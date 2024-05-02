@@ -45,7 +45,7 @@ const LogoFolio: NextPage = () => {
   };
 
   return (
-    <div className="h-full flex-col flex" ref={containerRef}>
+    <div className="h-full flex-col flex w-full" ref={containerRef}>
       <div className="mx-5 w-8" onClick={handleGoBack}><ArrowBack /></div>
       <div>
         <p className="uppercase font-neueRegular md:text-title text-titleMobile text-redHome text-center my-40">Logofolio</p>

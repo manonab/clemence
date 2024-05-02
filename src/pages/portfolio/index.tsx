@@ -67,7 +67,7 @@ const PortFolio: NextPage = () => {
   };
 
   return (
-    <div className="h-full flex-col items-center justify-center mx-auto">
+    <div className="h-full flex-col items-center justify-center mx-auto w-full">
       <div className="mx-5 w-8" onClick={handleGoBack}><ArrowBack /></div>
 
       <div className="flex-col mt-10 mb-12">

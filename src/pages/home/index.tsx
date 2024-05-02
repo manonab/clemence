@@ -2,7 +2,7 @@ import HomeComponent from "@/components/home";
 
 export default function Home() {
   return (
-    <div className="md:my-20">
+    <div className="md:my-20 w-full">
       <HomeComponent />
     </div>
   );

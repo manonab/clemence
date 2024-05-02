@@ -36,7 +36,7 @@ const Capiche: NextPage = () => {
   };
 
   return (
-    <div className="h-full flex-col items-center justify-center mx-auto">
+    <div className="h-full flex-col items-center justify-center mx-auto w-full">
       <div className="mx-5 w-8" onClick={handleGoBack}><ArrowBack /></div>
       <div className="flex-col mb-20">
         <p className="uppercase font-neueRegular md:text-title text-capicheMobile text-redHome text-center mt-[180px] mb-[100px]">Capiche</p>
