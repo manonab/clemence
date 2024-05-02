@@ -10,6 +10,69 @@
 body{
     background-color: #FCF6EF;
 }
+@layer base {
+  @font-face {
+    font-family: 'Clash';
+    src: url('/static/fonts/ClashDisplay-Regular.otf') format('truetype');
+  }
+  @font-face {
+    font-family: 'Clash-Bold';
+    src: url('/static/fonts/ClashDisplay-Bold.otf') format('truetype');
+  }
+  @font-face {
+    font-family: 'Clash-Medium';
+    src: url('/static/fonts/ClashDisplay-Medium.otf') format('truetype');
+  }
+  @font-face {
+    font-family: 'Clash-Extra';
+    src: url('/static/fonts/ClashDisplay-Extralight.otf') format('truetype');
+  }
+  @font-face {
+    font-family: 'Clash-Semibold';
+    src: url('/static/fonts/ClashDisplay-Semibold.otf') format('truetype');
+  }
+  @font-face {
+    font-family: 'Clash-Light';
+    src: url('/static/fonts/ClashDisplay-Light.otf') format('truetype');
+  }
+  @font-face {
+    font-family: 'kate';
+    src: url('/static/fonts/Kate-Display.otf') format('truetype');
+  }
+  @font-face {
+    font-family: 'kate-medium';
+    src: url('/static/fonts/Kate-Medium.otf') format('truetype');
+  }
+  @font-face {
+    font-family: 'kate-black';
+    src: url('/static/fonts/Kate-Black.otf') format('truetype');
+  }
+  @font-face {
+    font-family: 'neue-medium';
+    src: url('/static/fonts/NeueHelveticaBQMedium.otf') format('truetype');
+  }
+  @font-face {
+    font-family: 'neue-regular';
+    src: url('/static/fonts/NeueHelveticaBQRegular.otf') format('truetype');
+  }
+  @font-face {
+    font-family: 'neue-semi';
+    src: url('/static/fonts/NeueHelveticaBQHeavy.otf') format('truetype');
+  }
+  @font-face {
+    font-family: 'neue-bold';
+    src: url('/static/fonts/NeueHelveticaCondensedBQBold.otf') format('truetype');
+  }
+  @font-face {
+    font-family: 'neue-extra';
+    src: url('/static/fonts/NeueHelveticaBQBlack.otf') format('truetype');
+  }
+  @font-face {
+    font-family: 'neue-condensed';
+    src: url('/static/fonts/HelveticaNeueMediumCondensed.otf') format('truetype');
+  }
+}
+
 .linear-background {
   background: linear-gradient(180deg, rgba(144, 144, 144, 0.20) 0%, rgba(252, 246, 239, 0.20) 100%, rgba(252, 246, 239, 0.20) 100%);
 }
@@ -106,73 +169,6 @@ body{
   background-color: transparent;
   opacity: 0;
   transition: opacity 0.3s ease;
-}
-
-
-
-@layer base {
-/*   
-  @font-face {
-    font-family: 'Clash';
-    src: url('./fonts/ClashDisplay-Regular.otf') format('truetype');
-  }
-
-  @font-face {
-    font-family: 'Clash-Bold';
-    src: url('./fonts/ClashDisplay-Bold.otf') format('truetype');
-  }
-  @font-face {
-    font-family: 'Clash-Medium';
-    src: url('./fonts/ClashDisplay-Medium.otf') format('truetype');
-  }
-  @font-face {
-    font-family: 'Clash-Extra';
-    src: url('./fonts/ClashDisplay-Extralight.otf') format('truetype');
-  }
-  @font-face {
-    font-family: 'Clash-Semibold';
-    src: url('./public/fonts/ClashDisplay-Semibold.otf') format('truetype');
-  }
-  @font-face {
-    font-family: 'Clash-Light';
-    src: url('./public/fonts/ClashDisplay-Light.otf') format('truetype');
-  }
-  @font-face {
-    font-family: 'kate';
-    src: url('./public/fonts/Kate-Display.otf') format('truetype');
-  }
-  @font-face {
-    font-family: 'kate-medium';
-    src: url('./public/fonts/Kate-Medium.otf') format('truetype');
-  }
-  @font-face {
-    font-family: 'kate-black';
-    src: url('./public/fonts/Kate-Black.otf') format('truetype');
-  }
-  @font-face {
-    font-family: 'neue-medium';
-    src: url('./public/fonts/NeueHelveticaBQMedium.otf') format('truetype');
-  }
-  @font-face {
-    font-family: 'neue-regular';
-    src: url('./public/fonts/NeueHelveticaBQRegular.otf') format('truetype');
-  }
-  @font-face {
-    font-family: 'neue-semi';
-    src: url('./public/fonts/NeueHelveticaBQHeavy.otf') format('truetype');
-  }
-  @font-face {
-    font-family: 'neue-bold';
-    src: url('./public/fonts/NeueHelveticaCondensedBQBold.otf') format('truetype');
-  }
-  @font-face {
-    font-family: 'neue-extra';
-    src: url('./public/fonts/NeueHelveticaBQBlack.otf') format('truetype');
-  }
-  @font-face {
-    font-family: 'neue-condensed';
-    src: url('./public/fonts/HelveticaNeueMediumCondensed.otf') format('truetype');
-  } */
 }
 
 .bg_slider {
