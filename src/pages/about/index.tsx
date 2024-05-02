@@ -1,10 +1,10 @@
-import { BigDownArrow } from "@/assets/big-down-arrow";
 import { Images } from "@/common/images/index";
 import { useHeaderColor } from "@/context/index";
 import { NextPage } from "next";
 import Image from "next/image";
 import { useEffect } from "react";
 import { ParallaxProvider } from "react-scroll-parallax";
+import { BigDownArrow } from "../../../public/static/assets/big-down-arrow";
 
 const About: NextPage = () => {
   const { setHeaderColor } = useHeaderColor();

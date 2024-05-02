@@ -83,7 +83,7 @@ const Values: NextPage = () => {
             <p className="text-[10px] text-justify">Au fil de ma vie et de ma carrière personnelle,  j’ai pu appréhender avec clarté et détermination les bouleversements sociaux qui se jouent depuis maintenant des années.  Pour toutes les entreprises qui souhaitent faire parti du changement, je propose une relecture inclusive et une vision sensible de votre communication. </p>
           </div>
         </div>
-        <div className="bg-yellowHome w-full h-full pt-20 pb-10 mt-10">
+        <div className="bg-yellowHome !w-full h-full pt-20 pb-10 mt-10">
           <p className="font-neueRegular text-[20px] leading-[90%] mx-10">Manifesto</p>
           <div className="my-20 flex flex-col gap-4">
             <div className="flex items-center justify-evenly">

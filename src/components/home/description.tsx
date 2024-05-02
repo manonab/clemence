@@ -1,11 +1,12 @@
-import { ArrowRight } from "@/assets/arrow-right";
-import { BigArrow } from "@/assets/big-arrow";
+
 import { Images } from "@/common/images";
 import Contact from "@/pages/contact";
 import Image from "next/image";
 import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
 import { Parallax } from "react-scroll-parallax";
+import { ArrowRight } from "../../../public/static/assets/arrow-right";
+import { BigArrow } from "../../../public/static/assets/big-arrow";
 
 const Description: React.FC = () => {
   const router = useRouter();
@@ -83,7 +84,7 @@ const Description: React.FC = () => {
           </div>
         </Parallax>
       </div>
-      <div className="flex flex-col md:hidden h-full w-full gap-12 mt-12">
+      <div className="flex flex-col md:hidden h-full !w-full gap-12 mt-12">
         <div>
           <Image src={Images.homeMobile} width={200} alt="home" />
           <p className="text-homeMobileTitle text-redHome font-neueRegular -mt-[100px] ml-8">Tout<br></br> commence<br></br> par une<br></br> idée. </p>

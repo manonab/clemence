@@ -3,8 +3,8 @@ import emailjs from 'emailjs-com';
 
 import { MailOutlined } from '@mui/icons-material';
 import { useHeaderColor } from "@/context";
-import { ContactArrow } from "@/assets/contact/contactArrow";
 import { NextPage } from "next";
+import { ContactArrow } from "../../../public/static/assets/contact/contactArrow";
 
 type CloseModalFunction = () => void;
 

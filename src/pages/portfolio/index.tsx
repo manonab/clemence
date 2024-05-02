@@ -6,7 +6,7 @@ import { useRouter } from "next/router";
 import Image from "next/image";
 import { useHeaderColor } from "@/context";
 import { Images } from "@/common/images";
-import { BigArrow } from "@/assets/big-arrow";
+import { BigArrow } from "../../../public/static/assets/big-arrow";
 import { NextPage } from "next";
 
 const PortFolio: NextPage = () => {

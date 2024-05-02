@@ -5,11 +5,11 @@ import { motion } from "framer-motion";
 
 import { Close, Construction } from "@mui/icons-material";
 import Description from "./description";
-import { BigArrow } from "@/assets/big-arrow";
 import { useRouter } from "next/router";
 import { useHeaderColor } from "@/context";
 import { Images } from "@/common/images";
 import Image from "next/image";
+import { BigArrow } from "../../../public/static/assets/big-arrow";
 
 const timing = {
   duration: 0.7,
@@ -64,7 +64,7 @@ const HomeComponent: React.FC = () => {
         </div>
       )}
       <ParallaxProvider>
-        <Parallax speed={-30} className="hidden md:flex flex-col justify-around items-center gap-4">
+        <Parallax speed={-30} className="hidden md:flex !w-full flex-col justify-around items-center gap-4">
           <motion.div
             transition={{ ...timing, delay: 2 }}
             className="flex flex-col items-center justify-evenly h-screen">
