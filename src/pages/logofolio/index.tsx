@@ -60,7 +60,7 @@ const LogoFolio: NextPage = () => {
         </motion.div>
       </div>
       <div className="md:border-t-[1px] md:border-black md:w-full md:my-20 hidden" />
-      <div className="w-full md:py-[250px] py-[150px] bg-saumon md:bg-mainColor">
+      <div className="w-full md:py-[250px] py-[150px] bg-saumon">
         <Image src={Images.newlogo} className="md:w-[400px] md:h-[350px] w-[100px] mx-auto" alt="newlogo" />
       </div>
       <div className={`md:py-[250px] py-[150px] w-full ${showYellowBackground && "bg-yellowHome"}`}>

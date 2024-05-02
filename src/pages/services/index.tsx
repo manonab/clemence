@@ -51,8 +51,8 @@ const Services: NextPage = () => {
 
   return (
     <>
-      <div className="hidden flex-col md:flex gap-6">
-        <div className="bg-yellowHome">
+      <div className="hidden flex-col md:flex gap-6 w-full">
+        <div className="bg-yellowHome w-full">
           <div className="flex items-center justify-evenly h-full !w-auto mx-auto py-40">
             <div className="flex-col flex gap-12 w-auto">
               <p className="font-neueBold  text-[50px] leading-[90%] text-gray-900">

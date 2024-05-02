@@ -34,7 +34,12 @@ import screenPortFolio1 from "@assets/portfolio/screen-001.png";
 import screenPortFolio2 from "@assets/portfolio/screen-002.png";
 import screenPortFolio3 from "@assets/portfolio/screen-003.png";
 import progress from "@assets/home/frame-victoria.png";
-import posh from "@assets/home/posh.png"
+import posh from "@assets/home/posh.png";
+import portfolioDW from "@assets/portfolio/portfolio-welcome-desktop.png";
+import portfolioDB from "@assets/portfolio/portfolio-bottom-desktop.png";
+import portfolioScreen1 from "@assets/portfolio/portfolio-mobile-screen1.png";
+import portfolioScreen2 from "@assets/portfolio/portfolio-mobile-screen2.png";
+import portfolioScreen3 from "@assets/portfolio/portfolio-mobile-screen3.png";
 
 export const Images = {
   eye: Eye,
@@ -72,6 +77,11 @@ export const Images = {
   screenPortFolio1: screenPortFolio1,
   screenPortFolio2: screenPortFolio2,
   screenPortFolio3: screenPortFolio3,
+  portfolioDW: portfolioDW,
+  portfolioDB: portfolioDB,
+  portfolioScreen1: portfolioScreen1,
+  portfolioScreen2: portfolioScreen2,
+  portfolioScreen3: portfolioScreen3,
   inProgress: progress,
   posh: posh
 };

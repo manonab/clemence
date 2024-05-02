@@ -34,7 +34,7 @@ export default function Project() {
             onClick={() => {
               handleChange(route.path);
             }}
-            className="text-orange uppercase hover:cursor-pointer hover:text-redHome text-[70px] md:text-[170px] leading-[90%] font-neueRegular"
+            className="text-orange uppercase hover:cursor-pointer hover:text-redHome text-[70px] md:text-[160px] leading-[90%] font-neueRegular"
           >
             {route.name}
           </p>
