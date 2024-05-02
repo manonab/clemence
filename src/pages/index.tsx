@@ -1,5 +1,6 @@
 
 import { motion } from "framer-motion";
+
 import BackgroundSlider from "@/components/home/background-slider";
 import HomeComponent from "@/components/home";
 import Image from "next/image";

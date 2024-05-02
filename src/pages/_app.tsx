@@ -1,5 +1,4 @@
 import { Layout } from "@/common/layout";
-import Image from "next/image";
 import "./globals.css";
 import type { AppProps } from "next/app";
 

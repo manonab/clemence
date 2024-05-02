@@ -12,7 +12,7 @@ import { NextPage } from "next";
 const PortFolio: NextPage = () => {
   const { setHeaderColor } = useHeaderColor();
   const controls = useAnimation();
-  const contentRef = useRef(null);
+  const contentRef = useRef<HTMLDivElement | null>(null);
   const router = useRouter();
 
   useEffect(() => {

@@ -1,5 +1,6 @@
 import { Images } from "@/common/images";
 import { useHeaderColor } from "@/context";
+import { StaticImageData } from "next/image";
 import { useEffect, useState } from "react";
 
 
@@ -7,7 +8,7 @@ interface DesktopAnimationState {
   currentImage: number;
   showLastPart: boolean;
   animationFinished: boolean;
-  images: string[];
+  images: StaticImageData[];
 }
 
 export const useDesktopAnimation = () => {
