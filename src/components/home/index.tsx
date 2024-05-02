@@ -9,7 +9,7 @@ import { useRouter } from "next/router";
 import { useHeaderColor } from "@/context";
 import { Images } from "@/common/images";
 import Image from "next/image";
-import { BigArrow } from "../../../public/static/assets/big-arrow";
+import { BigArrow } from "@assets/big-arrow";
 
 const timing = {
   duration: 0.7,

@@ -4,9 +4,9 @@ import { ArrowForward, ArrowBack } from "@mui/icons-material";
 import Image from "next/image";
 import { useHeaderColor } from "@/context";
 import { useRouter } from "next/navigation";
-import { BigArrow } from "../../../public/static/assets/big-arrow";
 import { Images } from "@/common/images";
 import { NextPage } from "next";
+import { BigArrow } from "@assets/big-arrow";
 
 const Mosaic: NextPage = () => {
 

@@ -6,7 +6,7 @@ import Image from "next/image";
 import { useRouter } from "next/router";
 import { isMobile } from "react-device-detect";
 import { NextPage } from "next";
-import { ArrowRight } from "../../../public/static/assets/arrow-right";
+import { ArrowRight } from "@assets/arrow-right";
 
 const Services: NextPage = () => {
   const { setHeaderColor } = useHeaderColor();

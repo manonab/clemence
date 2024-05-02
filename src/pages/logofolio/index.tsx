@@ -5,8 +5,8 @@ import { NextRouter, useRouter } from "next/router";
 import Image from "next/image";
 import { Images } from "@/common/images";
 import { useHeaderColor } from "@/context";
-import { BigArrow } from "@/assets/big-arrow";
 import { NextPage } from "next";
+import { BigArrow } from "@assets/big-arrow";
 
 const LogoFolio: NextPage = () => {
   const { setHeaderColor } = useHeaderColor();

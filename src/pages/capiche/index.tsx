@@ -8,9 +8,10 @@ import { Images } from "@/common/images/index";
 
 import { useRouter } from "next/router";
 import { NextPage } from "next";
-import { BigArrow } from "../../../public/static/assets/big-arrow";
-import { Capiche001 } from "../../../public/static/assets/capiche/capiche-001";
-import { Capiche002 } from "../../../public/static/assets/capiche/capiche-002";
+import { Capiche001 } from "@assets/capiche/capiche-001";
+import { Capiche002 } from "@assets/capiche/capiche-002";
+import { BigArrow } from "@assets/big-arrow";
+
 
 const Capiche: NextPage = () => {
   const { setHeaderColor } = useHeaderColor();
