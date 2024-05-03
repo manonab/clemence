@@ -11,6 +11,8 @@ import { NextPage } from "next";
 import { Capiche001 } from "@assets/capiche/capiche-001";
 import { Capiche002 } from "@assets/capiche/capiche-002";
 import { BigArrow } from "@assets/big-arrow";
+import { ArrowRight } from "@assets/arrow-right";
+import { Logo } from "@assets/capiche/logo";
 
 
 const Capiche: NextPage = () => {
@@ -71,17 +73,30 @@ const Capiche: NextPage = () => {
           </div>
           <Capiche002 />
         </div>
+        {/* <div className="absolute right-0 ]">
+          <Logo />
+      </div> */}
       </div>
-      <div className="hidden md:flex mt-10 pt-10  gap-3 justify-center bg-saumon">
-        <div className="flex gap-3 justify-evenly">
-          <Capiche001 />
-          <p>Une alternative responsable et économique à vos soirées endiablées. </p>
+      <div className="hidden md:flex mt-[120px] pb-[150px] w-full gap-3 justify-center bg-saumon">
+        <div className="flex justify-evenly items-center w-full justify-around">
+          <Image src={Images.mobileScreen2} alt="capiche screen" className="w-[350px] h-[700px] -mt-10" />
+          <p className="text-orange font-neueCondensed text-[50px] leading-[90%] w-[550px] mb-20">Une alternative responsable et économique à vos soirées endiablées. </p>
         </div>
       </div>
-      <div className="pb-20 pt-10 bg-saumon">
-        <div onClick={() => router.push('/projects')} className="py-2 px-2 transition-all duration-300 ease-in-out font-bold text-[10px] text-center text-grayBlack uppercase hover:text-white hover:bg-grayBlack translate hover:cursor-pointer border-black border rounded-full min-w-[100px] max-w-[130px] mx-auto">
-          Autres projets
+      <div className="hidden md:flex w-full gap-3 justify-center bg-mainColor">
+        <div className="flex justify-evenly items-center w-full justify-around">
+          <p className="font-footer text-[17px] text-justify leading-[150%] w-[500px]">Lorem ipsum dolor sit amet consectetur. Molestie elementum convallis odio lacinia arcu aliquam etiam. A tristique ullamcorper vitae est lectus. Fermentum tellus sit gravida nunc aliquet mi. Habitasse mattis non vulputate tempor ultricies proin montes dignissim consectetur. Netus enim vivamus at sem arcu vitae faucibus cras neque.</p>
+          <Image src={Images.mobileScreen1} alt="capiche screen" className="w-[350px] h-[700px] -mt-[350px] mr-20" />
         </div>
+      </div>
+      <div
+        onClick={() => router.push('/projects')}
+        className="hidden mb-[250px] mt-10 hover:cursor-pointer ml-[100px] md:flex flex-col w-[200px] pb-2 items-center justify-around">
+        <span className="flex items-center gap-3">
+          <p className="uppercase text-xs	font-footer">Autres projets</p>
+          <ArrowRight />
+        </span>
+        <div className="border-b-black border-b-2 w-[150px] h-12 absolute transition-transform duration-300 transform origin-left hover:scale-x-0" />
       </div>
     </div>
   );

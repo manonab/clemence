@@ -40,7 +40,8 @@ import portfolioDB from "@assets/portfolio/portfolio-bottom-desktop.png";
 import portfolioScreen1 from "@assets/portfolio/portfolio-mobile-screen1.png";
 import portfolioScreen2 from "@assets/portfolio/portfolio-mobile-screen2.png";
 import portfolioScreen3 from "@assets/portfolio/portfolio-mobile-screen3.png";
-
+import mobileScreen1 from "@assets/capiche/desktop-capiche-screen1.png";
+import mobileScreen2 from "@assets/capiche/desktop-capiche-screen2.png";
 export const Images = {
   eye: Eye,
   image1: Image1,
@@ -82,6 +83,8 @@ export const Images = {
   portfolioScreen1: portfolioScreen1,
   portfolioScreen2: portfolioScreen2,
   portfolioScreen3: portfolioScreen3,
+  mobileScreen1: mobileScreen1,
+  mobileScreen2: mobileScreen2,
   inProgress: progress,
   posh: posh
 };

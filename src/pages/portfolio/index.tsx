@@ -151,7 +151,7 @@ const PortFolio: NextPage = () => {
             <p className="text-justify font-footer text-[18px] leading-[150%] w-1/2">Lorem ipsum dolor sit amet consectetur. Interdum quis etiam egestas purus orci suscipit sollicitudin. Iaculis odio pulvinar augue urna. Lorem dignissim morbi pellentesque dolor congue faucibus. Cras habitant lorem velit aliquam commodo congue. Vitae eros morbi et varius sagittis eget.</p>
             <div
               onClick={() => router.push('/projects')}
-              className="hover:cursor-pointer -ml-5 flex flex-col mt-[100px] w-[200px] pb-2 items-center justify-around">
+              className="hidden hover:cursor-pointer -ml-5 md:flex flex-col mt-[100px] w-[200px] pb-2 items-center justify-around">
               <span className="flex items-center gap-3">
                 <p className="uppercase text-xs	font-footer">Autres projets</p>
                 <ArrowRight />
