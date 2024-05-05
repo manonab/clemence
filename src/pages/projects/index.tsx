@@ -9,8 +9,9 @@ export default function Project() {
   const [selected, setSelected] = useState<string>("");
 
   useEffect(() => {
-    setHeaderColor("mainColor")
+    setHeaderColor("linear-background")
   }, [setHeaderColor]);
+
   const pathTextMappingMobile = [
     { path: "/projects/mosaic", name: "mosaic" },
     { path: "/projects/portfolio", name: "portfolio" },

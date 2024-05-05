@@ -77,9 +77,9 @@ export const useDesktopAnimation = () => {
       }, 1500);
       setTimeout(() => {
         setHeaderColor('bg_slider hovered')
-      }, 2400);
+      }, 2200);
     }
-  }, [state.currentImage, images.length]);
+  }, [state.currentImage, images.length, setHeaderColor]);
 
   useEffect(() => {
     if (state.showLastPart) {

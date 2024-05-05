@@ -18,8 +18,9 @@ import { Logo } from "@assets/capiche/logo";
 const Capiche: NextPage = () => {
   const { setHeaderColor } = useHeaderColor();
   const router = useRouter()
+
   useEffect(() => {
-    setHeaderColor("mainColor")
+    setHeaderColor("linear-background")
   }, [setHeaderColor]);
 
   const timing = {

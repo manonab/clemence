@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { ArrowForward, ArrowBack } from "@mui/icons-material";
 import Image from "next/image";
 import { useHeaderColor } from "@/context";
-import { useRouter } from "next/navigation";
+import { useRouter } from "next/router";
 import { Images } from "@/common/images";
 import { NextPage } from "next";
 import { BigArrow } from "@assets/big-arrow";
@@ -14,7 +14,7 @@ const Mosaic: NextPage = () => {
   const router = useRouter();
 
   useEffect(() => {
-    setHeaderColor("mainColor")
+    setHeaderColor("linear-background")
   }, [setHeaderColor]);
 
   const timing = {
@@ -34,11 +34,11 @@ const Mosaic: NextPage = () => {
   return (
     <div className="w-full">
       <div className="h-full flex md:hidden flex-col items-center justify-center mx-auto w-full">
-      <div className="mx-5 w-8" onClick={handleGoBack}><ArrowBack /></div>
+        <div className="mx-5 w-8 self-start" onClick={handleGoBack}><ArrowBack /></div>
       <div className="flex-col mt-20 mb-16">
         <p className="uppercase font-neueRegular md:text-title text-capicheMobile text-redHome text-center mt-[180px] mb-[100px]">Mosaic</p>
         <motion.div
-          className="mx-auto flex-col flex items-center gap-3 mb-[150px]"
+            className="m flex-col flex items-center gap-3 mb-[150px]"
           initial={{ opacity: 0, y: 100 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ ...timing, delay: 0.6 }}

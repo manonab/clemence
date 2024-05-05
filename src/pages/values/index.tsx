@@ -12,10 +12,11 @@ const Values: NextPage = () => {
   const { setHeaderColor } = useHeaderColor();
   const router = useRouter();
   useEffect(() => {
+    console.log(isMobile)
     if (isMobile) {
-      setHeaderColor("linear-values");
+      setHeaderColor("linear-background");
     } else {
-      setHeaderColor("linear-values")
+      setHeaderColor("bg-saumon")
     }
   }, [setHeaderColor]);
 

@@ -18,10 +18,11 @@ const LogoFolio: NextPage = () => {
     duration: 0.7,
     ease: [0.43, 0.13, 0.23, 0.96],
   };
+  useEffect(() => {
+    setHeaderColor("linear-background")
+  }, [setHeaderColor]);
 
   useEffect(() => {
-    setHeaderColor("mainColor");
-
     const handleScroll = () => {
       if (containerRef.current) {
         const containerRect = containerRef.current.getBoundingClientRect();

@@ -32,7 +32,7 @@ const Description: React.FC = () => {
 
   return (
     <div>
-      <div className={`w-full h-auto md:flex flex-col ${isServicesSectionVisible ? "bg-mainColor" : "bg-yellowHome"}`}>
+      <div className={`w-full hidden h-auto md:flex flex-col ${isServicesSectionVisible ? "bg-mainColor" : "bg-yellowHome"}`}>
         <div className="w-full h-full mx-auto flex flex-col gap-[150px] py-32">
           <p className="w-[1100px] ml-24 text-left text-orange text-[53px] leading-[57.6px] font-neueCondensed">Le courage de nos idées, la passion de les partager. Parce que chaque histoire mérite qu’on la raconte, <span className="text-redHome font-bold">qu’attendons nous pour commencer ?</span></p>
           <p className="w-[1100px] ml-48 text-right text-orange text-[53px] leading-[57.6px] font-neueCondensed">Consultante en communication et créative passionnée, je m’efforce d’aider votre projet à grandir grâce au design et au marketing digital.</p>

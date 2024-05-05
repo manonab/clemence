@@ -20,7 +20,7 @@ const Services: NextPage = () => {
 
   useEffect(() => {
     if (!isMobile) {
-      setHeaderColor("linear-services");
+      setHeaderColor("bg-yellowHome");
       const handleScroll = () => {
         if (scrollingTextRef.current) {
           const rect = scrollingTextRef.current.getBoundingClientRect();
@@ -32,12 +32,12 @@ const Services: NextPage = () => {
       return () => {
         window.removeEventListener("scroll", handleScroll);
       };
+    } else {
+      setHeaderColor("linear-background");
+
     }
   }, [setHeaderColor]);
 
-  useEffect(() => {
-    setHeaderColor("linear-background");
-  }, [setHeaderColor]);
   const handleCommunication = () => {
     setIsCommunicationSelected((isCommunicationSelected: boolean) => !isCommunicationSelected)
   }

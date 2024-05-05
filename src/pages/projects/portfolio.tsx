@@ -41,9 +41,8 @@ const PortFolio: NextPage = () => {
     };
   }, [controls]);
 
-
   useEffect(() => {
-    setHeaderColor("mainColor")
+    setHeaderColor("linear-background")
   }, [setHeaderColor]);
 
   const timing = {

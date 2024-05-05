@@ -17,7 +17,7 @@ const About: NextPage = () => {
     <ParallaxProvider>
       <div className="flex-col md:flex gap-12 w-screen h-auto hidden">
         <div className="flex items-end justify-between w-auto">
-          <div className="min-w-[950px] flex-col flex">
+          <div className="flex-col flex">
             <div className="w-[1259px] ml-10">
               <p className="font-neueRegular text-title uppercase  text-orange font-medium">Tout commença par une idée</p>
             </div>
