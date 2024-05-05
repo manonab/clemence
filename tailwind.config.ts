@@ -15,7 +15,7 @@ const config: Config = {
 				blueHome: "#0071F3",
 				saumon: "#FCDED7",
 				royalBlue: "#0071F3",
-				magenta: "#E00F6D",
+				mosaic: "#E00F6D",
 				lightBlack: "#212121",
 			},
 			fontFamily: {

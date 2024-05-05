@@ -42,6 +42,8 @@ import portfolioScreen2 from "@assets/portfolio/portfolio-mobile-screen2.png";
 import portfolioScreen3 from "@assets/portfolio/portfolio-mobile-screen3.png";
 import mobileScreen1 from "@assets/capiche/desktop-capiche-screen1.png";
 import mobileScreen2 from "@assets/capiche/desktop-capiche-screen2.png";
+import mosaicPosts from "@assets/mosaic/post-mosaic-desktop.png";
+
 export const Images = {
   eye: Eye,
   image1: Image1,
@@ -86,6 +88,7 @@ export const Images = {
   mobileScreen1: mobileScreen1,
   mobileScreen2: mobileScreen2,
   inProgress: progress,
-  posh: posh
+  posh: posh,
+  mosaicPosts: mosaicPosts
 };
 

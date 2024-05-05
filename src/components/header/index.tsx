@@ -65,7 +65,7 @@ export const Menu: React.FC = () => {
           <span className="flex items-center gap-3">
             <p className={`${selected === "/contact" && "text-redHome font-bold"} text-[15px] hover:cursor-pointer font-clashSemibold uppercase`}>Rencontrons nous</p>
           </span>
-          <div className={`${selected === "/contact" ? "border-b-redHome" : "border-b-black"} border-b-2 w-[165px] h-10 absolute transition-transform duration-300 transform origin-left hover:scale-x-0`} />
+          <div className={`${selected === "/contact" ? "border-b-redHome font-bold" : "border-b-black"} border-b-black border-b-2 w-[165px] h-10 absolute transition-transform duration-300 transform origin-left hover:scale-x-0`} />
         </div>
       </motion.div>
       <div className="md:hidden">

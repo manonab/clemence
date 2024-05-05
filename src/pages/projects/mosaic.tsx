@@ -32,7 +32,8 @@ const Mosaic: NextPage = () => {
   };
 
   return (
-    <div className="h-full flex-col items-center justify-center mx-auto w-full">
+    <div className="w-full">
+      <div className="h-full flex md:hidden flex-col items-center justify-center mx-auto w-full">
       <div className="mx-5 w-8" onClick={handleGoBack}><ArrowBack /></div>
       <div className="flex-col mt-20 mb-16">
         <p className="uppercase font-neueRegular md:text-title text-capicheMobile text-redHome text-center mt-[180px] mb-[100px]">Mosaic</p>
@@ -85,7 +86,33 @@ const Mosaic: NextPage = () => {
           Voir sur linkedin
         </a>
       </div>
+      </div>
 
+      {/* DESKTOP VERSION */}
+
+      <div className="md:flex hidden flex-col">
+        <div className="flex-col mt-10 mb-12">
+          <p className="uppercase font-neueRegular md:text-title text-capicheMobile text-redHome text-center mt-[180px] mb-[100px]">MOSAIC</p>
+          <motion.div
+            className="mx-auto flex-col flex items-center gap-3 mb-[150px]"
+            initial={{ opacity: 0, y: 100 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ ...timing, delay: 0.6 }}
+          >
+            <BigArrow />
+            <p className="font-footer uppercase font-bold leading-[20px] text-[14px]">DISCOVER</p>
+          </motion.div>
+        </div>
+        <div className="w-full">
+          <Image src={Images.mosaicPosts} alt="multiples post mosaic" className="w-full" />
+        </div>
+        <div className="bg-yellowHome py-10 mt-32">
+          <div className="w-[189px] h-[189px] rounded-full border-mosaic border border-2 absolute -left-16 -mt-36" />
+          <div className="flex mt-20 mx-32">
+            <p className="text-orange font-neueCondensed leading-[100%] text-[62px]">“Mosaic encourage, éduque<br></br> et inspire les jeunes<br></br> personnes LGBTQ+ et celleux<br></br> à leur côtés”.</p>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

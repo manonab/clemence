@@ -69,7 +69,7 @@ const PortFolio: NextPage = () => {
 
   return (
     <div className="h-full flex-col items-center justify-center mx-auto w-full">
-      <div className="mx-5 w-8" onClick={handleGoBack}><ArrowBack /></div>
+      <div className="mx-5 w-8 md:hidden flex" onClick={handleGoBack}><ArrowBack /></div>
       <div className="flex-col mt-10 mb-12">
         <p className="uppercase font-neueRegular md:text-title text-capicheMobile text-redHome text-center mt-[180px] mb-[100px]">Portfolio</p>
         <motion.div
@@ -116,6 +116,7 @@ const PortFolio: NextPage = () => {
         </div>
       </div>
       </div>
+
       <div className="md:flex hidden bg-saumon items-center">
         <div className="flex flex-col gap-6 items-start w-full overflow-auto h-full ml-28 my-28">
           <div className="flex flex-col items-start pl-6 pb-6">
