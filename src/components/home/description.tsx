@@ -120,11 +120,11 @@ const Description: React.FC = () => {
           <div className="overflow-auto whitespace-nowrap mx-5 scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-gray-200">
             <div className="flex items-center justify-evenly space-x-6 py-5 px-10">
               <Image
-                onClick={() => router.push('/capiche')}
+                onClick={() => router.push('/projects/capiche')}
                 src={Images.homeCapiche}
                 alt="Logo de capiche" className="w-[130px] mx-5" />
-              <Image onClick={() => router.push('/mosaic')} src={Images.homeMosaic} alt="Image 2" className="w-[130px] mx-5" />
-              <Image onClick={() => router.push('/portfolio')} src={Images.homePortfolio} alt="Image 3" className="w-[130px] ml-5 mr-10" />
+              <Image onClick={() => router.push('/projects/mosaic')} src={Images.homeMosaic} alt="Image 2" className="w-[130px] mx-5" />
+              <Image onClick={() => router.push('/projects/portfolio')} src={Images.homePortfolio} alt="Image 3" className="w-[130px] ml-5 mr-10" />
             </div>
           </div>
           <p className="uppercase font-footer text-grayBlack text-[8px] mx-4 my-5" onClick={() => router.push("project")}>EN SAVOIR PLUS</p>

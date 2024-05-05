@@ -16,6 +16,7 @@ const config: Config = {
 				saumon: "#FCDED7",
 				royalBlue: "#0071F3",
 				magenta: "#E00F6D",
+				lightBlack: "#212121",
 			},
 			fontFamily: {
 				clash: ["Clash"],

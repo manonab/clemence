@@ -5,6 +5,7 @@ import { MailOutlined } from '@mui/icons-material';
 import { useHeaderColor } from "@/context";
 import { NextPage } from "next";
 import { ContactArrow } from "@assets/contact/contactArrow";
+import { BigDownArrow } from "@assets/big-down-arrow";
 
 type CloseModalFunction = () => void;
 
@@ -62,7 +63,7 @@ const Contact: NextPage = () => {
   };
 
   return (
-    <div>
+    <div className="!w-full">
       {showModal && <Modal onClose={handleCloseModal} />}
       <div className="flex-col flex gap-3 mx-1 md:hidden">
         <div className="mx-6 flex flex-col items-start gap-4 justify-around mb-5">
@@ -129,10 +130,71 @@ const Contact: NextPage = () => {
           </div>
         </div>
       </div>
-      <div>
-        <div className="mx-16 flex flex-col items-start gap-4 justify-around mb-5">
-          <p className="text-orange text-[190px] leading-[100%] font-neueRegular">Créons<br />ensemble.</p>
-          <ContactArrow />
+      <div className="hidden md:flex flex-col w-full">
+        <div className="">
+          <p className="mx-20 text-orange text-[190px] leading-[100%] font-neueRegular">Créons<br />ensemble.</p>
+          <div className="mx-28 mb-16">
+            <BigDownArrow />
+          </div>
+          <div className="flex justify-start mx-28 gap-36">
+            <div className="flex-col flex items-start w-1/3">
+              <p className="mb-2 font-neueCondensed text-[30px] tracking-[-1px] leading-[16px]">Nom</p>
+              <input
+                value={lastName}
+                onChange={(e) => setLastName(e.target.value)}
+                className="px-5 py-3 w-full rounded-[5px] bg-mainColor border border-black"
+              />
+            </div>
+            <div className="flex-col flex items-start w-1/3">
+              <p className="mb-2 font-neueCondensed text-[30px] tracking-[-1px] leading-[16px]">Prénom</p>
+              <input
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                className="px-5 py-3 w-full rounded-[5px] bg-mainColor border border-black"
+              />
+            </div>
+          </div>
+          <div className="my-10 flex justify-start mx-28 gap-36">
+            <div className="flex-col flex items-start w-1/3">
+              <p className="mb-2 font-neueCondensed text-[30px] tracking-[-1px] leading-[16px]">Email</p>
+              <input
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                className="px-5 py-3 w-full rounded-[5px] bg-mainColor border border-black"
+              />
+            </div>
+            <div className="flex-col flex items-start w-1/3">
+              <p className="font-neueCondensed mb-2 text-[30px] tracking-[-1px] leading-[16px]">Objet</p>
+              <input
+                value={subject}
+                onChange={(e) => setSubject(e.target.value)}
+                className="px-5 py-3 w-full rounded-[5px] bg-mainColor border border-black"
+              />
+            </div>
+          </div>
+          <div className="flex-col flex items-start ml-28 w-2/3">
+            <p className="font-neueCondensed mb-2 text-[30px] tracking-[-1px] leading-[16px]">Votre message</p>
+            <textarea
+              value={message}
+              onChange={(e) => setMessage(e.target.value)}
+              className="px-5 py-3 w-full rounded-[5px] min-h-[250px] bg-mainColor border border-black"
+            />
+          </div>
+          <div className="flex items-start my-20 justify-between w-2/3 ml-28">
+            <div
+              className="hover:cursor-pointer border-black border rounded-3xl max-w-[330px] max-h-[105px]  mr-4"
+              onClick={handleSendEmail}
+            >
+              <p className="font-footer font-bold leading-[120%] p-4 text-[12px] text-center text-grayBlack uppercase">Hit me baby (one time)</p>
+            </div>
+            <div className="flex flex-col items-start gap-3">
+              <p className="font-neueCondensed text-[45px] leading-[100%] text-orange mr-8">Retrouvez moi également sur <br />Linkedin juste <a className="text-redHome" target="_blank" href="https://www.linkedin.com/in/cl%C3%A9mence-dequaire/?locale=en_US">ici</a>.</p>
+              <div className="flex items-center gap-1.5">
+                <MailOutlined />
+                <p className="font-neueCondensed text-grayBlack text-[12px] leading-[90%]">clemence.dequaire.pro@gmail.com</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

@@ -12,10 +12,10 @@ export default function Project() {
     setHeaderColor("mainColor")
   }, [setHeaderColor]);
   const pathTextMappingMobile = [
-    { path: "/mosaic", name: "mosaic" },
-    { path: "/portfolio", name: "portfolio" },
-    { path: "/capiche", name: "capiche" },
-    { path: "/logofolio", name: "logos" }
+    { path: "/projects/mosaic", name: "mosaic" },
+    { path: "/projects/portfolio", name: "portfolio" },
+    { path: "/projects/capiche", name: "capiche" },
+    { path: "/projects/logofolio", name: "logos" }
   ];
 
   const handleChange = (route: string) => {
@@ -34,7 +34,7 @@ export default function Project() {
             onClick={() => {
               handleChange(route.path);
             }}
-            className="text-orange uppercase hover:cursor-pointer hover:text-redHome text-[70px] md:text-[160px] leading-[90%] font-neueRegular"
+            className="text-orange uppercase hover:cursor-pointer hover:text-redHome text-[70px] md:text-[190px] leading-[90%] font-neueRegular"
           >
             {route.name}
           </p>
