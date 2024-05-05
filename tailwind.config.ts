@@ -17,6 +17,7 @@ const config: Config = {
 				royalBlue: "#0071F3",
 				mosaic: "#E00F6D",
 				lightBlack: "#212121",
+				lightPink: "#FCDED7",
 			},
 			fontFamily: {
 				clash: ["Clash"],

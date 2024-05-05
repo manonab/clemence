@@ -44,6 +44,7 @@ import mobileScreen1 from "@assets/capiche/desktop-capiche-screen1.png";
 import mobileScreen2 from "@assets/capiche/desktop-capiche-screen2.png";
 import mosaicPosts from "@assets/mosaic/post-mosaic-desktop.png";
 import rabbitError from "@assets/error/rabbit-404.png";
+import reviewMosaic from "@assets/mosaic/review-mosaic.png";
 
 export const Images = {
   eye: Eye,
@@ -91,6 +92,7 @@ export const Images = {
   inProgress: progress,
   posh: posh,
   mosaicPosts: mosaicPosts,
-  rabbitError: rabbitError
+  rabbitError: rabbitError,
+  reviewMosaic: reviewMosaic
 };
 

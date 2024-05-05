@@ -111,6 +111,28 @@ const Mosaic: NextPage = () => {
           <div className="flex mt-20 mx-32">
             <p className="text-orange font-neueCondensed leading-[100%] text-[62px]">“Mosaic encourage, éduque<br></br> et inspire les jeunes<br></br> personnes LGBTQ+ et celleux<br></br> à leur côtés”.</p>
           </div>
+          <div className="flex items-center mx-auto w-full justify-evenly">
+            <div className="flex flex-col gap-6 my-20 w-1/2">
+              {mosaicContent.map((element, index) => (
+                <div key={index} className="w-1/3">
+                  <p className="my-10 text-redHome font-neueRegular text-[50px] leading-[90%]">{element.title}</p>
+                  <p className="font-footer text-[17px] leading-[130%] text-lightBlack">{element.content}</p>
+                </div>
+              ))}
+            </div>
+            <div>
+            </div>
+            <div className="w-[500px] h-[460px] absolute right-20 mb-28 bg-lightPink rounded-[50px] w-1/2">
+            </div>
+            <div className="z-[999] flex flex-col items-center justify-center h-full  w-[500px] h-[460px] bg-mainColor rounded-[50px] w-1/2">
+              <p className="font-footer font-extrabold text-[100px] text-royalBlue text-center">+16%</p>
+              <p className="font-footer font-semibold text-[25px] text-royalBlue text-right">d’augmentation de<br></br> l’audience globale en<br></br> ligne.</p>
+            </div>
+          </div>
+        </div>
+        <div className="py-20 bg-mainColor mx-auto">
+          <p className="font-neueRegular uppercase my-16 text-[150px] leading-[90%] text-redHome text-center">Témoignage</p>
+          <Image src={Images.reviewMosaic} alt="review" />
         </div>
       </div>
     </div>
