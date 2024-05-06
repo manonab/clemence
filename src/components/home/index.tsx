@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import { Parallax, ParallaxProvider } from "react-scroll-parallax";
 import { motion } from "framer-motion";
 
-
 import { Close, Construction } from "@mui/icons-material";
 import Description from "./description";
 import { useHeaderColor } from "@/context";
