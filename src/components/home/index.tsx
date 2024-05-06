@@ -5,7 +5,6 @@ import { motion } from "framer-motion";
 
 import { Close, Construction } from "@mui/icons-material";
 import Description from "./description";
-import { useRouter } from "next/router";
 import { useHeaderColor } from "@/context";
 import { Images } from "@/common/images";
 import Image from "next/image";
@@ -19,11 +18,10 @@ const timing = {
 const HomeComponent: React.FC = () => {
   const { setHeaderColor } = useHeaderColor();
   const [modalOpen, setModalOpen] = useState<boolean>(false);
-  const router = useRouter();
 
   useEffect(() => {
     setHeaderColor("#FCF6EF");
-  }, []);
+  }, [setHeaderColor]);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -38,28 +36,46 @@ const HomeComponent: React.FC = () => {
   return (
     <>
       {modalOpen && (
-        <div className="fixed inset-0 flex justify-center items-center z-50 bg-black bg-opacity-50 backdrop-filter backdrop-blur-lg">
-          <div className="h-[450px] w-[350px] rounded-2xl bg-white flex flex-col justify-around items-center relative">
-            <div className="flex flex-col gap-3 items-center justify-start h-1/2">
-              <div className="self-end" onClick={handleClose}><Close /></div>
+        <div className="w-full h-full">
+          <div className="md:flex hidden fixed inset-0 flex justify-center items-center z-50 bg-black bg-opacity-50 backdrop-filter backdrop-blur-lg">
+            <div className="overflow-hidden md:h-[450px] md:w-1/3 rounded-2xl bg-white flex flex-col justify-around items-center relative">
+              <div className="w-full flex flex-col gap-3 items-center justify-start">
+                <div className="self-end p-2 hover:cursor-pointer" onClick={handleClose}><Close /></div>
               <p className="text-redHome font-neueRegular text-[60px] z-50">Psst...</p>
-              <p className="text-footer text-m text-center mx-2">si tu veux vraiment vraiment voir ce<br></br> site, sois indulgent.e : il est encore<br></br> <span className="flex gap-0.5 items-center">en construction <Construction className="w-6" /></span></p>
-              <div onClick={handleClose} className="mt-5 bg-mainColor z-50 transition-all duration-300 ease-in-out font-bold text-xs text-center text-grayBlack uppercase hover:text-white hover:bg-grayBlack translate hover:cursor-pointer border-black border rounded-full px-5 py-2 mx-auto">
-                Bien noté!
+                <p className="text-footer text-m text-center mx-2">si tu veux vraiment vraiment voir ce site, sois<br></br> indulgent.e : il est encore en construction !</p>
               </div>
+              <Image
+                src={Images.inProgress}
+                className="md:w-full md:h-full object-cover rounded-2xl"
+                alt="inprogress"
+              />
+              <motion.div initial={{ opacity: 0, y: "100%" }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.3, duration: 0.8, type: "spring", stiffness: 150 }}
+                className="absolute bottom-0 z-10">
+                <Image src={Images.posh} alt="victoria beckam" className="w-full h-[200px]" />
+              </motion.div>
+            </div>
+          </div>
+          <div className="flex md:hidden fixed inset-0 flex justify-center items-center z-50 bg-black bg-opacity-50 backdrop-filter backdrop-blur-lg">
+            <div className="overflow-hidden md:h-[450px] md:w-1/3 rounded-2xl bg-white flex flex-col justify-around items-center relative">
+              <div className="w-full flex flex-col gap-3 items-center justify-start">
+                <div className="self-end p-2 hover:cursor-pointer" onClick={handleClose}><Close /></div>
+                <p className="text-redHome font-neueRegular text-[60px] z-50">Psst...</p>
+                <p className="text-footer text-m text-center mx-2">si tu veux vraiment vraiment voir ce site, sois<br></br> indulgent.e : il est encore en construction !</p>
             </div>
             <Image
               src={Images.inProgress}
-              className="h-1/2 z-10"
+                className="md:w-full md:h-full object-cover rounded-2xl"
               alt="inprogress"
             />
-            {/* <motion.img
-              initial={{ opacity: 0, y: "100%" }}
+              <motion.div initial={{ opacity: 0, y: "100%" }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.3, duration: 0.5, type: "spring", stiffness: 150 }}
-              src={Images.posh}
-              className="absolute bottom-0 z-10"
-            /> */}
+                transition={{ delay: 0.3, duration: 0.8, type: "spring", stiffness: 150 }}
+                className="absolute bottom-0 z-10">
+                <Image src={Images.posh} alt="victoria beckam" className="w-full h-[200px]" />
+              </motion.div>
+            </div>
           </div>
         </div>
       )}
