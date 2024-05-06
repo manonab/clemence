@@ -9,6 +9,7 @@ import { useHeaderColor } from "@/context";
 import { Images } from "@/common/images";
 import Image from "next/image";
 import { BigArrow } from "@assets/big-arrow";
+import { Cookies } from "../cookies";
 
 const timing = {
   duration: 0.7,
@@ -18,6 +19,7 @@ const timing = {
 const HomeComponent: React.FC = () => {
   const { setHeaderColor } = useHeaderColor();
   const [modalOpen, setModalOpen] = useState<boolean>(false);
+  const [cookiesOpen, setCookiesOpen] = useState<boolean>(false);
 
   useEffect(() => {
     setHeaderColor("#FCF6EF");
@@ -25,14 +27,24 @@ const HomeComponent: React.FC = () => {
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      setModalOpen(true);
+      setCookiesOpen(true);
     }, 2000);
     return () => clearTimeout(timer);
   }, []);
 
+
   const handleClose = () => {
-    setModalOpen(false)
+    setModalOpen(false);
   }
+
+  const handleCookiesClose = () => {
+    setCookiesOpen(false);
+
+    setTimeout(() => {
+      setModalOpen(true)
+    }, 2000);
+  }
+
   return (
     <>
       {modalOpen && (
@@ -79,6 +91,11 @@ const HomeComponent: React.FC = () => {
           </div>
         </div>
       )}
+      {cookiesOpen &&
+        <Cookies
+          setIsOpen={handleCookiesClose}
+        />
+      }
       <ParallaxProvider>
         <Parallax speed={-30} className="hidden md:flex w-full flex-col justify-around items-center gap-4">
           <motion.div

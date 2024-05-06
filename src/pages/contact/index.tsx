@@ -117,8 +117,7 @@ const Contact: NextPage = () => {
         <div className="flex items-start mb-20 justify-around w-auto mt-5">
           <div
             className="hover:cursor-pointer border-black border rounded-3xl p-2 max-w-[130px] max-h-[45px]  mr-4"
-            onClick={handleSendEmail}
-          >
+            onClick={handleSendEmail}>
             <p className="font-footer font-bold text-[6px] text-center text-grayBlack uppercase">Hit me baby (one time)</p>
           </div>
           <div className="flex flex-col items-start gap-3">

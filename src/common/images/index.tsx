@@ -43,7 +43,8 @@ import portfolioScreen3 from "@assets/portfolio/portfolio-mobile-screen3.png";
 import mobileScreen1 from "@assets/capiche/desktop-capiche-screen1.png";
 import mobileScreen2 from "@assets/capiche/desktop-capiche-screen2.png";
 import mosaicPosts from "@assets/mosaic/post-mosaic-desktop.png";
-import rabbitError from "@assets/error/rabbit-404.png";
+import rabbitError from "@assets/utils/rabbit-404.png";
+import cookies from "@assets/utils/cookies.png";
 import reviewMosaic from "@assets/mosaic/review-mosaic.png";
 
 export const Images = {
@@ -93,6 +94,7 @@ export const Images = {
   posh: posh,
   mosaicPosts: mosaicPosts,
   rabbitError: rabbitError,
-  reviewMosaic: reviewMosaic
+  reviewMosaic: reviewMosaic,
+  cookies: cookies
 };
 
