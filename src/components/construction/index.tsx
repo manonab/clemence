@@ -2,32 +2,61 @@ import React, { SetStateAction, Dispatch } from "react";
 import { Close } from '@mui/icons-material';
 import Image from "next/image";
 import { Images } from "@/common/images";
+import { useAnimationContext } from "@/context/animation-context";
+import { motion } from "framer-motion";
+
 interface ConstructionProps {
   isVisible: boolean;
   setIsVisible: Dispatch<SetStateAction<boolean>>;
 }
 
 export const Construction: React.FC<ConstructionProps> = ({ isVisible, setIsVisible }: ConstructionProps) => {
+  const { animationSeen, markAnimationSeen } = useAnimationContext();
+  if (animationSeen) {
+    return null;
+  }
   return (
-    <>
-      {isVisible && (
-        <div style={{ boxShadow: "0px 4px 4px 0px rgba(0, 0, 0, 0.25)" }}
-          className="rounded-[20px] mx-auto container w-[875px] h-[559px] z-10">
-          <p
-            className="text-right hover:cursor-pointer p-3"
-          >
-            <Close sx={{ width: "24px", height: "24px" }} onClick={() => setIsVisible(false)} />
-          </p>
-          <div className="flex bg-mainColor justify-around flex-col gap-2 items-center">
-            <p className="text-[80px] text-redHome font-neueSemiBold leading-[70px]">Hello you,</p>
-            <p className="w-[526px] text-xl text-center leading-6">if you really really want to see this webiste, please keep in mind that it’s still a work in progress !</p>
-            <Image
-              src={Images.becks}
-              alt="victoria beckham image"
-              className="w-full h-[372px]" />
+    <div className="w-full h-full">
+      <div className="md:flex hidden fixed inset-0 flex justify-center items-center z-50 bg-black bg-opacity-25 backdrop-filter backdrop-blur-lg">
+        <div className="overflow-hidden md:h-[450px] md:w-1/3 rounded-2xl bg-white flex flex-col justify-around items-center relative">
+          <div className="w-full flex flex-col gap-3 items-center justify-start">
+            <div className="self-end p-2 hover:cursor-pointer" onClick={markAnimationSeen}><Close /></div>
+            <p className="text-redHome font-neueRegular text-[60px] z-50">Psst...</p>
+            <p className="text-footer text-m text-center mx-2">si tu veux vraiment vraiment voir ce site, sois<br></br> indulgent.e : il est encore en construction !</p>
           </div>
+          <Image
+            src={Images.inProgress}
+            className="md:w-full md:h-full object-cover rounded-2xl"
+            alt="inprogress"
+          />
+          <motion.div initial={{ opacity: 0, y: "100%" }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.3, duration: 0.8, type: "spring", stiffness: 150 }}
+            className="absolute bottom-0 z-10">
+            <Image src={Images.posh} alt="victoria beckam" className="w-full h-[200px]" />
+          </motion.div>
         </div>
-      )}
-    </>
+      </div>
+      <div className="flex md:hidden fixed inset-0 flex justify-center items-center z-50 bg-black bg-opacity-50 backdrop-filter backdrop-blur-lg">
+        <div className="overflow-hidden md:h-[450px] md:w-1/3 rounded-2xl bg-white flex flex-col justify-around items-center relative">
+          <div className="w-full flex flex-col gap-3 items-center justify-start">
+            <div className="self-end p-2 hover:cursor-pointer" onClick={markAnimationSeen}><Close /></div>
+            <p className="text-redHome font-neueRegular text-[60px] z-50">Psst...</p>
+            <p className="text-footer text-m text-center mx-2">si tu veux vraiment vraiment voir ce site, sois<br></br> indulgent.e : il est encore en construction !</p>
+          </div>
+          <Image
+            src={Images.inProgress}
+            className="md:w-full md:h-full object-cover rounded-2xl"
+            alt="inprogress"
+          />
+          <motion.div initial={{ opacity: 0, y: "100%" }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.3, duration: 0.8, type: "spring", stiffness: 150 }}
+            className="absolute bottom-0 z-10">
+            <Image src={Images.posh} alt="victoria beckam" className="w-full h-[200px]" />
+          </motion.div>
+        </div>
+      </div>
+    </div>
   );
 };

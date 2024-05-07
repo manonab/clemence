@@ -8,8 +8,10 @@ import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
 import { Parallax } from "react-scroll-parallax";
 
-
-const Description: React.FC = () => {
+interface DescriptionProps {
+  id: string;
+}
+const Description: React.FC<DescriptionProps> = ({ id }) => {
   const router = useRouter();
   const [scrollPosition, setScrollPosition] = useState<number>(0);
   const [scrolled, setScrolled] = useState<boolean>(false);
@@ -33,9 +35,9 @@ const Description: React.FC = () => {
   return (
     <div>
       <div className={`w-full hidden h-auto md:flex flex-col ${isServicesSectionVisible ? "bg-mainColor" : "bg-yellowHome"}`}>
-        <div className="w-full h-full mx-auto flex flex-col gap-[150px] py-32">
-          <p className="w-[1100px] ml-24 text-left text-orange text-[53px] leading-[57.6px] font-neueCondensed">Le courage de nos idées, la passion de les partager. Parce que chaque histoire mérite qu’on la raconte, <span className="text-redHome font-bold">qu’attendons nous pour commencer ?</span></p>
-          <p className="w-[1100px] ml-48 text-right text-orange text-[53px] leading-[57.6px] font-neueCondensed">Consultante en communication et créative passionnée, je m’efforce d’aider votre projet à grandir grâce au design et au marketing digital.</p>
+        <div className="w-full h-full flex flex-col items-base gap-[150px] py-32">
+          <p className="ml-32 text-left text-orange text-[53px] leading-[57.6px] font-neueCondensed" id={id}>Le courage de nos idées, la passion de les<br></br> partager. Parce que chaque histoire mérite qu’on<br></br> la raconte, <span className="text-redHome font-bold">qu’attendons nous pour commencer ?</span></p>
+          <p className="mr-32 text-right text-orange text-[53px] leading-[57.6px] font-neueCondensed">Consultante en communication et créative<br></br> passionnée, je m’efforce d’aider votre projet à<br></br> grandir grâce au design et au marketing digital.</p>
           <div
             onClick={() => router.push('/about')}
             className="hover:cursor-pointer ml-24 flex flex-col mb-2 w-[150px] pb-2 items-center justify-around">
@@ -49,7 +51,7 @@ const Description: React.FC = () => {
         <div className="w-auto h-full relative">
           <div className={`flex items-center justify-end pr-10 gap-3 relative w-full`}>
             <Image src={Images.service} alt="Service" />
-            <p className="text-right font-neueRegular uppercase text-bannerTitile text-redHome">SERVICES</p>
+            <p className="text-right font-neueRegular uppercase text-[200px] text-redHome">SERVICES</p>
           </div>
           <div className="flex items-center justify-around my-36 mx-20">
             <div className="flex-col items-center gap-3">
@@ -101,7 +103,7 @@ const Description: React.FC = () => {
           </div>
         </div>
         <div className="bg-yellowHome w-full pb-24">
-          <div className="mt-20 mb-10 mx-6">
+          <div className="mt-20 mb-10 mx-6" id="scroll-target">
             <p className="font-neueCondensed text-orange text-homeMobileContent max-w-[300px]">Le courage de nos idées, la passion de les partager.Parce que chaque histoire mérite qu&lsquo;on la raconte, <span className="text-redHome font-bold">qu&lsquo;attendons nous pour commencer ?</span></p>
           </div>
           <p className="mx-6 mb-5 font-neueRegular text-redHome text-homeMobileServices">services</p>

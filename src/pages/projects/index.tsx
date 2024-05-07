@@ -26,7 +26,7 @@ export default function Project() {
 
   return (
     <div
-      className="bg-mainColor z-[999] flex flex-col gap-12 justify-center items-center fixed top-0 left-0 w-full h-full w-full overflow-y-auto"
+      className="bg-mainColor z-[999] flex flex-col gap-12 justify-center items-center w-full h-full"
     >
       <div className="flex items-start flex-col gap-6 w-full ml-5 md:ml-20">
         {pathTextMappingMobile.map((route) => (

@@ -8,9 +8,10 @@ import { Images } from "@/common/images";
 import { NextPage } from "next";
 import { BigArrow } from "@assets/big-arrow";
 import { ArrowRight } from "@assets/arrow-right";
+import { Link } from 'react-scroll';
+
 
 const Mosaic: NextPage = () => {
-
   const { setHeaderColor } = useHeaderColor();
   const router = useRouter();
 
@@ -39,15 +40,17 @@ const Mosaic: NextPage = () => {
         <div className="mx-5 w-8 self-start" onClick={handleGoBack}><ArrowBack /></div>
         <div className="flex-col mt-20 mb-16">
           <p className="uppercase font-neueRegular md:text-title text-capicheMobile text-redHome text-center mt-[180px] mb-[100px]">Mosaic</p>
+          <Link to="scroll_target" className="hover:cursor-pointer" smooth={true}>
           <motion.div
-            className="m flex-col flex items-center gap-3 mb-[150px]"
+              className="flex-col flex items-center gap-3 mb-[150px]"
             initial={{ opacity: 0, y: 100 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ ...timing, delay: 0.6 }}
           >
             <BigArrow />
-            <p className="font-footer uppercase font-bold leading-[20px] text-[14px]">DISCOVER</p>
+              <p className="font-footer uppercase font-bold leading-[20px] text-[14px] hover:cursor-pointer ">DISCOVER</p>
           </motion.div>
+          </Link>
         </div>
         <div className="w-full h-auto bg-saumon py-10">
           <div className="flex items-center justify-center gap-4">
@@ -70,7 +73,7 @@ const Mosaic: NextPage = () => {
             ))}
           </div>
         </div>
-        <div className="w-auto py-20 bg-yellowHome overflow-hidden">
+        <div className="w-auto py-20 bg-yellowHome overflow-hidden" id="mosaic_target">
           <div className="flex items-center justify-around gap-12">
             <Image src={Images.mosaic1} className="w-[180px] h-[180px] -ml-[120px]" alt="mosaic1" />
             <Image src={Images.mosaic2} className="w-[220px] h-[220px]" alt="mosaic2" />
@@ -93,20 +96,22 @@ const Mosaic: NextPage = () => {
       {/* DESKTOP VERSION */}
 
       <div className="md:flex hidden flex-col">
-        <div className="flex-col mt-10 mb-12">
+        <div className="flex-col mt-10 mb-12 h-screen">
           <p className="uppercase font-neueRegular md:text-title text-capicheMobile text-redHome text-center mt-[180px] mb-[100px]">MOSAIC</p>
-          <motion.div
-            className="mx-auto flex-col flex items-center gap-3 mb-[150px]"
-            initial={{ opacity: 0, y: 100 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ ...timing, delay: 0.6 }}
-          >
-            <BigArrow />
-            <p className="font-footer uppercase font-bold leading-[20px] text-[14px]">DISCOVER</p>
-          </motion.div>
+          <Link to="mosaic_desktop_target" className="hover:cursor-pointer" smooth={true}>
+            <motion.div
+              className="flex-col flex items-center gap-3 mb-[150px]"
+              initial={{ opacity: 0, y: 100 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ ...timing, delay: 0.6 }}
+            >
+              <BigArrow />
+              <p className="font-footer uppercase font-bold leading-[20px] text-[14px] hover:cursor-pointer ">DISCOVER</p>
+            </motion.div>
+          </Link>
         </div>
         <div className="w-full">
-          <Image src={Images.mosaicPosts} alt="multiples post mosaic" className="w-full" />
+          <Image src={Images.mosaicPosts} alt="multiples post mosaic" className="w-full" id="mosaic_desktop_target" />
         </div>
         <div className="bg-yellowHome py-10 mt-32">
           <div className="w-[189px] h-[189px] rounded-full border-mosaic border border-2 absolute -left-16 -mt-36" />

@@ -9,6 +9,7 @@ import { Images } from "@/common/images";
 import { NextPage } from "next";
 import { BigArrow } from "@assets/big-arrow";
 import { ArrowRight } from "@assets/arrow-right";
+import { Link } from "react-scroll";
 
 const PortFolio: NextPage = () => {
   const { setHeaderColor } = useHeaderColor();
@@ -69,21 +70,23 @@ const PortFolio: NextPage = () => {
   return (
     <div className="h-full flex-col items-center justify-center mx-auto w-full">
       <div className="mx-5 w-8 md:hidden flex" onClick={handleGoBack}><ArrowBack /></div>
-      <div className="flex-col mt-10 mb-12">
+      <div className="flex-col mt-10 mb-12 h-screen">
         <p className="uppercase font-neueRegular md:text-title text-capicheMobile text-redHome text-center mt-[180px] mb-[100px]">Portfolio</p>
-        <motion.div
-          className="mx-auto flex-col flex items-center gap-3 mb-[150px]"
-          initial={{ opacity: 0, y: 100 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ ...timing, delay: 0.6 }}
-        >
-          <BigArrow />
-          <p className="font-footer uppercase font-bold leading-[20px] text-[14px]">DISCOVER</p>
-        </motion.div>
+        <Link to="portfolio_target" className="hover:cursor-pointer" smooth={true}>
+          <motion.div
+            className="mx-auto flex-col flex items-center gap-3 mb-[150px]"
+            initial={{ opacity: 0, y: 100 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ ...timing, delay: 0.6 }}
+          >
+            <BigArrow />
+            <p className="font-footer uppercase font-bold leading-[20px] text-[14px]">DISCOVER</p>
+          </motion.div>
+        </Link>
       </div>
       <div className="flex flex-col md:hidden">
       <div className="w-auto mt-6 mb-10 mx-10">
-        <p className="font-neueCondensed text-left leading-[90%] text-orange text-[30px]">Changer les choses, une<br></br> idée à la fois. </p>
+          <p className="font-neueCondensed text-left leading-[90%] text-orange text-[30px]" id="portfolio_desktop_target">Changer les choses, une<br></br> idée à la fois. </p>
       </div>
       {/* <motion.div^
           initial={{ opacity: 0, x: "100%" }}
@@ -116,7 +119,7 @@ const PortFolio: NextPage = () => {
       </div>
       </div>
 
-      <div className="md:flex hidden bg-saumon items-center">
+      <div className="md:flex hidden bg-saumon items-center" id="portfolio_target">
         <div className="flex flex-col gap-6 items-start w-full overflow-auto h-full ml-28 my-28">
           <div className="flex flex-col items-start pl-6 pb-6">
             <p className="text-redHome font-neueSemiBold lowercase text-[50px] mb-2">Concept.</p>

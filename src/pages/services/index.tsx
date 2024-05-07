@@ -52,7 +52,7 @@ const Services: NextPage = () => {
   return (
     <>
       <div className="hidden flex-col md:flex gap-6 w-full">
-        <div className="bg-yellowHome w-full">
+        <div className="bg-yellowHome w-full h-screen">
           <div className="flex items-center justify-evenly h-full !w-auto mx-auto py-40">
             <div className="flex-col flex gap-12 w-auto">
               <p className="font-neueBold  text-[50px] leading-[90%] text-gray-900">
@@ -116,12 +116,12 @@ const Services: NextPage = () => {
             </div>
           </div>
           <div id="scrolling-text" ref={scrollingTextRef} className={`flex items-center justify-end gap-3 relative ${scrolled ? 'scrolling' : ''}`}>
-            <p className="text-right font-neueRegular uppercase text-[160px] leading-[90%] text-orange">CRÉER</p>
+            <p className="text-right font-neueRegular uppercase text-[160px] leading-[90%] text-redHome">CRÉER</p>
             <Image src={Images.service} alt="Service" />
-            <p className={`text-right font-neueRegular uppercase text-[160px] leading-[90%] text-orange ${scrolled ? 'text-transition' : 'hidden'}`}>CRÉER</p>
+            <p className={`text-right font-neueRegular uppercase text-[160px] leading-[90%] text-redHome ${scrolled ? 'text-transition' : 'hidden'}`}>CRÉER</p>
           </div>
         </div>
-        <div className="bg-mainColor h-screen my-20">
+        <div className="bg-mainColor h-screen flex flex-col items-base justify-center">
           <p className="font-neueRegular text-[50px] leading-[90%] mb-20 ml-20">Expertise</p>
           <div className="flex justify-evenly">
             <div className="flex-col w-[330px]">

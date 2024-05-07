@@ -13,6 +13,7 @@ import { Capiche002 } from "@assets/capiche/capiche-002";
 import { BigArrow } from "@assets/big-arrow";
 import { ArrowRight } from "@assets/arrow-right";
 import { Logo } from "@assets/capiche/logo";
+import { Link } from "react-scroll";
 
 
 const Capiche: NextPage = () => {
@@ -41,8 +42,9 @@ const Capiche: NextPage = () => {
   return (
     <div className="h-full flex-col items-center justify-center mx-auto w-full">
       <div className="mx-5 w-8 flex md:hidden" onClick={handleGoBack}><ArrowBack /></div>
-      <div className="flex-col mb-20">
-        <p className="uppercase font-neueRegular md:text-title text-capicheMobile text-redHome text-center mt-[180px] mb-[100px]">Capiche</p>
+      <div className="flex-col mb-20 h-screen">
+        <p className="uppercase font-neueRegular md:text-title text-capicheMobile text-redHome text-center mt-[180px] mb-[160px]">Capiche</p>
+        <Link to="capiche_target" className="hover:cursor-pointer" smooth={true}>
         <motion.div
           className="mx-auto flex-col flex items-center gap-3 mb-[150px]"
           initial={{ opacity: 0, y: 100 }}
@@ -52,9 +54,10 @@ const Capiche: NextPage = () => {
           <BigArrow />
           <p className="font-footer uppercase font-bold leading-[20px] text-[14px]">DISCOVER</p>
         </motion.div>
+        </Link>
       </div>
-      <div className="w-full h-auto mb-16 mt-20 md:py-20 md:bg-yellowHome">
-        <Image src={Images.capicheBG} alt="capiche background" className="md:w-2/3 w-full md:rounded-2xl md:mx-auto" />
+      <div className="w-full h-auto mb-16 mt-20 md:py-20 md:bg-yellowHome h-screen" id="capiche_target">
+        <Image src={Images.capicheBG} alt="capiche background" className="md:w-auto w-full md:rounded-2xl md:mx-auto md:h-full" />
       </div>
       <div className="w-auto mt-12 mb-10 mx-10 md:hidden">
         <p className="font-neueCondensed text-left leading-[90%] text-orange text-[30px]">Une alternative<br></br> écologique à vos soirées<br></br> endiablées. </p>
@@ -78,7 +81,7 @@ const Capiche: NextPage = () => {
           <Logo />
       </div> */}
       </div>
-      <div className="hidden md:flex mt-[120px] pb-[150px] w-full gap-3 justify-center bg-saumon">
+      <div className="hidden md:flex mt-[120px] pb-[150px] w-full gap-3 justify-center">
         <div className="flex justify-evenly items-center w-full justify-around">
           <Image src={Images.mobileScreen2} alt="capiche screen" className="w-[350px] h-[700px] -mt-10" />
           <p className="text-orange font-neueCondensed text-[50px] leading-[90%] w-[550px] mb-20">Une alternative responsable et économique à vos soirées endiablées. </p>
