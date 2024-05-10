@@ -1,8 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { Remove, Add } from '@mui/icons-material';
 import { useHeaderColor } from "@/context";
-import { Images } from "@/common/images";
-import Image from "next/image";
 import { useRouter } from "next/router";
 import { isMobile } from "react-device-detect";
 import { NextPage } from "next";
@@ -53,8 +51,8 @@ const Services: NextPage = () => {
     <>
       <div className="hidden flex-col md:flex gap-6 w-full">
         <div className="bg-yellowHome w-full h-screen">
-          <div className="flex items-center justify-evenly !w-auto mx-auto py-40">
-            <div className="flex-col flex gap-12 w-auto">
+          <div className="flex  justify-evenly mx-auto  h-full mt-20">
+            <div className="flex-col flex gap-12 w-auto h-full ">
               <p className="font-neueBold  text-[50px] leading-[90%] text-gray-900">
                 Communication &<br></br>marketing digital
               </p>
@@ -76,7 +74,7 @@ const Services: NextPage = () => {
                 </div>
               </div>
             </div>
-            <div className="flex-col flex gap-12 w-auto h-full">
+            <div className="flex-col flex gap-12 w-auto h-full mt-10">
               <p className="font-neueBold text-[50px] leading-[90%]">Design</p>
               <div className="h-full">
                 <div className="items-end flex">
@@ -95,7 +93,7 @@ const Services: NextPage = () => {
                 </div>
               </div>
             </div>
-            <div className="flex-col flex gap-12  w-auto h-full">
+            <div className="flex-col flex gap-12  w-auto h-full mt-10">
               <p className="font-neueBold text-[50px] leading-[90%]">Consulting</p>
               <div>
                 <p className="text-base text-gray-900 w-[300px] font-footer">
@@ -107,12 +105,11 @@ const Services: NextPage = () => {
                   </div>
                 </p>
                 <div className={isConsultingSelected ? "flex flex-col" : "hidden"}>
-
-                </div>
                   <ul className="list-disc ml-3 mt-3">
                     <li className="text-base font-semibold">Relecture inclusive</li>
-                    <li className="text-base font-semibold">Formation & sensibilisation aux questions<br></br> LGBTQ+ & féministes</li>
+                    <li className="text-base font-semibold">Formation & sensibilisation aux<br></br> questions LGBTQ+ & féministes</li>
                   </ul>
+                </div>
 
               </div>
             </div>
