@@ -8,12 +8,14 @@ import { useHeaderColor } from "@/context";
 import { NextPage } from "next";
 import { BigArrow } from "@assets/big-arrow";
 import { Link } from "react-scroll";
-import { Logo } from "@assets/utils/logo-clemence";
 
 const LogoFolio: NextPage = () => {
   const { setHeaderColor } = useHeaderColor();
+  const [showSaumonBackground, setShowSaumonBackground] = useState<boolean>(false);
   const [showYellowBackground, setShowYellowBackground] = useState<boolean>(false);
-  const containerRef = useRef<HTMLDivElement>(null);
+  const containerRef = useRef<HTMLDivElement | null>(null);
+  const capicheRef = useRef<HTMLDivElement | null>(null);
+
   const router = useRouter();
 
   const timing = {
@@ -23,12 +25,34 @@ const LogoFolio: NextPage = () => {
   useEffect(() => {
     setHeaderColor("linear-background")
   }, [setHeaderColor]);
+
   useEffect(() => {
     const handleScroll = () => {
       if (containerRef.current) {
         const containerRect = containerRef.current.getBoundingClientRect();
         const scrollPosition = window.scrollY || window.pageYOffset;
         const threshold = containerRect.top + containerRect.height / 2;
+        if (scrollPosition > threshold) {
+          setShowSaumonBackground(true);
+        } else {
+          setShowSaumonBackground(false);
+        }
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [containerRef]);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (capicheRef.current) {
+        const containerRect = capicheRef.current.getBoundingClientRect();
+        const scrollPosition = window.scrollY || window.pageYOffset;
+        const threshold = containerRect.top + containerRect.height / 0.5;
         if (scrollPosition > threshold) {
           setShowYellowBackground(true);
         } else {
@@ -42,14 +66,15 @@ const LogoFolio: NextPage = () => {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, []);
+  }, [capicheRef]);
+
 
   const handleGoBack = () => {
     router.back();
   };
 
   return (
-    <div className="h-full flex-col flex w-full" ref={containerRef}>
+    <div className="h-full flex-col flex w-full">
       <div className="mx-5 w-8 flex md:hidden" onClick={handleGoBack}><ArrowBack /></div>
       <div className="h-screen">
         <Link to="logo_target" className="hover:cursor-pointer" smooth={true}>
@@ -65,12 +90,11 @@ const LogoFolio: NextPage = () => {
         </motion.div>
         </Link>
       </div>
-      <div id="logo_portfolio" className={` ${showYellowBackground ? 'bg-yellowHome' : 'bg-saumon'} h-screen`} />
-      <div className="w-full md:py-[250px] py-[150px] bg-saumon h-screen" id="logo_target">
-        <Image src={Images.newlogo} className="md:w-[400px] md:h-[350px] w-auto h-auto mx-auto" alt="newlogo" />
+      <div ref={containerRef} id="logo_target" className={` ${showSaumonBackground ? 'bg-saumon' : 'bg-mainColor'} w-full md:py-[250px] py-[150px] h-screen`} >
+        <Image src={Images.newlogo} className="md:w-[400px] md:h-[350px] w-auto h-auto mx-auto" alt="clemence logo" />
       </div>
-      <div className="w-full md:py-[250px] py-[150px] bg-yellowHome h-screen" id="logo_target">
-        <Image src={Images.capichelogo} className="md:h-1/2 w-auto h-auto mx-auto" alt="newlogo" />
+      <div ref={capicheRef} className={` ${showYellowBackground ? 'bg-yellowHome' : 'bg-mainColor'} w-full md:py-[250px] py-[150px] h-screen`} >
+        <Image src={Images.capichelogo} className="md:h-1/2 w-auto h-auto mx-auto" alt="capiche logo" />
       </div>
     </div>
   );
