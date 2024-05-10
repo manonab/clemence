@@ -90,7 +90,7 @@ const Description: React.FC<DescriptionProps> = ({ id }) => {
       <div className="flex flex-col md:hidden h-full !w-full gap-12 mt-12">
         <div>
           <Image src={Images.homeMobile} width={200} alt="home" />
-          <p className="text-homeMobileTitle text-redHome font-neueRegular -mt-[100px] ml-8">Tout<br></br> commence<br></br> par une<br></br> idée. </p>
+          <p className="text-homeMobileTitle text-redHome font-neueRegular -mt-[100px] ml-6">Tout<br></br> commence<br></br> par une<br></br> idée. </p>
           <div className="mx-6 my-10">
             <p className="font-neueCondensed text-orange text-homeMobileContent max-w-[300px]">Consultante en communication et créative passionnée, je m’efforce d’aider votre marque à grandir grâce au design et au marketing digital.</p>
           </div>

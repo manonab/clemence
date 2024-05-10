@@ -24,16 +24,14 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
   }, []);
 
   return (
-    <>
-      <body>
+    <div className="h-auto bg-mainColor w-auto">
+      {/* <body>
         <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TQSBRQLV"
           height="0" width="0" style={{ display: 'none', visibility: 'hidden' }}></iframe></noscript>
-      </body>
-      <div className="h-auto bg-mainColor w-auto">
+      </body> */}
         <Menu />
         <main>{children}</main>
-      </div>
-    </>
+    </div>
   );
 };
 

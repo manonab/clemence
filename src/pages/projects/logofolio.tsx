@@ -23,7 +23,6 @@ const LogoFolio: NextPage = () => {
   useEffect(() => {
     setHeaderColor("linear-background")
   }, [setHeaderColor]);
-
   useEffect(() => {
     const handleScroll = () => {
       if (containerRef.current) {
@@ -32,6 +31,8 @@ const LogoFolio: NextPage = () => {
         const threshold = containerRect.top + containerRect.height / 2;
         if (scrollPosition > threshold) {
           setShowYellowBackground(true);
+        } else {
+          setShowYellowBackground(false);
         }
       }
     };
@@ -41,7 +42,7 @@ const LogoFolio: NextPage = () => {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, [setHeaderColor]);
+  }, []);
 
   const handleGoBack = () => {
     router.back();
@@ -64,7 +65,7 @@ const LogoFolio: NextPage = () => {
         </motion.div>
         </Link>
       </div>
-      <div className="md:border-t-[1px] md:border-black md:w-full md:my-20 hidden" />
+      <div id="logo_portfolio" className={` ${showYellowBackground ? 'bg-yellowHome' : 'bg-saumon'} h-screen`} />
       <div className="w-full md:py-[250px] py-[150px] bg-saumon h-screen" id="logo_target">
         <Image src={Images.newlogo} className="md:w-[400px] md:h-[350px] w-auto h-auto mx-auto" alt="newlogo" />
       </div>

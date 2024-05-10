@@ -53,7 +53,7 @@ const Services: NextPage = () => {
     <>
       <div className="hidden flex-col md:flex gap-6 w-full">
         <div className="bg-yellowHome w-full h-screen">
-          <div className="flex items-center justify-evenly h-full !w-auto mx-auto py-40">
+          <div className="flex items-center justify-evenly !w-auto mx-auto py-40">
             <div className="flex-col flex gap-12 w-auto">
               <p className="font-neueBold  text-[50px] leading-[90%] text-gray-900">
                 Communication &<br></br>marketing digital
@@ -63,10 +63,9 @@ const Services: NextPage = () => {
                   <p className="text-base text-gray-900 w-[300px]">
                     Informer, engager et fidéliser votre audience avec une stratégie moderne et adaptée à vos problématiques.
                   </p>
-                  {isCommunicationSelected ? <div onClick={handleCommunication} className="hover:cursor-pointer"><Add /></div> : <div className="hover:cursor-pointer" onClick={handleCommunication} ><Remove /></div>}
+                  {isCommunicationSelected ? <div onClick={handleCommunication} className="hover:cursor-pointer"><Remove /></div> : <div className="hover:cursor-pointer" onClick={handleCommunication} ><Add /></div>}
                 </div>
-                {isCommunicationSelected &&
-                  <div>
+                <div className={isCommunicationSelected ? "flex flex-col" : "hidden"}>
                     <ul className="list-disc ml-3 mt-3 text-gray-900">
                       <li className="text-base font-semibold">Social Media</li>
                       <li className="text-base font-semibold">SEO</li>
@@ -74,28 +73,29 @@ const Services: NextPage = () => {
                       <li className="text-base font-semibold">Rédaction</li>
                       <li className="text-base font-semibold">Campagnes payantes (ads)</li>
                     </ul>
-                  </div>
-                }
+                </div>
               </div>
             </div>
-            <div className="flex-col flex gap-12 w-auto h-auto">
+            <div className="flex-col flex gap-12 w-auto h-full">
               <p className="font-neueBold text-[50px] leading-[90%]">Design</p>
               <div className="h-full">
                 <div className="items-end flex">
                   <p className="text-base text-gray-900 w-[300px]">
-                    Donner de la puissance à vos messages avec des designs marquants et intuitifs, notamment sur les réseaux.                </p>
-                  {isDesignSelected ? <div onClick={handleDesign} className="hover:cursor-pointer"><Add /></div> : <div className="hover:cursor-pointer" onClick={handleDesign} ><Remove /></div>}
+                    Donner de la puissance à vos messages avec des designs marquants et intuitifs, notamment sur les réseaux.
+                  </p>
+                  {isDesignSelected ? <div onClick={handleDesign} className="hover:cursor-pointer"><Remove /></div> : <div className="hover:cursor-pointer" onClick={handleDesign} ><Add /></div>}
                 </div>
-                {isDesignSelected &&
-                  <ul className="list-disc ml-3 mt-3">
+                <div className={isDesignSelected ? "flex flex-col" : "hidden"}>
+                  <ul className="list-disc ml-3 mt-3 text-gray-900">
                     <li className="text-base font-semibold">UX/UI design (Figma)</li>
-                    <li className="text-base font-semibold">Cartes de visite, brochures... </li>
+                    <li className="text-base font-semibold">Cartes de visite, brochures...</li>
                     <li className="text-base font-semibold">Réseaux sociaux (posts, stories).</li>
                   </ul>
-                }
+
+                </div>
               </div>
             </div>
-            <div className="flex-col flex gap-12  w-auto">
+            <div className="flex-col flex gap-12  w-auto h-full">
               <p className="font-neueBold text-[50px] leading-[90%]">Consulting</p>
               <div>
                 <p className="text-base text-gray-900 w-[300px] font-footer">
@@ -103,24 +103,25 @@ const Services: NextPage = () => {
                     <p className="text-base text-gray-900 w-[300px]">
                       Vous portez vers une communication plus éthique et solidaire qui répond aux problématiques d’aujourd’hui.
                     </p>
-                    {isConsultingSelected ? <div onClick={handleConsulting} className="hover:cursor-pointer"><Add /></div> : <div className="hover:cursor-pointer" onClick={handleConsulting} ><Remove /></div>}
+                    {isConsultingSelected ? <div onClick={handleConsulting} className="hover:cursor-pointer"><Remove /></div> : <div className="hover:cursor-pointer" onClick={handleConsulting} ><Add /></div>}
                   </div>
                 </p>
-                {isConsultingSelected &&
+                <div className={isConsultingSelected ? "flex flex-col" : "hidden"}>
+
+                </div>
                   <ul className="list-disc ml-3 mt-3">
                     <li className="text-base font-semibold">Relecture inclusive</li>
                     <li className="text-base font-semibold">Formation & sensibilisation aux questions<br></br> LGBTQ+ & féministes</li>
                   </ul>
-                }
+
               </div>
             </div>
           </div>
-          <div id="scrolling-text" ref={scrollingTextRef} className={`flex items-center justify-end gap-3 relative ${scrolled ? 'scrolling' : ''}`}>
-            <p className="text-right font-neueRegular uppercase text-[160px] leading-[90%] text-redHome">CRÉER</p>
-            <Image src={Images.service} alt="Service" />
-            <p className={`text-right font-neueRegular uppercase text-[160px] leading-[90%] text-redHome ${scrolled ? 'text-transition' : 'hidden'}`}>CRÉER</p>
-          </div>
         </div>
+
+
+
+
         <div className="bg-mainColor h-screen flex flex-col items-base justify-center">
           <p className="font-neueRegular text-[50px] leading-[90%] mb-20 ml-20">Expertise</p>
           <div className="flex justify-evenly">

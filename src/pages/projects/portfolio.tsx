@@ -42,6 +42,7 @@ const PortFolio: NextPage = () => {
     };
   }, [controls]);
 
+
   useEffect(() => {
     setHeaderColor("linear-background")
   }, [setHeaderColor]);
@@ -149,7 +150,7 @@ const PortFolio: NextPage = () => {
           </div>
         </div>
         <div className="flex">
-          <div className="flex flex-col ml-28 mt-20">
+          <div className="flex flex-col ml-28 mt-28">
             <p className="text-orange text-[62px] font-neueCondensed leading-[90%] mb-20">Changer les choses, une idée<br></br> à la fois.</p>
             <p className="text-justify font-footer text-[18px] leading-[150%] w-1/2">Lorem ipsum dolor sit amet consectetur. Interdum quis etiam egestas purus orci suscipit sollicitudin. Iaculis odio pulvinar augue urna. Lorem dignissim morbi pellentesque dolor congue faucibus. Cras habitant lorem velit aliquam commodo congue. Vitae eros morbi et varius sagittis eget.</p>
             <div
@@ -162,7 +163,7 @@ const PortFolio: NextPage = () => {
               <div className="border-b-black border-b-2 w-[150px] h-12 absolute transition-transform duration-300 transform origin-left hover:scale-x-0" />
             </div>
           </div>
-          <div className="w-full mt-[200px] -mb-20">
+          <div className="w-auto absolute right-0 mt-28">
             <Image src={Images.portfolioDB} alt="logo" />
           </div>
         </div>

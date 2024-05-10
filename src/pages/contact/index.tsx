@@ -107,18 +107,18 @@ const Contact: NextPage = () => {
           </div>
         </div>
         <div className="flex-col flex items-start">
-          <p className="font-inter ml-5 my-1">Votre message</p>
+          <p className="font-inter my-1">Votre message</p>
           <textarea
             value={message}
             onChange={(e) => setMessage(e.target.value)}
-            className="px-2 py-1 min-w-[370px] rounded-[5px] bg-mainColor border border-black mx-auto min-h-[200px] "
+            className="px-2 py-1 min-w-[350px] rounded-[5px] bg-mainColor border border-black mx-auto min-h-[200px] "
           />
         </div>
         <div className="flex items-start mb-20 justify-around w-auto mt-5">
           <div
             className="hover:cursor-pointer border-black border rounded-3xl p-2 max-w-[130px] max-h-[45px]  mr-4"
             onClick={handleSendEmail}>
-            <p className="font-footer font-bold text-[6px] text-center text-grayBlack uppercase">Hit me baby (one time)</p>
+            <p className="font-footer font-bold text-[7px] text-center text-grayBlack uppercase">Hit me baby (one time)</p>
           </div>
           <div className="flex flex-col items-start gap-3">
             <p className="font-neueCondensed text-[16px] leading-[90%] text-orange mr-8">Retrouvez moi également sur <br />Linkedin juste <a className="text-redHome" target="_blank" href="https://www.linkedin.com/in/cl%C3%A9mence-dequaire/?locale=en_US">ici</a>.</p>
@@ -130,12 +130,11 @@ const Contact: NextPage = () => {
         </div>
       </div>
       <div className="hidden md:flex flex-col w-full">
-        <div className="">
-          <p className="mx-20 text-orange text-[190px] leading-[100%] font-neueRegular">Créons<br />ensemble.</p>
+        <p className="ml-20 text-orange text-[230px] leading-[100%] font-neueRegular">Créons<br />ensemble.</p>
           <div className="mx-28 mb-16">
             <BigDownArrow />
           </div>
-          <div className="flex justify-start mx-28 gap-36">
+        <div className=" flex justify-start ml-28  gap-x-36 w-full">
             <div className="flex-col flex items-start w-1/3">
               <p className="mb-2 font-neueCondensed text-[30px] tracking-[-1px] leading-[16px]">Nom</p>
               <input
@@ -153,7 +152,7 @@ const Contact: NextPage = () => {
               />
             </div>
           </div>
-          <div className="my-10 flex justify-start mx-28 gap-36">
+        <div className="mt-10 flex justify-start ml-28 gap-x-36 w-full">
             <div className="flex-col flex items-start w-1/3">
               <p className="mb-2 font-neueCondensed text-[30px] tracking-[-1px] leading-[16px]">Email</p>
               <input
@@ -171,7 +170,7 @@ const Contact: NextPage = () => {
               />
             </div>
           </div>
-          <div className="flex-col flex items-start ml-28 w-2/3">
+        <div className="mt-10 flex-col flex items-start ml-28 w-3/4">
             <p className="font-neueCondensed mb-2 text-[30px] tracking-[-1px] leading-[16px]">Votre message</p>
             <textarea
               value={message}
@@ -179,7 +178,7 @@ const Contact: NextPage = () => {
               className="px-5 py-3 w-full rounded-[5px] min-h-[250px] bg-mainColor border border-black"
             />
           </div>
-          <div className="flex items-start my-20 justify-between w-2/3 ml-28">
+        <div className="flex items-start mt-20 justify-between w-3/4 ml-28">
             <div
               className="hover:cursor-pointer border-black border rounded-3xl max-w-[330px] max-h-[105px]  mr-4"
               onClick={handleSendEmail}
@@ -190,8 +189,7 @@ const Contact: NextPage = () => {
               <p className="font-neueCondensed text-[45px] leading-[100%] text-orange mr-8">Retrouvez moi également sur <br />Linkedin juste <a className="text-redHome" target="_blank" href="https://www.linkedin.com/in/cl%C3%A9mence-dequaire/?locale=en_US">ici</a>.</p>
               <div className="flex items-center gap-1.5">
                 <MailOutlined />
-                <p className="font-neueCondensed text-grayBlack text-[12px] leading-[90%]">clemence.dequaire.pro@gmail.com</p>
-              </div>
+              <p className="font-neueCondensed text-grayBlack text-[12px] leading-[90%]">clemence.dequaire.pro@gmail.com</p>
             </div>
           </div>
         </div>
