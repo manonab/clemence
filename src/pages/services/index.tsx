@@ -5,6 +5,7 @@ import { useRouter } from "next/router";
 import { isMobile } from "react-device-detect";
 import { NextPage } from "next";
 import { ArrowRight } from "@assets/arrow-right";
+import RouageAnimation from "@/animations/rouage";
 
 const Services: NextPage = () => {
   const { setHeaderColor } = useHeaderColor();
@@ -49,9 +50,9 @@ const Services: NextPage = () => {
 
   return (
     <>
-      <div className="hidden flex-col md:flex gap-6 w-full">
-        <div className="bg-yellowHome w-full h-screen">
-          <div className="flex  justify-evenly mx-auto  h-full mt-20">
+      <div className="hidden flex-col md:flex gap-6 w-full overflow-hidden">
+        <div className="bg-yellowHome w-full h-screen flex flex-col">
+          <div className="flex  justify-evenly mx-auto  min-h-[400px] mt-20 w-full">
             <div className="flex-col flex gap-12 w-auto h-full ">
               <p className="font-neueBold  text-[50px] leading-[90%] text-gray-900">
                 Communication &<br></br>marketing digital
@@ -89,7 +90,6 @@ const Services: NextPage = () => {
                     <li className="text-base font-semibold">Cartes de visite, brochures...</li>
                     <li className="text-base font-semibold">Réseaux sociaux (posts, stories).</li>
                   </ul>
-
                 </div>
               </div>
             </div>
@@ -110,15 +110,14 @@ const Services: NextPage = () => {
                     <li className="text-base font-semibold">Formation & sensibilisation aux<br></br> questions LGBTQ+ & féministes</li>
                   </ul>
                 </div>
-
               </div>
             </div>
           </div>
+          <div className="w-full ">
+            <RouageAnimation text1="CRÉER" text2="CRÉER" end={100} start={400} color="text-orange" />
+          </div>
+
         </div>
-
-
-
-
         <div className="bg-mainColor h-screen flex flex-col items-base justify-center">
           <p className="font-neueRegular text-[50px] leading-[90%] mb-20 ml-20">Expertise</p>
           <div className="flex justify-evenly">

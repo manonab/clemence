@@ -1,4 +1,5 @@
 
+import RouageAnimation from "@/animations/rouage";
 import { Images } from "@/common/images";
 import Contact from "@/pages/contact";
 import { ArrowRight } from "@assets/arrow-right";
@@ -48,11 +49,8 @@ const Description: React.FC<DescriptionProps> = ({ id }) => {
             <div className="border-b-black border-b-2 w-[150px] h-12 absolute transition-transform duration-300 transform origin-left hover:scale-x-0" />
           </div>
         </div>
-        <div className="w-auto h-full relative">
-          <div className={`flex items-center justify-end pr-10 gap-3 relative w-full`}>
-            <Image src={Images.service} alt="Service" />
-            <p className="text-right font-neueRegular uppercase text-[200px] text-redHome">SERVICES</p>
-          </div>
+        <div className="w-auto h-full relative overflow-hidden">
+          <RouageAnimation text1="SERVICES" text2="SERVICES" end={-200} start={800} color="text-redHome" />
           <div className="flex items-center justify-around my-36 mx-20">
             <div className="flex-col items-center gap-3">
               <p className="font-neueBold text-orange text-serviceTitle">Communication</p>
@@ -67,7 +65,7 @@ const Description: React.FC<DescriptionProps> = ({ id }) => {
           </div>
           <div
             onClick={() => router.push('/services')}
-            className="mb-[250px] hover:cursor-pointer ml-24 flex flex-col mb-2 w-[150px] pb-2 items-center justify-around">
+            className="mb-[250px] hover:cursor-pointer ml-24 flex flex-col w-[150px] pb-2 items-center justify-around">
             <span className="flex items-center gap-3">
               <p className="uppercase text-xs	font-footer">En savoir plus</p>
               <ArrowRight />
