@@ -9,6 +9,7 @@ import { NextPage } from "next";
 import { BigArrow } from "@assets/big-arrow";
 import { ArrowRight } from "@assets/arrow-right";
 import { Link } from 'react-scroll';
+import RouageAnimation from "@/animations/rouage";
 
 
 const Mosaic: NextPage = () => {
@@ -95,7 +96,7 @@ const Mosaic: NextPage = () => {
 
       {/* DESKTOP VERSION */}
 
-      <div className="md:flex hidden flex-col">
+      <div className="md:flex hidden flex-col overflow-hidden">
         <div className="flex-col mt-10 mb-12 h-screen">
           <p className="uppercase font-neueRegular md:text-title text-capicheMobile text-redHome text-center mt-[180px] mb-[100px]">MOSAIC</p>
           <Link to="mosaic_desktop_target" className="hover:cursor-pointer" smooth={true}>
@@ -111,10 +112,10 @@ const Mosaic: NextPage = () => {
           </Link>
         </div>
         <div className="w-full">
-          <Image src={Images.mosaicPosts} alt="multiples post mosaic" className="w-full" id="mosaic_desktop_target" />
+          <RouageAnimation isMosaic={true} start={-800} end={100} otherStart={100} otherEnd={-800} />
         </div>
         <div className="bg-yellowHome py-10 mt-32">
-          <div className="w-[189px] h-[189px] rounded-full border-mosaic border border-2 absolute -left-16 -mt-36" />
+          <div className="w-[189px] h-[189px] rounded-full border-mosaic  border-2 absolute -left-16 -mt-36" />
           <div className="flex flex-col items-start ml-32">
             <p className="text-orange font-neueCondensed leading-[100%] text-[62px] mt-20">“Mosaic encourage, éduque<br></br> et inspire les jeunes<br></br> personnes LGBTQ+ et celleux<br></br> à leur côtés”.</p>
             <div className="flex items-center mx-auto w-full justify-start pb-28">
@@ -126,9 +127,9 @@ const Mosaic: NextPage = () => {
                   </div>
                 ))}
               </div>
-              <div className="w-[500px] h-[460px] absolute right-[350px] mb-28 bg-lightPink rounded-[50px] w-1/2">
+              <div className="w-[500px] h-[460px] absolute right-[350px] mb-28 bg-lightPink rounded-[50px]">
               </div>
-              <div className="z-[999] flex flex-col items-center justify-center  w-[500px] h-[460px] bg-mainColor rounded-[50px] w-1/2">
+              <div className="z-[999] flex flex-col items-center justify-center  w-[500px] h-[460px] bg-mainColor rounded-[50px]">
                 <p className="absolute mb-[520px] z-[999] uppercase font-neueRegular text-[50px] leading-[90%] mr-[260px]">Quelques<br></br> chiffres</p>
                 <p className="font-footer font-extrabold text-[100px] text-royalBlue text-center">+16%</p>
                 <p className="font-footer font-semibold text-[25px] text-royalBlue text-right">d’augmentation de<br></br> l’audience globale en<br></br> ligne.</p>

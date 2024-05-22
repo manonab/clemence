@@ -46,7 +46,12 @@ import mosaicPosts from "@assets/mosaic/post-mosaic-desktop.png";
 import rabbitError from "@assets/utils/rabbit-404.png";
 import cookies from "@assets/utils/cookies.png";
 import reviewMosaic from "@assets/mosaic/review-mosaic.png";
-
+import PostMosaic1 from "@assets/mosaic/mosaic-1.png";
+import PostMosaic2 from "@assets/mosaic/mosaic-2.png";
+import PostMosaic3 from "@assets/mosaic/mosaic-3.png";
+import PostMosaic4 from "@assets/mosaic/mosaic-4.png";
+import PostMosaic5 from "@assets/mosaic/mosaic-5.png";
+import PostMosaic6 from "@assets/mosaic/mosaic-6.png";
 export const Images = {
   eye: Eye,
   image1: Image1,
@@ -95,6 +100,12 @@ export const Images = {
   mosaicPosts: mosaicPosts,
   rabbitError: rabbitError,
   reviewMosaic: reviewMosaic,
-  cookies: cookies
+  cookies: cookies,
+  PostMosaic1: PostMosaic1,
+  PostMosaic2: PostMosaic2,
+  PostMosaic3: PostMosaic3,
+  PostMosaic4: PostMosaic4,
+  PostMosaic5: PostMosaic5,
+  PostMosaic6: PostMosaic6
 };
 
