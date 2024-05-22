@@ -13,6 +13,9 @@ const Services: NextPage = () => {
   const [isCommunicationSelected, setIsCommunicationSelected] = useState<boolean>(false)
   const [isDesignSelected, setIsDesignSelected] = useState<boolean>(false)
   const [isConsultingSelected, setIsConsultingSelected] = useState<boolean>(false)
+  const [showWhiteBackground, setShowWhiteBackground] = useState<boolean>(false);
+  const containerRef = useRef<HTMLDivElement | null>(null);
+
   const router = useRouter();
 
   const scrollingTextRef = useRef<HTMLDivElement>(null);
@@ -47,10 +50,29 @@ const Services: NextPage = () => {
   const handleConsulting = () => {
     setIsConsultingSelected((isConsultingSelected: boolean) => !isConsultingSelected)
   }
+  useEffect(() => {
+    const handleScroll = () => {
+      if (containerRef.current) {
+        const containerRect = containerRef.current.getBoundingClientRect();
+        const scrollPosition = window.scrollY || window.pageYOffset;
+        const threshold = containerRect.top + containerRect.height / 2;
+        if (scrollPosition > threshold) {
+          setShowWhiteBackground(true);
+        } else {
+          setShowWhiteBackground(false);
+        }
+      }
+    };
 
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [containerRef]);
   return (
     <>
-      <div className="hidden flex-col md:flex gap-6 w-full overflow-hidden">
+      <div className="hidden flex-col md:flex  w-full overflow-hidden">
         <div className="bg-yellowHome w-full h-screen flex flex-col">
           <div className="flex  justify-evenly mx-auto  min-h-[400px] mt-20 w-full">
             <div className="flex-col flex gap-12 w-auto h-full ">
@@ -113,10 +135,9 @@ const Services: NextPage = () => {
               </div>
             </div>
           </div>
-          <div className="w-full ">
-            <RouageAnimation text1="CRÉER" text2="CRÉER" end={100} start={400} color="text-orange" />
-          </div>
-
+        </div>
+        <div ref={containerRef} className={`${showWhiteBackground ? "bg-mainColor" : "bg-yellowHome"}`}>
+          <RouageAnimation text1="CRÉER" text2="CRÉER" end={-200} start={800} color="text-orange" />
         </div>
         <div className="bg-mainColor h-screen flex flex-col items-base justify-center">
           <p className="font-neueRegular text-[50px] leading-[90%] mb-20 ml-20">Expertise</p>
