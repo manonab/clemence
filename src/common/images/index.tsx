@@ -52,6 +52,7 @@ import PostMosaic3 from "@assets/mosaic/mosaic-3.png";
 import PostMosaic4 from "@assets/mosaic/mosaic-4.png";
 import PostMosaic5 from "@assets/mosaic/mosaic-5.png";
 import PostMosaic6 from "@assets/mosaic/mosaic-6.png";
+
 export const Images = {
   eye: Eye,
   image1: Image1,
@@ -106,6 +107,6 @@ export const Images = {
   PostMosaic3: PostMosaic3,
   PostMosaic4: PostMosaic4,
   PostMosaic5: PostMosaic5,
-  PostMosaic6: PostMosaic6
+  PostMosaic6: PostMosaic6,
 };
 
