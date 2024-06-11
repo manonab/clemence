@@ -1,12 +1,15 @@
-import { useEffect } from 'react';
-import { useRouter } from 'next/router';
-import { Layout } from "@/common/layout";
-import "./globals.css";
 import type { AppProps } from "next/app";
-import { HeaderColorProvider } from "@/context";
-import { AnimationProvider } from '@/context/animation-context';
+import { useRouter } from "next/router";
+import { useEffect } from "react";
 
-const GTM_ID = 'GTM-TQSBRQLV';
+import { Layout } from "@/common/layout";
+
+import "./globals.css";
+
+import { HeaderColorProvider } from "@/context";
+import { AnimationProvider } from "@/context/animation-context";
+
+const GTM_ID = "GTM-TQSBRQLV";
 declare global {
   interface Window {
     dataLayer: any[];
@@ -18,13 +21,13 @@ function MyApp({ Component, pageProps }: AppProps) {
   useEffect(() => {
     const handleRouteChange = (url: string) => {
       window.dataLayer.push({
-        event: 'pageview',
+        event: "pageview",
         page: url,
       });
     };
 
     const initGTM = () => {
-      const script = document.createElement('script');
+      const script = document.createElement("script");
       script.innerHTML = `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
       new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
       j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
@@ -34,12 +37,12 @@ function MyApp({ Component, pageProps }: AppProps) {
       document.head.appendChild(script);
     };
 
-    router.events.on('routeChangeComplete', handleRouteChange);
+    router.events.on("routeChangeComplete", handleRouteChange);
 
     initGTM();
 
     return () => {
-      router.events.off('routeChangeComplete', handleRouteChange);
+      router.events.off("routeChangeComplete", handleRouteChange);
     };
   }, []);
 

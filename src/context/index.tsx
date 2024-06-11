@@ -1,4 +1,4 @@
-import React, { createContext, ReactNode, useContext, useState } from 'react';
+import React, { createContext, ReactNode, useContext, useState } from "react";
 
 interface HeaderProps {
   children: ReactNode;
@@ -11,14 +11,16 @@ interface HeaderColorContextProps {
 
 const HeaderColorContext = createContext<HeaderColorContextProps>({
   headerColor: "",
-  setHeaderColor: () => { },
+  setHeaderColor: () => {},
 });
 
 export const useHeaderColor = () => useContext(HeaderColorContext);
 
-export const HeaderColorProvider: React.FC<HeaderProps> = ({ children }: HeaderProps) => {
+export const HeaderColorProvider: React.FC<HeaderProps> = ({
+  children,
+}: HeaderProps) => {
   const [headerColor, setHeaderColor] = useState<string>("");
-  console.log("headerColor from context:", headerColor)
+  console.log("headerColor from context:", headerColor);
   return (
     <HeaderColorContext.Provider value={{ headerColor, setHeaderColor }}>
       {children}

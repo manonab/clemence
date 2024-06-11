@@ -1,11 +1,13 @@
-import React, { createContext, ReactNode, useContext, useState } from 'react';
+import React, { createContext, ReactNode, useContext, useState } from "react";
 
 interface AnimationContextType {
   animationSeen: boolean;
   markAnimationSeen: () => void;
 }
 
-const AnimationContext = createContext<AnimationContextType | undefined>(undefined);
+const AnimationContext = createContext<AnimationContextType | undefined>(
+  undefined,
+);
 
 export const useAnimationContext = () => {
   const context = useContext(AnimationContext);

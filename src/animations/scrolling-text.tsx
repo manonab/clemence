@@ -1,6 +1,7 @@
-import React, { useEffect, useRef, useState } from "react";
-import { Images } from "@/common/images";
 import Image from "next/image";
+import React, { useEffect, useRef, useState } from "react";
+
+import { Images } from "@/common/images";
 
 const ScrollingText: React.FC = () => {
   const [scrolled, setScrolled] = useState<boolean>(false);
@@ -23,15 +24,16 @@ const ScrollingText: React.FC = () => {
     <div
       id="scrolling-text"
       ref={scrollingTextRef}
-      className={`flex items-center justify-end gap-3 relative`}
+      className={`relative flex items-center justify-end gap-3`}
     >
-      <p className="text-right font-neueRegular uppercase text-[160px] leading-[90%] text-redHome">
+      <p className="text-right font-neueRegular text-[160px] uppercase leading-[90%] text-redHome">
         CRÉER
       </p>
       <Image src={Images.service} alt="Service" />
       <p
-        className={`text-right font-neueRegular uppercase text-[160px] leading-[90%] text-redHome ${scrolled ? styles.textTransition : styles.hidden
-          }`}
+        className={`text-right font-neueRegular text-[160px] uppercase leading-[90%] text-redHome ${
+          scrolled ? styles.textTransition : styles.hidden
+        }`}
       >
         CRÉER
       </p>

@@ -1,13 +1,13 @@
+import Image from "next/image";
+import { useRouter } from "next/router";
+import React, { useEffect, useState } from "react";
+import { Parallax } from "react-scroll-parallax";
 
 import RouageAnimation from "@/animations/rouage";
 import { Images } from "@/common/images";
 import Contact from "@/pages/contact";
 import { ArrowRight } from "@assets/arrow-right";
 import { BigArrow } from "@assets/big-arrow";
-import Image from "next/image";
-import { useRouter } from "next/router";
-import React, { useEffect, useState } from "react";
-import { Parallax } from "react-scroll-parallax";
 
 interface DescriptionProps {
   id: string;
@@ -35,101 +35,195 @@ const Description: React.FC<DescriptionProps> = ({ id }) => {
 
   return (
     <div>
-      <div className={`w-full hidden h-auto md:flex flex-col ${isServicesSectionVisible ? "bg-mainColor" : "bg-yellowHome"}`}>
-        <div className="w-full h-full flex flex-col items-base gap-[150px] py-32">
-          <p className="ml-32 text-left text-orange text-[53px] leading-[57.6px] font-neueCondensed" id={id}>Le courage de nos idées, la passion de les<br></br> partager. Parce que chaque histoire mérite qu’on<br></br> la raconte, <span className="text-redHome font-bold">qu’attendons nous pour commencer ?</span></p>
-          <p className="mr-32 text-right text-orange text-[53px] leading-[57.6px] font-neueCondensed">Consultante en communication et créative<br></br> passionnée, je m’efforce d’aider votre projet à<br></br> grandir grâce au design et au marketing digital.</p>
+      <div
+        className={`hidden h-auto w-full flex-col md:flex ${isServicesSectionVisible ? "bg-mainColor" : "bg-yellowHome"}`}
+      >
+        <div className="items-base flex size-full flex-col gap-[150px] py-32">
+          <p
+            className="ml-32 text-left font-neueCondensed text-[53px] leading-[57.6px] text-orange"
+            id={id}
+          >
+            Le courage de nos idées, la passion de les<br></br> partager. Parce
+            que chaque histoire mérite qu’on<br></br> la raconte,{" "}
+            <span className="font-bold text-redHome">
+              qu’attendons nous pour commencer ?
+            </span>
+          </p>
+          <p className="mr-32 text-right font-neueCondensed text-[53px] leading-[57.6px] text-orange">
+            Consultante en communication et créative<br></br> passionnée, je
+            m’efforce d’aider votre projet à<br></br> grandir grâce au design et
+            au marketing digital.
+          </p>
           <div
-            onClick={() => router.push('/about')}
-            className="hover:cursor-pointer ml-24 flex flex-col mb-2 w-[150px] pb-2 items-center justify-around">
+            onClick={() => router.push("/about")}
+            className="mb-2 ml-24 flex w-[150px] flex-col items-center justify-around pb-2 hover:cursor-pointer"
+          >
             <span className="flex items-center gap-3">
-              <p className="uppercase text-xs	font-footer">En savoir plus</p>
+              <p className="font-footer text-xs	uppercase">En savoir plus</p>
               <ArrowRight />
             </span>
-            <div className="border-b-black border-b-2 w-[150px] h-12 absolute transition-transform duration-300 transform origin-left hover:scale-x-0" />
+            <div className="absolute h-12 w-[150px] origin-left border-b-2 border-b-black transition-transform duration-300 hover:scale-x-0" />
           </div>
         </div>
-        <div className="w-auto h-full relative overflow-hidden">
-          <RouageAnimation text1="SERVICES" text2="SERVICES" end={-200} start={800} color="text-redHome" />
-          <div className="flex items-center justify-around my-36 mx-20">
+        <div className="relative h-full w-auto overflow-hidden">
+          <RouageAnimation
+            text1="SERVICES"
+            text2="SERVICES"
+            end={-200}
+            start={800}
+            color="text-redHome"
+          />
+          <div className="mx-20 my-36 flex items-center justify-around">
             <div className="flex-col items-center gap-3">
-              <p className="font-neueBold text-orange text-serviceTitle">Communication</p>
+              <p className="font-neueBold text-serviceTitle text-orange">
+                Communication
+              </p>
               <div className="flex items-center">
-                <p className="font-neueBold text-orange text-serviceTitle mr-4">&</p>
-                <p className="font-neueBold text-orange text-serviceTitle">marketing</p>
+                <p className="mr-4 font-neueBold text-serviceTitle text-orange">
+                  &
+                </p>
+                <p className="font-neueBold text-serviceTitle text-orange">
+                  marketing
+                </p>
               </div>
-              <p className="font-neueBold text-orange text-serviceTitle ml-20">digital.</p>
+              <p className="ml-20 font-neueBold text-serviceTitle text-orange">
+                digital.
+              </p>
             </div>
-            <p className="font-neueBold text-orange text-serviceTitle">Design</p>
-            <p className="font-neueBold text-orange text-serviceTitle">Consulting</p>
+            <p className="font-neueBold text-serviceTitle text-orange">
+              Design
+            </p>
+            <p className="font-neueBold text-serviceTitle text-orange">
+              Consulting
+            </p>
           </div>
           <div
-            onClick={() => router.push('/services')}
-            className="mb-[250px] hover:cursor-pointer ml-24 flex flex-col w-[150px] pb-2 items-center justify-around">
+            onClick={() => router.push("/services")}
+            className="mb-[250px] ml-24 flex w-[150px] flex-col items-center justify-around pb-2 hover:cursor-pointer"
+          >
             <span className="flex items-center gap-3">
-              <p className="uppercase text-xs	font-footer">En savoir plus</p>
+              <p className="font-footer text-xs	uppercase">En savoir plus</p>
               <ArrowRight />
             </span>
-            <div className="border-b-black border-b-2 w-[150px] h-12 absolute transition-transform duration-300 transform origin-left hover:scale-x-0" />
+            <div className="absolute h-12 w-[150px] origin-left border-b-2 border-b-black transition-transform duration-300 hover:scale-x-0" />
           </div>
         </div>
         <Parallax speed={-15} className="min-h-[450px]">
-          <div className="w-full h-screen bg-saumon relative pt-20">
+          <div className="relative h-screen w-full bg-saumon pt-20">
             <div className="flex-col items-center justify-center">
-              <p className="flex justify-center mt-44 items-baseline text-[100px] leading-[100px] text-royalBlue font-neueSemiBold">Like what you s<span><Image src={Images?.rabbit} alt="rabbit" className="w-[130px] bg-center rounded-2xl mx-2" /></span>?</p>
-              <p className="text-black font-footer font-medium leading-[100px] text-center text-[80px]">Restons en contact</p>
+              <p className="mt-44 flex items-baseline justify-center font-neueSemiBold text-[100px] leading-[100px] text-royalBlue">
+                Like what you s
+                <span>
+                  <Image
+                    src={Images?.rabbit}
+                    alt="rabbit"
+                    className="mx-2 w-[130px] rounded-2xl bg-center"
+                  />
+                </span>
+                ?
+              </p>
+              <p className="text-center font-footer text-[80px] font-medium leading-[100px] text-black">
+                Restons en contact
+              </p>
             </div>
-            <div onClick={() => router.push('/contact')} className="py-5 px-10 transition-all duration-300 ease-in-out leading-[17.5px] font-bold text-sm text-center text-grayBlack uppercase hover:text-white hover:bg-grayBlack translate hover:cursor-pointer border-black border my-20 rounded-full w-[200px] mx-auto">
+            <div
+              onClick={() => router.push("/contact")}
+              className="translate mx-auto my-20 w-[200px] rounded-full border border-black px-10 py-5 text-center text-sm font-bold uppercase leading-[17.5px] text-grayBlack transition-all duration-300 ease-in-out hover:cursor-pointer hover:bg-grayBlack hover:text-white"
+            >
               Me contacter
             </div>
           </div>
         </Parallax>
       </div>
-      <div className="flex flex-col md:hidden h-full !w-full gap-12 mt-12">
+      <div className="mt-12 flex h-full !w-full flex-col gap-12 md:hidden">
         <div>
           <Image src={Images.homeMobile} width={200} alt="home" />
-          <p className="text-homeMobileTitle text-redHome font-neueRegular -mt-[100px] ml-6">Tout<br></br> commence<br></br> par une<br></br> idée. </p>
+          <p className="-mt-[100px] ml-6 font-neueRegular text-homeMobileTitle text-redHome">
+            Tout<br></br> commence<br></br> par une<br></br> idée.{" "}
+          </p>
           <div className="mx-6 my-10">
-            <p className="font-neueCondensed text-orange text-homeMobileContent max-w-[300px]">Consultante en communication et créative passionnée, je m’efforce d’aider votre marque à grandir grâce au design et au marketing digital.</p>
+            <p className="max-w-[300px] font-neueCondensed text-homeMobileContent text-orange">
+              Consultante en communication et créative passionnée, je m’efforce
+              d’aider votre marque à grandir grâce au design et au marketing
+              digital.
+            </p>
           </div>
           <div className="flex items-center justify-end">
             <div className="flex flex-col items-center gap-3">
               <BigArrow />
-              <p className="font-footer uppercase font-bold leading-[20px]">SCROLL & ROLL</p>
+              <p className="font-footer font-bold uppercase leading-[20px]">
+                SCROLL & ROLL
+              </p>
             </div>
             <Image src={Images.homeMobile2} width={160} alt="mobile2" />
           </div>
         </div>
-        <div className="bg-yellowHome w-full pb-24">
-          <div className="mt-20 mb-10 mx-6" id="scroll-target">
-            <p className="font-neueCondensed text-orange text-homeMobileContent max-w-[300px]">Le courage de nos idées, la passion de les partager.Parce que chaque histoire mérite qu&lsquo;on la raconte, <span className="text-redHome font-bold">qu&lsquo;attendons nous pour commencer ?</span></p>
+        <div className="w-full bg-yellowHome pb-24">
+          <div className="mx-6 mb-10 mt-20" id="scroll-target">
+            <p className="max-w-[300px] font-neueCondensed text-homeMobileContent text-orange">
+              Le courage de nos idées, la passion de les partager.Parce que
+              chaque histoire mérite qu&lsquo;on la raconte,{" "}
+              <span className="font-bold text-redHome">
+                qu&lsquo;attendons nous pour commencer ?
+              </span>
+            </p>
           </div>
-          <p className="mx-6 mb-5 font-neueRegular text-redHome text-homeMobileServices">services</p>
-          <div className="flex flex-col gap-3 items-start mx-6 my-5">
-            <p className="text-grayBlack font-footer font-bold">Communication</p>
+          <p className="mx-6 mb-5 font-neueRegular text-homeMobileServices text-redHome">
+            services
+          </p>
+          <div className="mx-6 my-5 flex flex-col items-start gap-3">
+            <p className="font-footer font-bold text-grayBlack">
+              Communication
+            </p>
             <Image src={Images.line} className="-mt-3" alt="line" />
-            <p className="text-grayBlack font-footer font-bold">Marketing digital</p>
+            <p className="font-footer font-bold text-grayBlack">
+              Marketing digital
+            </p>
             <Image src={Images.line} className="-mt-3" alt="line" />
-            <p className="text-grayBlack font-footer font-bold">Design</p>
+            <p className="font-footer font-bold text-grayBlack">Design</p>
             <Image src={Images.line} className="-mt-3" alt="line" />
-            <p className="text-grayBlack font-footer font-bold">Consulting</p>
+            <p className="font-footer font-bold text-grayBlack">Consulting</p>
             <Image src={Images.line} className="-mt-3" alt="line" />
           </div>
-          <p className="uppercase font-footer text-grayBlack text-[8px] mx-4 my-5" onClick={() => router.push("services")}>EN SAVOIR PLUS</p>
-          <p className="mx-6 my-5 font-neueRegular text-redHome text-homeMobileServices">projets</p>
-          <div className="overflow-auto whitespace-nowrap mx-5 scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-gray-200">
-            <div className="flex items-center justify-evenly space-x-6 py-5 px-10">
+          <p
+            className="mx-4 my-5 font-footer text-[8px] uppercase text-grayBlack"
+            onClick={() => router.push("services")}
+          >
+            EN SAVOIR PLUS
+          </p>
+          <p className="mx-6 my-5 font-neueRegular text-homeMobileServices text-redHome">
+            projets
+          </p>
+          <div className="scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-gray-200 mx-5 overflow-auto whitespace-nowrap">
+            <div className="flex items-center justify-evenly space-x-6 px-10 py-5">
               <Image
-                onClick={() => router.push('/projects/capiche')}
+                onClick={() => router.push("/projects/capiche")}
                 src={Images.homeCapiche}
-                alt="Logo de capiche" className="w-[130px] mx-5" />
-              <Image onClick={() => router.push('/projects/mosaic')} src={Images.homeMosaic} alt="Image 2" className="w-[130px] mx-5" />
-              <Image onClick={() => router.push('/projects/portfolio')} src={Images.homePortfolio} alt="Image 3" className="w-[130px] ml-5 mr-10" />
+                alt="Logo de capiche"
+                className="mx-5 w-[130px]"
+              />
+              <Image
+                onClick={() => router.push("/projects/mosaic")}
+                src={Images.homeMosaic}
+                alt="Image 2"
+                className="mx-5 w-[130px]"
+              />
+              <Image
+                onClick={() => router.push("/projects/portfolio")}
+                src={Images.homePortfolio}
+                alt="Image 3"
+                className="ml-5 mr-10 w-[130px]"
+              />
             </div>
           </div>
-          <p className="uppercase font-footer text-grayBlack text-[8px] mx-4 my-5" onClick={() => router.push("project")}>EN SAVOIR PLUS</p>
+          <p
+            className="mx-4 my-5 font-footer text-[8px] uppercase text-grayBlack"
+            onClick={() => router.push("project")}
+          >
+            EN SAVOIR PLUS
+          </p>
         </div>
-        <div className="bg-mainColor w-full pb-18">
+        <div className="pb-18 w-full bg-mainColor">
           <Contact />
         </div>
       </div>

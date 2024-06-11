@@ -1,8 +1,8 @@
-import { Images } from "@/common/images";
-import { useHeaderColor } from "@/context";
 import { StaticImageData } from "next/image";
 import { useEffect, useState } from "react";
 
+import { Images } from "@/common/images";
+import { useHeaderColor } from "@/context";
 
 interface DesktopAnimationState {
   currentImage: number;
@@ -30,8 +30,8 @@ export const useDesktopAnimation = () => {
       Images.image8,
       Images.image9,
       Images.image10,
-      Images.logo
-    ]
+      Images.logo,
+    ],
   });
 
   const images = [
@@ -46,14 +46,17 @@ export const useDesktopAnimation = () => {
     Images.image8,
     Images.image9,
     Images.image10,
-    Images.logo
+    Images.logo,
   ];
 
   const startSlideShow = () => {
     const interval = setInterval(() => {
       setState((prev) => ({
         ...prev,
-        currentImage: prev.currentImage < images.length - 1 ? prev.currentImage + 1 : prev.currentImage,
+        currentImage:
+          prev.currentImage < images.length - 1
+            ? prev.currentImage + 1
+            : prev.currentImage,
       }));
     }, 150);
 
@@ -76,7 +79,7 @@ export const useDesktopAnimation = () => {
         setState((prev) => ({ ...prev, showLastPart: true }));
       }, 1500);
       setTimeout(() => {
-        setHeaderColor('bg_slider hovered')
+        setHeaderColor("bg_slider hovered");
       }, 2200);
     }
   }, [state.currentImage, images.length, setHeaderColor]);
@@ -89,5 +92,5 @@ export const useDesktopAnimation = () => {
     }
   }, [state.showLastPart]);
 
-  return { state, images }
+  return { state, images };
 };

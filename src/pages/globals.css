@@ -1,86 +1,103 @@
-@import url('https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  background-color: #FCF6EF;
+  background-color: #fcf6ef;
 }
-body{
-    background-color: #FCF6EF;
+body {
+  background-color: #fcf6ef;
 }
 @layer base {
   @font-face {
-    font-family: 'Clash';
-    src: url('/static/fonts/ClashDisplay-Regular.otf') format('truetype');
+    font-family: "Clash";
+    src: url("/static/fonts/ClashDisplay-Regular.otf") format("truetype");
   }
   @font-face {
-    font-family: 'Clash-Bold';
-    src: url('/static/fonts/ClashDisplay-Bold.otf') format('truetype');
+    font-family: "Clash-Bold";
+    src: url("/static/fonts/ClashDisplay-Bold.otf") format("truetype");
   }
   @font-face {
-    font-family: 'Clash-Medium';
-    src: url('/static/fonts/ClashDisplay-Medium.otf') format('truetype');
+    font-family: "Clash-Medium";
+    src: url("/static/fonts/ClashDisplay-Medium.otf") format("truetype");
   }
   @font-face {
-    font-family: 'Clash-Extra';
-    src: url('/static/fonts/ClashDisplay-Extralight.otf') format('truetype');
+    font-family: "Clash-Extra";
+    src: url("/static/fonts/ClashDisplay-Extralight.otf") format("truetype");
   }
   @font-face {
-    font-family: 'Clash-Semibold';
-    src: url('/static/fonts/ClashDisplay-Semibold.otf') format('truetype');
+    font-family: "Clash-Semibold";
+    src: url("/static/fonts/ClashDisplay-Semibold.otf") format("truetype");
   }
   @font-face {
-    font-family: 'Clash-Light';
-    src: url('/static/fonts/ClashDisplay-Light.otf') format('truetype');
+    font-family: "Clash-Light";
+    src: url("/static/fonts/ClashDisplay-Light.otf") format("truetype");
   }
   @font-face {
-    font-family: 'kate';
-    src: url('/static/fonts/Kate-Display.otf') format('truetype');
+    font-family: "kate";
+    src: url("/static/fonts/Kate-Display.otf") format("truetype");
   }
   @font-face {
-    font-family: 'kate-medium';
-    src: url('/static/fonts/Kate-Medium.otf') format('truetype');
+    font-family: "kate-medium";
+    src: url("/static/fonts/Kate-Medium.otf") format("truetype");
   }
   @font-face {
-    font-family: 'kate-black';
-    src: url('/static/fonts/Kate-Black.otf') format('truetype');
+    font-family: "kate-black";
+    src: url("/static/fonts/Kate-Black.otf") format("truetype");
   }
   @font-face {
-    font-family: 'neue-medium';
-    src: url('/static/fonts/NeueHelveticaBQMedium.otf') format('truetype');
+    font-family: "neue-medium";
+    src: url("/static/fonts/NeueHelveticaBQMedium.otf") format("truetype");
   }
   @font-face {
-    font-family: 'neue-regular';
-    src: url('/static/fonts/NeueHelveticaBQRegular.otf') format('truetype');
+    font-family: "neue-regular";
+    src: url("/static/fonts/NeueHelveticaBQRegular.otf") format("truetype");
   }
   @font-face {
-    font-family: 'neue-semi';
-    src: url('/static/fonts/NeueHelveticaBQHeavy.otf') format('truetype');
+    font-family: "neue-semi";
+    src: url("/static/fonts/NeueHelveticaBQHeavy.otf") format("truetype");
   }
   @font-face {
-    font-family: 'neue-bold';
-    src: url('/static/fonts/NeueHelveticaCondensedBQBold.otf') format('truetype');
+    font-family: "neue-bold";
+    src: url("/static/fonts/NeueHelveticaCondensedBQBold.otf")
+      format("truetype");
   }
   @font-face {
-    font-family: 'neue-extra';
-    src: url('/static/fonts/NeueHelveticaBQBlack.otf') format('truetype');
+    font-family: "neue-extra";
+    src: url("/static/fonts/NeueHelveticaBQBlack.otf") format("truetype");
   }
   @font-face {
-    font-family: 'neue-condensed';
-    src: url('/static/fonts/HelveticaNeueMediumCondensed.otf') format('truetype');
+    font-family: "neue-condensed";
+    src: url("/static/fonts/HelveticaNeueMediumCondensed.otf")
+      format("truetype");
   }
 }
 
 .linear-background {
-  background: linear-gradient(180deg, rgba(144, 144, 144, 0.20) 0%, rgba(252, 246, 239, 0.20) 100%, rgba(252, 246, 239, 0.20) 100%);
+  background: linear-gradient(
+    180deg,
+    rgba(144, 144, 144, 0.2) 0%,
+    rgba(252, 246, 239, 0.2) 100%,
+    rgba(252, 246, 239, 0.2) 100%
+  );
 }
 .linear-services {
-  background: #F8FAD2 linear-gradient(180deg, rgba(144, 144, 144, 0.20) 0%, rgba(252, 246, 239, 0.20) 100%) !important;
+  background: #f8fad2
+    linear-gradient(
+      180deg,
+      rgba(144, 144, 144, 0.2) 0%,
+      rgba(252, 246, 239, 0.2) 100%
+    ) !important;
 }
 .linear-values {
-  background: #FCDED7 linear-gradient(180deg, rgba(144, 144, 144, 0.20) 0%, rgba(252, 246, 239, 0.20) 100%) !important;
+  background: #fcded7
+    linear-gradient(
+      180deg,
+      rgba(144, 144, 144, 0.2) 0%,
+      rgba(252, 246, 239, 0.2) 100%
+    ) !important;
 }
 .image-container {
   position: relative;
@@ -93,7 +110,7 @@ body{
   height: 3rem;
   border-bottom: 2px solid #000;
   transform-origin: left;
-  transition: transform 0.3s ease; 
+  transition: transform 0.3s ease;
 }
 
 .line:hover {
@@ -106,10 +123,10 @@ body{
   left: 100%;
   width: 184px;
   height: 3rem;
-  border-bottom: 2px solid #FFF;
-  transform-origin: right; 
-  transition: transform  ease-in-out; 
-  animation: reappearFromRight 0.8s ease forwards; 
+  border-bottom: 2px solid #fff;
+  transform-origin: right;
+  transition: transform ease-in-out;
+  animation: reappearFromRight 0.8s ease forwards;
 }
 /* #scrolling-text {
   white-space: nowrap;
@@ -123,8 +140,12 @@ body{
 } */
 
 @keyframes scroll-right {
-  0% { transform: translateX(100%); }
-  50% { transform: translateX(0%); } 
+  0% {
+    transform: translateX(100%);
+  }
+  50% {
+    transform: translateX(0%);
+  }
 }
 .hidden {
   display: none;
@@ -140,13 +161,12 @@ body{
 
 @keyframes reappearFromRight {
   0% {
-    transform:  translateX(0) scaleX(0); 
+    transform: translateX(0) scaleX(0);
   }
   100% {
-    transform:  translateX(0) scaleX(1);
+    transform: translateX(0) scaleX(1);
   }
 }
-
 
 .hidden-image {
   opacity: 0;
@@ -172,16 +192,18 @@ body{
 }
 
 .bg_slider {
-  --initialBgColor: #F8FAD2;
-  --slideBgColor: #FCDED7;
-  background-image: linear-gradient(90deg,
-      var(--initialBgColor) 0%,
-      var(--initialBgColor) 50%,
-      var(--slideBgColor) 50%,
-      var(--slideBgColor) 100%);
+  --initialBgColor: #f8fad2;
+  --slideBgColor: #fcded7;
+  background-image: linear-gradient(
+    90deg,
+    var(--initialBgColor) 0%,
+    var(--initialBgColor) 50%,
+    var(--slideBgColor) 50%,
+    var(--slideBgColor) 100%
+  );
   background-size: 400%;
-  transition: background-position 1.2s cubic-bezier(.47, .1, 1, .63);
-  transition-delay: 0.0s;
+  transition: background-position 1.2s cubic-bezier(0.47, 0.1, 1, 0.63);
+  transition-delay: 0s;
 }
 
 .bg_slider.hovered {
@@ -192,36 +214,36 @@ body{
 
 .move-left-to-right {
   animation-name: moveLeftToRight;
-  animation-duration: .8s;
+  animation-duration: 0.8s;
   animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
   animation-delay: 2s;
-  animation-fill-mode: forwards; 
+  animation-fill-mode: forwards;
   text-align: left;
   margin-left: 0;
   width: auto;
   opacity: 1;
-  color: #FF0101;
+  color: #ff0101;
 }
 
 @keyframes moveLeftToRight {
   0% {
     transform: translateX(0);
     text-align: left;
-    color: #FF0101; 
+    color: #ff0101;
     opacity: 1;
   }
   45% {
-    color: #FF0101; 
+    color: #ff0101;
     opacity: 0.6;
   }
   55% {
-    color: #0071F3; 
+    color: #0071f3;
     opacity: 0.6;
   }
   100% {
     transform: translateX(100%);
     text-align: right;
-    color: #0071F3; 
+    color: #0071f3;
     opacity: 1;
   }
 }
