@@ -17,7 +17,7 @@ const Description: React.FC<DescriptionProps> = ({ id }) => {
   const [scrollPosition, setScrollPosition] = useState<number>(0);
   const [scrolled, setScrolled] = useState<boolean>(false);
   const isServicesSectionVisible = scrollPosition > 1350;
-
+  console.log(scrolled);
   useEffect(() => {
     const handleScroll = () => {
       setScrollPosition(window.scrollY);

@@ -1,21 +1,13 @@
 import { Close } from "@mui/icons-material";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import React, { SetStateAction, Dispatch } from "react";
+import React from "react";
 
 import { Images } from "@/common/images";
 import { useAnimationContext } from "@/context/animation-context";
 import { PoshLogo } from "@assets/utils/posh";
 
-interface ConstructionProps {
-  isVisible: boolean;
-  setIsVisible: Dispatch<SetStateAction<boolean>>;
-}
-
-export const Construction: React.FC<ConstructionProps> = ({
-  isVisible,
-  setIsVisible,
-}: ConstructionProps) => {
+export const Construction: React.FC = () => {
   const { animationSeen, markAnimationSeen } = useAnimationContext();
   if (animationSeen) {
     return null;

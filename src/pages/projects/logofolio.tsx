@@ -2,7 +2,7 @@ import { ArrowBack } from "@mui/icons-material";
 import { motion } from "framer-motion";
 import { NextPage } from "next";
 import Image from "next/image";
-import { NextRouter, useRouter } from "next/router";
+import { useRouter } from "next/router";
 import { useEffect, useState, useRef } from "react";
 import { Link } from "react-scroll";
 

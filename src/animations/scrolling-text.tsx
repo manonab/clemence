@@ -32,7 +32,7 @@ const ScrollingText: React.FC = () => {
       <Image src={Images.service} alt="Service" />
       <p
         className={`text-right font-neueRegular text-[160px] uppercase leading-[90%] text-redHome ${
-          scrolled ? styles.textTransition : styles.hidden
+          scrolled
         }`}
       >
         CRÉER

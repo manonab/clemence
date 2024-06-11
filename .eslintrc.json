@@ -21,7 +21,6 @@
   ],
   "plugins": [
     "react",
-    "jest",
     "@typescript-eslint",
     "import",
     "tailwindcss",

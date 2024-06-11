@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { Link } from "react-scroll";
 import { Parallax, ParallaxProvider } from "react-scroll-parallax";
 
@@ -15,35 +15,14 @@ const timing = {
 
 const HomeComponent: React.FC = () => {
   const { setHeaderColor } = useHeaderColor();
-  const [modalOpen, setModalOpen] = useState<boolean>(false);
-  const [cookiesOpen, setCookiesOpen] = useState<boolean>(false);
 
   useEffect(() => {
     setHeaderColor("#FCF6EF");
   }, [setHeaderColor]);
 
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setCookiesOpen(true);
-    }, 2000);
-    return () => clearTimeout(timer);
-  }, []);
-
-  const handleClose = () => {
-    setModalOpen(false);
-  };
-
-  const handleCookiesClose = () => {
-    setCookiesOpen(false);
-
-    setTimeout(() => {
-      setModalOpen(true);
-    }, 2000);
-  };
-
   return (
     <ParallaxProvider>
-      <Construction isVisible={modalOpen} setIsVisible={setModalOpen} />
+      <Construction />
       <Parallax
         speed={-30}
         className="hidden w-full flex-col items-center justify-around gap-4 md:flex"

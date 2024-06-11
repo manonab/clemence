@@ -3,16 +3,18 @@ import { useRouter } from "next/router";
 import { useEffect } from "react";
 
 import { Layout } from "@/common/layout";
-
 import "./globals.css";
-
 import { HeaderColorProvider } from "@/context";
 import { AnimationProvider } from "@/context/animation-context";
 
 const GTM_ID = "GTM-TQSBRQLV";
+interface Props {
+  event: string;
+  page: string;
+}
 declare global {
   interface Window {
-    dataLayer: any[];
+    dataLayer: Props[];
   }
 }
 function MyApp({ Component, pageProps }: AppProps) {

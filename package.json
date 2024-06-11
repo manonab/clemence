@@ -9,7 +9,22 @@
     "lint": "eslint ./src --ext .ts,.tsx,.js,.jsx",
     "lint:fix": "eslint --fix . --debug",
     "format": "prettier --write .",
-    "prepare": "husky"
+    "check": "tsc --noEmit",
+    "prepare": "lint-staged"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run prepare"
+    }
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --fix --parser @typescript-eslint/parser",
+      "prettier --write"
+    ],
+    "*.{css,scss,md}": [
+      "prettier --write"
+    ]
   },
   "dependencies": {
     "@emotion/react": "^11.11.4",
@@ -29,7 +44,6 @@
     "eslint-plugin-react-hooks": "^4.6.2",
     "eslint-plugin-tailwindcss": "^3.17.3",
     "framer-motion": "^11.2.10",
-    "lint-staged": "^15.2.5",
     "next": "14.2.3",
     "prettier": "^3.3.2",
     "react": "^18.3.1",
@@ -45,6 +59,7 @@
     "eslint": "^8.57.0",
     "eslint-config-next": "14.2.3",
     "husky": "^9.0.11",
+    "lint-staged": "^15.2.5",
     "postcss": "^8.4.38",
     "tailwindcss": "^3.4.4",
     "typescript": "^5.4.5"

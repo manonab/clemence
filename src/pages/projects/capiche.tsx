@@ -12,7 +12,6 @@ import { ArrowRight } from "@assets/arrow-right";
 import { BigArrow } from "@assets/big-arrow";
 import { Capiche001 } from "@assets/capiche/capiche-001";
 import { Capiche002 } from "@assets/capiche/capiche-002";
-import { Logo } from "@assets/capiche/logo";
 
 const Capiche: NextPage = () => {
   const { setHeaderColor } = useHeaderColor();
@@ -110,9 +109,6 @@ const Capiche: NextPage = () => {
           </div>
           <Capiche002 />
         </div>
-        {/* <div className="absolute right-0 ]">
-          <Logo />
-      </div> */}
       </div>
       <div className="mt-[120px] hidden w-full justify-center gap-3 pb-[150px] md:flex">
         <div className="flex w-full items-center justify-around">

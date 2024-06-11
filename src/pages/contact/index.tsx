@@ -62,9 +62,6 @@ const Contact: NextPage = () => {
         setEmail("");
         setSubject("");
         setMessage("");
-      })
-      .catch((error: any) => {
-        console.error("Erreur lors de l'envoi de l'e-mail :", error);
       });
   };
 
