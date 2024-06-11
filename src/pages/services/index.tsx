@@ -82,8 +82,8 @@ const Services: NextPage = () => {
     <>
       <div className="hidden w-full flex-col  overflow-hidden md:flex">
         <div className="flex h-screen w-full flex-col bg-yellowHome">
-          <div className="mx-auto  mt-20 flex  min-h-[400px] w-full justify-evenly">
-            <div className="flex h-full w-auto flex-col gap-12 ">
+          <div className="m-auto  flex  min-h-[450px] w-full justify-evenly">
+            <div className="flex h-full w-auto flex-col gap-12">
               <p className="font-neueBold  text-[50px] leading-[90%] text-gray-900">
                 Communication &<br></br>marketing digital
               </p>
@@ -212,75 +212,75 @@ const Services: NextPage = () => {
             </div>
           </div>
         </div>
-        <div
-          ref={containerRef}
-          className={`${showWhiteBackground ? "bg-mainColor" : "bg-yellowHome"}`}
-        >
-          <RouageAnimation
-            text1="CRÉER"
-            text2="CRÉER"
-            end={-200}
-            start={800}
-            color="text-orange"
-          />
-        </div>
-        <div className="items-base flex h-screen flex-col justify-center bg-mainColor">
-          <p className="mb-20 ml-20 font-neueRegular text-[50px] leading-[90%]">
-            Expertise
-          </p>
-          <div className="flex justify-evenly">
-            <div className="w-[330px] flex-col">
-              <p className="font-footer text-[70px] font-semibold leading-[90%]">
-                01.
-              </p>
-              <p className="my-6 font-footer text-base font-bold leading-[90%]">
-                Analyser.
-              </p>
-              <p className="font-footer text-base leading-[130%]">
-                Ma mission est de vous écouter et de vous accompagner pas à pas
-                dans votre parcours. Avoir une compréhension approfondie de vos
-                problématiques pour trouver ensemble des solutions efficaces et
-                personnalisées qui répondent à vos défis uniques.{" "}
-              </p>
-            </div>
+      </div>
+      <div
+        ref={containerRef}
+        className={`${showWhiteBackground ? "bg-mainColor" : "bg-yellowHome"}`}
+      >
+        <RouageAnimation
+          text1="CRÉER"
+          text2="CRÉER"
+          end={-200}
+          start={800}
+          color="text-orange"
+        />
+      </div>
+      <div className="items-base flex h-screen flex-col justify-center bg-mainColor">
+        <p className="-mt-36 mb-20 ml-20 font-neueRegular text-[50px] leading-[90%]">
+          Expertise
+        </p>
+        <div className="flex justify-evenly">
+          <div className="w-[330px] flex-col">
+            <p className="font-footer text-[70px] font-semibold leading-[90%]">
+              01.
+            </p>
+            <p className="my-6 font-footer text-base font-bold leading-[90%]">
+              Analyser.
+            </p>
+            <p className="font-footer text-base leading-[130%]">
+              Ma mission est de vous écouter et de vous accompagner pas à pas
+              dans votre parcours. Avoir une compréhension approfondie de vos
+              problématiques pour trouver ensemble des solutions efficaces et
+              personnalisées qui répondent à vos défis uniques.{" "}
+            </p>
+          </div>
 
-            <div className="w-[330px] flex-col">
-              <p className="font-footer text-[70px] font-semibold leading-[90%]">
-                02.
-              </p>
-              <p className="my-6 font-footer text-base font-bold leading-[90%]">
-                Optimiser.
-              </p>
-              <p className="font-footer text-base leading-[130%]">
-                Construire ensemble une image de marque solide et cohérente. En
-                adoptant une approche centrée sur vos besoins, je vise à créer
-                pour vous une stratégie innovante et actuelle qui qui résonnera
-                avec votre audience cible et génèrera un engagement nouveau.
-              </p>
-            </div>
-            <div className="w-[330px] flex-col">
-              <p className="font-footer text-[70px] font-semibold leading-[90%]">
-                03.
-              </p>
-              <p className="my-6 font-footer text-base font-bold leading-[90%]">
-                Conseiller.
-              </p>
-              <p className="font-footer text-base leading-[130%]">
-                Dans un monde où la diversité est devenue un facteur non
-                négociable, je serai là pour vous soutenir et vous fournir les
-                outils et conseils nécessaires pour naviguer avec succès dans
-                ces nouveaux enjeux.
-              </p>
-            </div>
+          <div className="w-[330px] flex-col">
+            <p className="font-footer text-[70px] font-semibold leading-[90%]">
+              02.
+            </p>
+            <p className="my-6 font-footer text-base font-bold leading-[90%]">
+              Optimiser.
+            </p>
+            <p className="font-footer text-base leading-[130%]">
+              Construire ensemble une image de marque solide et cohérente. En
+              adoptant une approche centrée sur vos besoins, je vise à créer
+              pour vous une stratégie innovante et actuelle qui qui résonnera
+              avec votre audience cible et génèrera un engagement nouveau.
+            </p>
           </div>
-          <div
-            onClick={() => router.push("/projects")}
-            className="ml-[100px] mt-[100px] flex w-[105px] items-center justify-around gap-1.5 pb-2 hover:cursor-pointer"
-          >
-            <p className="text- font-footer	font-bold uppercase">Projets</p>
-            <ArrowRight />
-            <div className="absolute h-12 w-[105px] origin-left border-b-2 border-b-black transition-transform duration-300 hover:scale-x-0" />
+          <div className="w-[330px] flex-col">
+            <p className="font-footer text-[70px] font-semibold leading-[90%]">
+              03.
+            </p>
+            <p className="my-6 font-footer text-base font-bold leading-[90%]">
+              Conseiller.
+            </p>
+            <p className="font-footer text-base leading-[130%]">
+              Dans un monde où la diversité est devenue un facteur non
+              négociable, je serai là pour vous soutenir et vous fournir les
+              outils et conseils nécessaires pour naviguer avec succès dans ces
+              nouveaux enjeux.
+            </p>
           </div>
+        </div>
+        <div
+          onClick={() => router.push("/projects")}
+          className="ml-[100px] mt-[100px] flex w-[105px] items-center justify-around gap-1.5 pb-2 hover:cursor-pointer"
+        >
+          <p className="text- font-footer	font-bold uppercase">Projets</p>
+          <ArrowRight />
+          <div className="absolute h-12 w-[105px] origin-left border-b-2 border-b-black transition-transform duration-300 hover:scale-x-0" />
         </div>
       </div>
       <div className="mx-auto mt-16 flex flex-col md:hidden">
