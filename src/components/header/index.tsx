@@ -12,6 +12,7 @@ export const Menu: React.FC = () => {
   const router = useRouter();
   const [selected, setSelected] = useState<string>();
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
+  const [isScrolled, setIsScrolled] = useState<boolean>(false);
   const { headerColor } = useHeaderColor();
 
   const pathTextMapping = [
@@ -43,13 +44,27 @@ export const Menu: React.FC = () => {
     }
   }, [router, setSelected]);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 30) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
   return (
     <div>
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, ease: [0.43, 0.13, 0.23, 0.96] }}
-        className={`${headerColor} mx-auto hidden flex-row items-center justify-between px-[40px] py-[30px] md:flex`}
+        className={`${headerColor}  fixed top-0 mx-auto hidden w-full flex-row items-center justify-between px-[40px] py-[30px] md:flex ${isScrolled ? "md:hidden" : "fixed"}`}
       >
         <div
           onClick={() => router.push("/home")}
@@ -86,6 +101,41 @@ export const Menu: React.FC = () => {
           <div className="absolute  h-10 w-[165px] origin-left border-b-2  border-b-redHome transition-transform duration-300 hover:scale-x-0" />
         </div>
       </motion.div>
+      <button
+        onClick={() => setIsScrolled(false)}
+        className={`fixed right-10 top-10 z-50 gap-1 bg-none text-grayBlack hover:cursor-pointer focus:outline-none ${isScrolled ? "md:flex" : "md:hidden"}`}
+      >
+        <motion.div
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -20 }}
+          transition={{ duration: 0.5, type: "spring", stiffness: 150 }}
+          className="size-2.5 rounded-full bg-orange"
+        ></motion.div>
+        <motion.div
+          initial={{ y: 10, opacity: 0, scale: 0.5 }}
+          animate={{ y: 0, opacity: 1, scale: 1 }}
+          transition={{
+            delay: 0.6,
+            duration: 0.8,
+            type: "spring",
+            stiffness: 150,
+          }}
+          className="size-2.5 rounded-full bg-redHome"
+        ></motion.div>
+        <motion.div
+          initial={{ y: 10, opacity: 0, scale: 0.5 }}
+          animate={{ y: 0, opacity: 1, scale: 1 }}
+          transition={{
+            delay: 0.9,
+            duration: 0.8,
+            type: "spring",
+            stiffness: 150,
+          }}
+          className="size-2.5 rounded-full bg-pinkVive"
+        ></motion.div>
+      </button>
+      {/* mobile version */}
       <div className="md:hidden">
         <div
           className={`${headerColor} mt-2 flex items-center justify-between px-[30px] py-[32px]`}
