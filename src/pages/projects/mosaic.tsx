@@ -8,6 +8,7 @@ import { Link } from "react-scroll";
 
 import RouageAnimation from "@/animations/rouage";
 import { Images } from "@/common/images";
+import Carousel from "@/components/mosaic/carousel";
 import { useHeaderColor } from "@/context";
 import { ArrowRight } from "@assets/arrow-right";
 import { BigArrow } from "@assets/big-arrow";
@@ -108,7 +109,7 @@ const Mosaic: NextPage = () => {
           <div className="flex items-center justify-around gap-12">
             <Image
               src={Images.mosaic1}
-              className="-ml-[120px] size-[180px]"
+              className="ml-[-120px] size-[180px]"
               alt="mosaic1"
             />
             <Image
@@ -149,7 +150,7 @@ const Mosaic: NextPage = () => {
           <a
             target="_blank"
             href="https://www.linkedin.com/in/cl%C3%A9mence-dequaire/?locale=en_US"
-            className="translate mx-auto mb-20 min-w-[100px] max-w-[130px] rounded-full border border-black p-2 text-center text-[10px] font-bold uppercase text-grayBlack transition-all duration-300 ease-in-out hover:cursor-pointer hover:bg-grayBlack hover:text-white"
+            className="mx-auto mb-20 min-w-[100px] max-w-[130px] rounded-full border border-black p-2 text-center text-[10px] font-bold uppercase text-grayBlack transition-all duration-300 ease-in-out hover:cursor-pointer hover:bg-grayBlack hover:text-white"
             rel="noreferrer"
           >
             Voir sur linkedin
@@ -211,18 +212,8 @@ const Mosaic: NextPage = () => {
                   </div>
                 ))}
               </div>
-              <div className="absolute right-[350px] mb-28 h-[460px] w-[500px] rounded-[50px] bg-lightPink"></div>
-              <div className="z-[999] flex h-[460px] w-[500px] flex-col  items-center justify-center rounded-[50px] bg-mainColor">
-                <p className="absolute z-[999] mb-[520px] mr-[260px] font-neueRegular text-[50px] uppercase leading-[90%]">
-                  Quelques<br></br> chiffres
-                </p>
-                <p className="text-center font-footer text-[100px] font-extrabold text-royalBlue">
-                  +16%
-                </p>
-                <p className="text-right font-footer text-[25px] font-semibold text-royalBlue">
-                  d’augmentation de<br></br> l’audience globale en<br></br>{" "}
-                  ligne.
-                </p>
+              <div className="ml-36">
+                <Carousel />
               </div>
             </div>
           </div>
