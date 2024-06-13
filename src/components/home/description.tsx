@@ -38,7 +38,7 @@ const Description: React.FC<DescriptionProps> = ({ id }) => {
       <div
         className={`hidden h-auto w-full flex-col md:flex ${isServicesSectionVisible ? "bg-mainColor" : "bg-yellowHome"}`}
       >
-        <div className="items-base flex size-full flex-col gap-[150px] py-32">
+        <div className="flex size-full flex-col items-baseline gap-[150px] py-32">
           <p
             className="ml-32 text-left font-neueCondensed text-[53px] leading-[57.6px] text-orange"
             id={id}
@@ -55,7 +55,7 @@ const Description: React.FC<DescriptionProps> = ({ id }) => {
             au marketing digital.
           </p>
           <div
-            onClick={() => router.push("/about")}
+            onClick={() => router.push("/services")}
             className="mb-2 ml-24 flex w-[150px] flex-col items-center justify-around pb-2 hover:cursor-pointer"
           >
             <span className="flex items-center gap-3">
@@ -128,7 +128,7 @@ const Description: React.FC<DescriptionProps> = ({ id }) => {
             </div>
             <div
               onClick={() => router.push("/contact")}
-              className="translate mx-auto my-20 w-[200px] rounded-full border border-black px-10 py-5 text-center text-sm font-bold uppercase leading-[17.5px] text-grayBlack transition-all duration-300 ease-in-out hover:cursor-pointer hover:bg-grayBlack hover:text-white"
+              className="mx-auto my-20 w-[200px] rounded-full border border-black px-10 py-5 text-center text-sm font-bold uppercase leading-[17.5px] text-grayBlack transition-all duration-300 ease-in-out hover:cursor-pointer hover:bg-grayBlack hover:text-white"
             >
               Me contacter
             </div>
@@ -138,7 +138,7 @@ const Description: React.FC<DescriptionProps> = ({ id }) => {
       <div className="mt-12 flex h-full !w-full flex-col gap-12 md:hidden">
         <div>
           <Image src={Images.homeMobile} width={200} alt="home" />
-          <p className="-mt-[100px] ml-6 font-neueRegular text-homeMobileTitle text-redHome">
+          <p className="ml-6 mt-[-100px] font-neueRegular text-homeMobileTitle text-redHome">
             Tout<br></br> commence<br></br> par une<br></br> idée.{" "}
           </p>
           <div className="mx-6 my-10">
@@ -194,7 +194,7 @@ const Description: React.FC<DescriptionProps> = ({ id }) => {
           <p className="mx-6 my-5 font-neueRegular text-homeMobileServices text-redHome">
             projets
           </p>
-          <div className="scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-gray-200 mx-5 overflow-auto whitespace-nowrap">
+          <div className="mx-5 overflow-auto whitespace-nowrap">
             <div className="flex items-center justify-evenly space-x-6 px-10 py-5">
               <Image
                 onClick={() => router.push("/projects/capiche")}
@@ -218,12 +218,12 @@ const Description: React.FC<DescriptionProps> = ({ id }) => {
           </div>
           <p
             className="mx-4 my-5 font-footer text-[8px] uppercase text-grayBlack"
-            onClick={() => router.push("project")}
+            onClick={() => router.push("/project")}
           >
             EN SAVOIR PLUS
           </p>
         </div>
-        <div className="pb-18 w-full bg-mainColor">
+        <div className="w-full bg-mainColor pb-20">
           <Contact />
         </div>
       </div>

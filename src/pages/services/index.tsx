@@ -4,7 +4,6 @@ import { useRouter } from "next/router";
 import { useEffect, useRef, useState } from "react";
 import { isMobile } from "react-device-detect";
 
-import RouageAnimation from "@/animations/rouage";
 import { useHeaderColor } from "@/context";
 import { ArrowRight } from "@assets/arrow-right";
 
@@ -16,9 +15,6 @@ const Services: NextPage = () => {
   const [isDesignSelected, setIsDesignSelected] = useState<boolean>(false);
   const [isConsultingSelected, setIsConsultingSelected] =
     useState<boolean>(false);
-  const [showWhiteBackground, setShowWhiteBackground] =
-    useState<boolean>(false);
-  const containerRef = useRef<HTMLDivElement | null>(null);
 
   const router = useRouter();
 
@@ -58,30 +54,11 @@ const Services: NextPage = () => {
       (isConsultingSelected: boolean) => !isConsultingSelected,
     );
   };
-  useEffect(() => {
-    const handleScroll = () => {
-      if (containerRef.current) {
-        const containerRect = containerRef.current.getBoundingClientRect();
-        const scrollPosition = window.scrollY || window.pageYOffset;
-        const threshold = containerRect.top + containerRect.height / 2;
-        if (scrollPosition > threshold) {
-          setShowWhiteBackground(true);
-        } else {
-          setShowWhiteBackground(false);
-        }
-      }
-    };
 
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, [containerRef]);
   return (
     <>
       <div className="hidden w-full flex-col  overflow-hidden md:flex">
-        <div className="flex h-screen w-full flex-col bg-yellowHome">
+        <div className="flex h-screen w-screen flex-col bg-yellowHome">
           <div className="m-auto  flex  min-h-[450px] w-full justify-evenly">
             <div className="flex h-full w-auto flex-col gap-12">
               <p className="font-neueBold  text-[50px] leading-[90%] text-gray-900">
@@ -213,24 +190,12 @@ const Services: NextPage = () => {
           </div>
         </div>
       </div>
-      <div
-        ref={containerRef}
-        className={`${showWhiteBackground ? "bg-mainColor" : "bg-yellowHome"}`}
-      >
-        <RouageAnimation
-          text1="CRÉER"
-          text2="CRÉER"
-          end={-200}
-          start={800}
-          color="text-orange"
-        />
-      </div>
-      <div className="items-base flex h-screen flex-col justify-center bg-mainColor">
-        <p className="-mt-36 mb-20 ml-20 font-neueRegular text-[50px] leading-[90%]">
+      <div className="flex h-screen w-screen flex-col items-baseline justify-center bg-mainColor p-20">
+        <p className="-mt-36 mb-20 font-neueRegular text-[50px] leading-[90%]">
           Expertise
         </p>
-        <div className="flex justify-evenly">
-          <div className="w-[330px] flex-col">
+        <div className="flex w-full items-center justify-evenly">
+          <div className="flex-col px-5">
             <p className="font-footer text-[70px] font-semibold leading-[90%]">
               01.
             </p>
@@ -244,8 +209,7 @@ const Services: NextPage = () => {
               personnalisées qui répondent à vos défis uniques.{" "}
             </p>
           </div>
-
-          <div className="w-[330px] flex-col">
+          <div className="flex-col px-5">
             <p className="font-footer text-[70px] font-semibold leading-[90%]">
               02.
             </p>
@@ -259,7 +223,7 @@ const Services: NextPage = () => {
               avec votre audience cible et génèrera un engagement nouveau.
             </p>
           </div>
-          <div className="w-[330px] flex-col">
+          <div className="flex-col px-5">
             <p className="font-footer text-[70px] font-semibold leading-[90%]">
               03.
             </p>
@@ -276,13 +240,14 @@ const Services: NextPage = () => {
         </div>
         <div
           onClick={() => router.push("/projects")}
-          className="ml-[100px] mt-[100px] flex w-[105px] items-center justify-around gap-1.5 pb-2 hover:cursor-pointer"
+          className="mt-[100px] flex w-[105px] items-center justify-around gap-1.5 pb-2 pl-3 hover:cursor-pointer"
         >
-          <p className="text- font-footer	font-bold uppercase">Projets</p>
+          <p className="font-footer	font-bold uppercase">Projets</p>
           <ArrowRight />
-          <div className="absolute h-12 w-[105px] origin-left border-b-2 border-b-black transition-transform duration-300 hover:scale-x-0" />
+          <div className="absolute h-12 w-[105px] origin-left border-b-2 border-b-black pl-[100px] transition-transform duration-300 hover:scale-x-0" />
         </div>
       </div>
+
       <div className="mx-auto mt-16 flex flex-col md:hidden">
         <p className="ml-10 font-neueSemiBold text-homeMobileTitleServices text-redHome">
           Communication<br></br> & marketing <br></br>digital

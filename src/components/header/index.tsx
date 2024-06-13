@@ -2,7 +2,7 @@ import { Close } from "@mui/icons-material";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { useRouter } from "next/router";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import { Images } from "@/common/images";
 import { useHeaderColor } from "@/context";
@@ -10,7 +10,7 @@ import { Logo } from "@assets/utils/logo-clemence";
 
 export const Menu: React.FC = () => {
   const router = useRouter();
-  const [selected, setSelected] = useState<string>("/home");
+  const [selected, setSelected] = useState<string>();
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
   const { headerColor } = useHeaderColor();
 
@@ -36,6 +36,12 @@ export const Menu: React.FC = () => {
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
+
+  useEffect(() => {
+    if (router.pathname) {
+      setSelected(router.pathname);
+    }
+  }, [router, setSelected]);
 
   return (
     <div>
