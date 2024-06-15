@@ -162,7 +162,7 @@ const PortFolio: NextPage = () => {
             onClick={() => router.push("/projects")}
             className="mx-auto min-w-[100px] max-w-[130px] rounded-full border border-black p-2 text-center text-[10px] font-bold uppercase text-grayBlack transition-all duration-300 ease-in-out hover:cursor-pointer hover:bg-grayBlack hover:text-white"
           >
-            Autres projets
+            Autres projet
           </div>
         </div>
       </div>
@@ -174,7 +174,7 @@ const PortFolio: NextPage = () => {
         <div className="my-28 ml-28 flex size-full flex-col items-start gap-6 overflow-auto">
           <div className="flex flex-col items-start pb-6 pl-6">
             <p className="mb-2 font-neueSemiBold text-[50px] lowercase text-redHome">
-              Concept.
+              Concept
             </p>
             <p className="max-w-1/3 min-w-[100px] font-footer text-[18px] leading-[130%]">
               J&lsquo;ai conçu ce portfolio comme une<br></br> introduction à
@@ -248,7 +248,7 @@ const PortFolio: NextPage = () => {
               className="-ml-5 mt-[100px] hidden w-[200px] flex-col items-center justify-around pb-2 hover:cursor-pointer md:flex"
             >
               <span className="flex items-center gap-3">
-                <p className="font-footer text-xs	uppercase">Autres projets</p>
+                <p className="font-footer text-xs	uppercase">Autres projet</p>
                 <ArrowRight />
               </span>
               <div className="absolute h-12 w-[150px] origin-left border-b-2 border-b-black transition-transform duration-300 hover:scale-x-0" />

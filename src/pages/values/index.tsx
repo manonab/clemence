@@ -84,7 +84,7 @@ const Values: NextPage = () => {
         </div>
         <div className="mt-10 h-full !w-full bg-yellowHome pb-10 pt-20">
           <p className="mx-10 font-neueRegular text-[20px] leading-[90%]">
-            Manifesto
+            Manifeste
           </p>
           <div className="my-20 flex flex-col gap-4">
             <div className="flex items-center justify-evenly">
@@ -128,14 +128,14 @@ const Values: NextPage = () => {
           </div>
           <div
             onClick={() => router.push("/projects")}
-            className="translate mx-auto w-[100px] rounded-full border border-black px-2 py-3 text-center text-[7px] font-bold uppercase text-grayBlack transition-all duration-300 ease-in-out hover:cursor-pointer hover:bg-grayBlack hover:text-white"
+            className="mx-auto w-[100px] rounded-full border border-black px-2 py-3 text-center text-[7px] font-bold uppercase text-grayBlack transition-all duration-300 ease-in-out hover:cursor-pointer hover:bg-grayBlack hover:text-white"
           >
             Mes projets
           </div>
         </div>
       </div>
       <div className="hidden size-full bg-saumon pb-20 pt-36 md:flex">
-        <p className="ml-16 font-neueRegular text-[190px] leading-[90%] text-orange">
+        <p className="ml-16 font-neueRegular text-[250px] leading-[90%] text-orange">
           Tout <br></br> commença<br></br>par une<br></br>
           <span className="text-redHome">idée</span>.
         </p>
@@ -152,8 +152,8 @@ const Values: NextPage = () => {
             sont écoulées depuis mon premier poste et cette idée s’est
             transformée en un défi que je relève passionnément chaque jour.
             Grâce à d’autres humain.e.s qui croyaient fort en leur convictions,
-            j’ai eu la chance de porter défis audacieux et des messages engagés.
-            Serez-vous les prochain.e.s ?
+            j’ai eu la chance de porter des défis audacieux et des messages
+            engagés. Serez-vous les prochain.e.s ?
           </p>
           <div>
             <Image src={Images.pride} alt="men with rainbow flag" />
@@ -188,7 +188,7 @@ const Values: NextPage = () => {
         </div>
         <div className="mt-10 hidden h-full !w-full flex-col bg-yellowHome pt-20 md:flex">
           <p className="ml-[180px] font-neueRegular text-[60px] leading-[90%]">
-            Manifesto
+            Manifeste
           </p>
           <div className="m-20 flex flex-col gap-4">
             <div className="flex items-center justify-evenly">

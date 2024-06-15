@@ -151,8 +151,8 @@ const Contact: NextPage = () => {
           </div>
         </div>
       </div>
-      <div className="hidden w-full flex-col md:flex">
-        <p className="ml-20 font-neueRegular text-[200px] leading-tight text-orange">
+      <div className="mt-28 hidden w-full flex-col md:flex">
+        <p className="ml-20 font-neueRegular text-[200px] leading-[90%] text-orange">
           Créons
           <br />
           ensemble.

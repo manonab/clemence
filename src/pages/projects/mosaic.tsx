@@ -28,12 +28,12 @@ const Mosaic: NextPage = () => {
 
   const mosaicContent = [
     {
-      title: "mission.",
+      title: "concept",
       content:
         "Mosaic est une association de défense des droits des personnes LGBTQ+ de 12 à 18 ans. Ils proposent des services d’écoute et d’animation pour les jeunes et leurs proches.",
     },
     {
-      title: "objectifs",
+      title: "mission",
       content:
         "Augmenter la visibilité globale de l’association avec un plan de communication adapté, de nouveaux concepts et en accord avec le ton et le design déjà mis en place.",
     },
@@ -228,7 +228,7 @@ const Mosaic: NextPage = () => {
             className="-ml-10 mt-[100px] hidden w-[200px] flex-col items-center justify-around pb-2 hover:cursor-pointer md:flex"
           >
             <span className="flex items-center gap-3">
-              <p className="font-footer text-xs	uppercase">Autres projets</p>
+              <p className="font-footer text-xs	uppercase">Autres projet</p>
               <ArrowRight />
             </span>
             <div className="absolute h-12 w-[150px] origin-left border-b-2 border-b-black transition-transform duration-300 hover:scale-x-0" />

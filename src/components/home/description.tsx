@@ -113,7 +113,7 @@ const Description: React.FC<DescriptionProps> = ({ id }) => {
             <div className="flex-col items-center justify-center">
               <p className="mt-44 flex items-baseline justify-center font-neueSemiBold text-[100px] leading-[100px] text-royalBlue">
                 Like what you s
-                <span>
+                <span className="-pb-10">
                   <Image
                     src={Images?.rabbit}
                     alt="rabbit"
@@ -123,7 +123,7 @@ const Description: React.FC<DescriptionProps> = ({ id }) => {
                 ?
               </p>
               <p className="text-center font-footer text-[80px] font-medium leading-[100px] text-black">
-                Restons en contact
+                Restons en contact.
               </p>
             </div>
             <div

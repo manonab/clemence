@@ -31,18 +31,16 @@ export const Menu: React.FC = () => {
 
   const handleChange = (route: string) => {
     setSelected(route);
-    router.push(`${route}`);
+    if (route === "/home") {
+      router.push(`/`);
+    } else {
+      router.push(`${route}`);
+    }
   };
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
-
-  useEffect(() => {
-    if (router.pathname) {
-      setSelected(router.pathname);
-    }
-  }, [router, setSelected]);
 
   useEffect(() => {
     if (router.pathname) {
@@ -68,16 +66,17 @@ export const Menu: React.FC = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
   return (
     <div>
       <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1, ease: [0.43, 0.13, 0.23, 0.96] }}
-        className={`${headerColor}  fixed top-0 mx-auto hidden w-full flex-row items-center justify-between px-[40px] py-[30px] md:flex ${isScrolled ? "md:hidden" : "fixed"}`}
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: isScrolled ? 0 : 1, y: isScrolled ? -20 : 0 }}
+        transition={{ duration: 0.5, ease: "easeInOut" }}
+        className={`${headerColor} fixed top-0 mx-auto hidden w-full flex-row items-center justify-between px-[40px] py-[30px] md:flex`}
       >
         <div
-          onClick={() => router.push("/home")}
+          onClick={() => router.push("/")}
           className="h-[70px] hover:cursor-pointer"
         >
           <Logo width={"50"} height={"40"} />
@@ -108,12 +107,15 @@ export const Menu: React.FC = () => {
               Rencontrons nous
             </p>
           </span>
-          <div className="absolute  h-10 w-[165px] origin-left border-b-2  border-b-redHome transition-transform duration-300 hover:scale-x-0" />
+          <div className="absolute h-10 w-[165px] origin-left border-b-2 border-b-redHome transition-transform duration-300 hover:scale-x-0" />
         </div>
       </motion.div>
-      <button
+      <motion.button
         onClick={() => setIsScrolled(false)}
-        className={`fixed right-10 top-10 z-50 gap-1 bg-none text-grayBlack hover:cursor-pointer focus:outline-none ${isScrolled ? "md:flex" : "md:hidden"}`}
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: isScrolled ? 1 : 0, y: isScrolled ? 0 : -20 }}
+        transition={{ duration: 0.5, ease: "easeInOut" }}
+        className={`fixed right-10 top-10 z-50 gap-1 bg-none text-grayBlack hover:cursor-pointer focus:outline-none md:hidden`}
       >
         <motion.div
           initial={{ opacity: 0, y: -20 }}
@@ -144,14 +146,14 @@ export const Menu: React.FC = () => {
           }}
           className="size-2.5 rounded-full bg-pinkVive"
         ></motion.div>
-      </button>
+      </motion.button>
       {/* mobile version */}
       <div className="md:hidden">
         <div
           className={`${headerColor} mt-2 flex items-center justify-between px-[30px] py-[32px]`}
         >
           <div
-            onClick={() => router.push("/home")}
+            onClick={() => router.push("/")}
             className="h-[80px] hover:cursor-pointer"
           >
             <Image src={Images.newlogo} alt="logo" width={60} height={50} />

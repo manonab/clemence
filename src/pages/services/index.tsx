@@ -92,7 +92,9 @@ const Services: NextPage = () => {
                   }
                 >
                   <ul className="ml-3 mt-3 list-disc text-gray-900">
-                    <li className="text-base font-semibold">Social Media</li>
+                    <li className="text-base font-semibold">
+                      Community management
+                    </li>
                     <li className="text-base font-semibold">SEO</li>
                     <li className="text-base font-semibold">
                       Gestion de projet
@@ -219,8 +221,8 @@ const Services: NextPage = () => {
             <p className="font-footer text-base leading-[130%]">
               Construire ensemble une image de marque solide et cohérente. En
               adoptant une approche centrée sur vos besoins, je vise à créer
-              pour vous une stratégie innovante et actuelle qui qui résonnera
-              avec votre audience cible et génèrera un engagement nouveau.
+              pour vous une stratégie innovante et actuelle qui résonnera avec
+              votre audience cible et génèrera un engagement nouveau.
             </p>
           </div>
           <div className="flex-col px-5">
@@ -324,8 +326,8 @@ const Services: NextPage = () => {
         {isConsultingSelected && (
           <div className="ml-5 mt-8">
             <p className="mx-4 font-footer text-[12px]">
-              Vous porter vers une communication plus éthique et solidaire qui
-              répond aux problématiques d’aujourd’hui.
+              Vous encourager vers une communication plus éthique et solidaire
+              qui répond aux problématiques d’aujourd’hui.
             </p>
             <ul className="ml-10 mt-5 list-disc">
               <li className="font-footer text-[12px] font-medium">
