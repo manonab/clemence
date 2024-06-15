@@ -164,7 +164,7 @@ const Values: NextPage = () => {
             “Seules 54 % des entreprises françaises<br></br> ont embrassé la
             diversité”.
           </p>
-          <p className="absolute left-[0.5%] rotate-[269deg]">
+          <p className="absolute left-[0.5%] -mb-24 rotate-[269deg]">
             *Têtu; Inclusion, Workday.
           </p>
           <div>

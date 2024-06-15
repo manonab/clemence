@@ -111,9 +111,9 @@ const Description: React.FC<DescriptionProps> = ({ id }) => {
         <Parallax speed={-15} className="min-h-[450px]">
           <div className="relative h-screen w-full bg-saumon pt-20">
             <div className="flex-col items-center justify-center">
-              <p className="mt-44 flex items-baseline justify-center font-neueSemiBold text-[100px] leading-[100px] text-royalBlue">
+              <p className="mt-44 flex  justify-center font-neueSemiBold text-[100px] leading-[100px] text-royalBlue">
                 Like what you s
-                <span className="-pb-10">
+                <span className="pt-[30px]">
                   <Image
                     src={Images?.rabbit}
                     alt="rabbit"
