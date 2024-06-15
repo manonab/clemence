@@ -187,7 +187,7 @@ const Values: NextPage = () => {
           </div>
         </div>
         <div className="mt-10 hidden h-full !w-full flex-col bg-yellowHome pt-20 md:flex">
-          <p className="ml-[180px] font-neueRegular text-[60px] leading-[90%]">
+          <p className="ml-[180px] font-neueCondensed text-[60px] leading-[90%]">
             Manifeste
           </p>
           <div className="m-20 flex flex-col gap-12">
