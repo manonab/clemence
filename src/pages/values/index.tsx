@@ -174,7 +174,7 @@ const Values: NextPage = () => {
             <Image
               alt="pink arrow"
               src={Images.manifesto}
-              className="mr-2 size-[40px] rotate-180"
+              className="mr-2 size-[34px] rotate-180"
             />
             <p className="w-1/2 min-w-[550px] max-w-[650px] text-justify font-footer text-[18px] leading-[150%]">
               Au fil de ma vie et de ma carrière personnelle, j’ai pu
