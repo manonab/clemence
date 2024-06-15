@@ -1,4 +1,4 @@
-import { motion, useViewportScroll } from "framer-motion";
+import { motion, useScroll } from "framer-motion";
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
 
@@ -25,7 +25,7 @@ const RouageAnimation: React.FC<RouageAnimationProps> = ({
   otherEnd,
   otherStart,
 }) => {
-  const { scrollY } = useViewportScroll();
+  const { scrollY } = useScroll();
   const [scrollProgress, setScrollProgress] = useState<number>(0);
 
   useEffect(() => {

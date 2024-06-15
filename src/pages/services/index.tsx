@@ -57,8 +57,8 @@ const Services: NextPage = () => {
 
   return (
     <>
-      <div className="hidden w-full flex-col  overflow-hidden pt-20 md:flex">
-        <div className="flex h-screen w-screen flex-col bg-yellowHome">
+      <div className="hidden w-full flex-col  overflow-hidden md:flex">
+        <div className="flex h-screen w-screen flex-col bg-yellowHome pt-36">
           <div className="m-auto  flex  min-h-[450px] w-full justify-evenly">
             <div className="flex h-full w-auto flex-col gap-12">
               <p className="font-neueBold  text-[50px] leading-[90%] text-gray-900">

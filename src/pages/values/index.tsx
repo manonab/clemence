@@ -134,7 +134,7 @@ const Values: NextPage = () => {
           </div>
         </div>
       </div>
-      <div className="hidden size-full bg-saumon pb-20 pt-24 md:flex">
+      <div className="hidden size-full bg-saumon pb-20 pt-36 md:flex">
         <p className="ml-16 font-neueRegular text-[190px] leading-[90%] text-orange">
           Tout <br></br> commença<br></br>par une<br></br>
           <span className="text-redHome">idée</span>.

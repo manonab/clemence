@@ -161,7 +161,7 @@ const Mosaic: NextPage = () => {
       {/* DESKTOP VERSION */}
 
       <div className="hidden flex-col overflow-hidden md:flex">
-        <div className="mb-12 mt-10 h-screen flex-col">
+        <div className="mb-12 h-screen flex-col pt-36">
           <p className="mb-[100px] mt-[180px] text-center font-neueRegular text-capicheMobile uppercase text-redHome md:text-title">
             MOSAIC
           </p>

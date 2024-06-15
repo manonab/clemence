@@ -39,7 +39,7 @@ export default function Project() {
   };
 
   return (
-    <div className="z-[999] flex size-full flex-col items-center justify-center gap-12 bg-mainColor">
+    <div className="z-[999] flex size-full flex-col items-center justify-center gap-12 bg-mainColor pt-32">
       <div className="ml-3 flex w-full flex-col items-start gap-6 md:ml-20 md:mt-16">
         {pathTextMappingMobile.map((route, index) => (
           <div key={index} className="flex h-[200px] items-center">

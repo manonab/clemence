@@ -160,7 +160,7 @@ const PortFolio: NextPage = () => {
         <div className="my-20">
           <div
             onClick={() => router.push("/projects")}
-            className="translate mx-auto min-w-[100px] max-w-[130px] rounded-full border border-black p-2 text-center text-[10px] font-bold uppercase text-grayBlack transition-all duration-300 ease-in-out hover:cursor-pointer hover:bg-grayBlack hover:text-white"
+            className="mx-auto min-w-[100px] max-w-[130px] rounded-full border border-black p-2 text-center text-[10px] font-bold uppercase text-grayBlack transition-all duration-300 ease-in-out hover:cursor-pointer hover:bg-grayBlack hover:text-white"
           >
             Autres projets
           </div>

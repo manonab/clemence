@@ -45,6 +45,16 @@ export const Menu: React.FC = () => {
   }, [router, setSelected]);
 
   useEffect(() => {
+    if (router.pathname) {
+      if (router.pathname === "/") {
+        setSelected("/home");
+      } else {
+        setSelected(router.pathname);
+      }
+    }
+  }, [router, setSelected]);
+
+  useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 30) {
         setIsScrolled(true);

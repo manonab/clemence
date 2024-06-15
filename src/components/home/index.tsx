@@ -1,11 +1,11 @@
 import { motion } from "framer-motion";
-import { useEffect } from "react";
+// import { useEffect } from "react";
 import { Link } from "react-scroll";
 import { Parallax, ParallaxProvider } from "react-scroll-parallax";
 
 import Description from "./description";
 import { Construction } from "../construction";
-import { useHeaderColor } from "@/context";
+// import { useHeaderColor } from "@/context";
 import { BigArrow } from "@assets/big-arrow";
 
 const timing = {
@@ -14,18 +14,18 @@ const timing = {
 };
 
 const HomeComponent: React.FC = () => {
-  const { setHeaderColor } = useHeaderColor();
+  // const { setHeaderColor } = useHeaderColor();
 
-  useEffect(() => {
-    setHeaderColor("#FCF6EF");
-  }, [setHeaderColor]);
+  // useEffect(() => {
+  //   setHeaderColor("#FCF6EF");
+  // }, [setHeaderColor]);
 
   return (
     <ParallaxProvider>
       <Construction />
       <Parallax
-        speed={-30}
-        className="hidden w-full flex-col items-center justify-around gap-4 md:flex"
+        speed={-15}
+        className="mb-20 hidden w-full flex-col items-center justify-around gap-4 md:flex"
       >
         <motion.div
           transition={{ ...timing, delay: 2 }}
@@ -48,7 +48,7 @@ const HomeComponent: React.FC = () => {
           </Link>
         </motion.div>
       </Parallax>
-      <Parallax speed={-15}>
+      <Parallax speed={-10}>
         <Description id="scroll_target" />
       </Parallax>
     </ParallaxProvider>
