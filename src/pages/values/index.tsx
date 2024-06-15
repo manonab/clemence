@@ -190,7 +190,7 @@ const Values: NextPage = () => {
           <p className="ml-[180px] font-neueRegular text-[60px] leading-[90%]">
             Manifeste
           </p>
-          <div className="m-20 flex flex-col gap-4">
+          <div className="m-20 flex flex-col gap-12">
             <div className="flex items-center justify-evenly">
               <p className="text-footer text-[70px] font-semibold leading-[90px]">
                 01.
