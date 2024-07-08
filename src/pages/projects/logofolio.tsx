@@ -12,8 +12,6 @@ import { BigArrow } from "@assets/big-arrow";
 
 const LogoFolio: NextPage = () => {
   const { setHeaderColor } = useHeaderColor();
-  const [showSaumonBackground, setShowSaumonBackground] =
-    useState<boolean>(false);
   const [showYellowBackground, setShowYellowBackground] =
     useState<boolean>(false);
   const containerRef = useRef<HTMLDivElement | null>(null);
@@ -28,27 +26,6 @@ const LogoFolio: NextPage = () => {
   useEffect(() => {
     setHeaderColor("linear-background");
   }, [setHeaderColor]);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (containerRef.current) {
-        const containerRect = containerRef.current.getBoundingClientRect();
-        const scrollPosition = window.scrollY || window.pageYOffset;
-        const threshold = containerRect.top + containerRect.height / 2;
-        if (scrollPosition > threshold) {
-          setShowSaumonBackground(true);
-        } else {
-          setShowSaumonBackground(false);
-        }
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, [containerRef]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -80,13 +57,13 @@ const LogoFolio: NextPage = () => {
       <div className="mx-5 flex w-8 md:hidden" onClick={handleGoBack}>
         <ArrowBack />
       </div>
-      <div className="h-screen">
+      <div className="my-56 h-screen">
         <Link to="logo_target" className="hover:cursor-pointer" smooth={true}>
-          <p className="my-40 text-center font-neueRegular text-titleMobile uppercase text-redHome md:text-title">
+          <p className="mt-40 text-center font-neueRegular text-titleMobile uppercase text-redHome md:text-title">
             Logofolio
           </p>
           <motion.div
-            className="mx-auto mb-20 flex flex-col items-center gap-3"
+            className="mx-auto my-20 flex flex-col items-center gap-3"
             initial={{ opacity: 0, y: 100 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ ...timing, delay: 0.6 }}
@@ -101,7 +78,7 @@ const LogoFolio: NextPage = () => {
       <div
         ref={containerRef}
         id="logo_target"
-        className={` ${showSaumonBackground ? "bg-saumon" : "bg-mainColor"} h-screen w-full py-[150px] md:py-[250px]`}
+        className={`h-screen w-full bg-mainColor py-[150px] `}
       >
         <Image
           src={Images.newlogo}

@@ -121,8 +121,8 @@ const Values: NextPage = () => {
                 04.
               </p>
               <p className="text-footer w-2/3 text-justify text-[12px] font-semibold leading-[120%] tracking-[02%]">
-                <span className="text-orange">Amusons nous</span> à créer,
-                partager, designer. Partageons l’amour de nos métiers.
+                <span className="text-orange">Amusons nous</span> partageons
+                l’amour de nos métiers.
               </p>
             </div>
           </div>
@@ -134,7 +134,7 @@ const Values: NextPage = () => {
           </div>
         </div>
       </div>
-      <div className="hidden size-full bg-saumon pb-20 pt-36 md:flex">
+      <div className="hidden size-full h-screen bg-saumon pb-20 pt-36 md:flex">
         <p className="ml-16 font-neueRegular text-[250px] leading-[90%] text-orange">
           Tout <br></br> commença<br></br>par une<br></br>
           <span className="text-redHome">idée</span>.
@@ -225,8 +225,8 @@ const Values: NextPage = () => {
                 04.
               </p>
               <p className="text-footer w-2/3 text-justify text-[28px] font-semibold leading-[120%] tracking-[02%]">
-                <span className="text-orange">Amusons nous</span>Partageons
-                l’amour<br></br> de nos métiers.
+                <span className="text-orange">Amusons nous</span> partageons
+                l’amour de nos métiers.
               </p>
             </div>
           </div>

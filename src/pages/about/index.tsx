@@ -112,8 +112,8 @@ const About: NextPage = () => {
             <div className="flex items-center">
               <p className="mr-11 font-footer text-[70px]">04.</p>
               <p className="font-footer text-[28px] leading-[100%]">
-                <span className="text-orange">Amusons nous</span> à créer,
-                partager, designer. Partageons l’amour de nos métiers.
+                <span className="text-orange">Amusons nous</span> partageons
+                l’amour de nos métiers.
               </p>
             </div>
           </div>
