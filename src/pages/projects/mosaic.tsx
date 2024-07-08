@@ -10,7 +10,6 @@ import RouageAnimation from "@/animations/rouage";
 import { Images } from "@/common/images";
 import Carousel from "@/components/mosaic/carousel";
 import { useHeaderColor } from "@/context";
-import { ArrowRight } from "@assets/arrow-right";
 import { BigArrow } from "@assets/big-arrow";
 
 const Mosaic: NextPage = () => {
@@ -216,22 +215,6 @@ const Mosaic: NextPage = () => {
                 <Carousel />
               </div>
             </div>
-          </div>
-        </div>
-        <div className="mx-auto bg-mainColor py-20">
-          <p className="my-16 text-center font-neueRegular text-[150px] uppercase leading-[90%] text-redHome">
-            Témoignage
-          </p>
-          <Image src={Images.reviewMosaic} alt="review" className="mb-32" />
-          <div
-            onClick={() => router.push("/projects")}
-            className="-ml-10 mt-[100px] hidden w-[200px] flex-col items-center justify-around pb-2 hover:cursor-pointer md:flex"
-          >
-            <span className="flex items-center gap-3">
-              <p className="font-footer text-xs	uppercase">Autres projet</p>
-              <ArrowRight />
-            </span>
-            <div className="absolute h-12 w-[150px] origin-left border-b-2 border-b-black transition-transform duration-300 hover:scale-x-0" />
           </div>
         </div>
       </div>

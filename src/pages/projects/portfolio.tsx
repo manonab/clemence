@@ -162,7 +162,7 @@ const PortFolio: NextPage = () => {
             onClick={() => router.push("/projects")}
             className="mx-auto min-w-[100px] max-w-[130px] rounded-full border border-black p-2 text-center text-[10px] font-bold uppercase text-grayBlack transition-all duration-300 ease-in-out hover:cursor-pointer hover:bg-grayBlack hover:text-white"
           >
-            Autres projet
+            Autre projet
           </div>
         </div>
       </div>
@@ -248,7 +248,7 @@ const PortFolio: NextPage = () => {
               className="-ml-5 mt-[100px] hidden w-[200px] flex-col items-center justify-around pb-2 hover:cursor-pointer md:flex"
             >
               <span className="flex items-center gap-3">
-                <p className="font-footer text-xs	uppercase">Autres projet</p>
+                <p className="font-footer text-xs	uppercase">Autre projet</p>
                 <ArrowRight />
               </span>
               <div className="absolute h-12 w-[150px] origin-left border-b-2 border-b-black transition-transform duration-300 hover:scale-x-0" />

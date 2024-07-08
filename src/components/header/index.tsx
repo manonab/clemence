@@ -17,13 +17,13 @@ export const Menu: React.FC = () => {
 
   const pathTextMapping = [
     { path: "/home", name: "accueil" },
-    { path: "/values", name: "mes valeurs" },
+    { path: "/about", name: "à propos" },
     { path: "/services", name: "services" },
     { path: "/projects", name: "projets" },
   ];
 
   const pathTextMappingMobile = [
-    { path: "/values", name: "à propos" },
+    { path: "/about", name: "à propos" },
     { path: "/services", name: "services" },
     { path: "/projects", name: "projets" },
     { path: "/contact", name: "contact" },

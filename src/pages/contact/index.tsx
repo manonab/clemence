@@ -160,7 +160,7 @@ const Contact: NextPage = () => {
         <div className="mx-28 mb-16">
           <BigDownArrow />
         </div>
-        <div className="flex w-full  justify-start">
+        <div className="ml-12 flex justify-start">
           <div className="flex w-1/2 flex-col items-start px-16">
             <p className="mb-2 font-neueCondensed text-2xl leading-snug -tracking-wide">
               Nom
@@ -182,7 +182,7 @@ const Contact: NextPage = () => {
             />
           </div>
         </div>
-        <div className="mt-10 flex w-full justify-start">
+        <div className="ml-12 mt-10  flex justify-start">
           <div className="flex w-1/2 flex-col items-start px-16">
             <p className="mb-2 font-neueCondensed text-2xl leading-snug -tracking-wide">
               Email
@@ -204,7 +204,7 @@ const Contact: NextPage = () => {
             />
           </div>
         </div>
-        <div className="mt-10 flex w-auto flex-col items-start px-16">
+        <div className="ml-12 mt-10 flex w-auto flex-col items-start px-16">
           <p className="mb-2 font-neueCondensed text-2xl leading-snug -tracking-wide">
             Votre message
           </p>
@@ -214,7 +214,7 @@ const Contact: NextPage = () => {
             className="min-h-[250px] w-full rounded-[5px] border border-black bg-mainColor px-5 py-3"
           />
         </div>
-        <div className="my-20 ml-28 flex w-3/4 items-start justify-between">
+        <div className="my-20 ml-28 flex items-start justify-between">
           <div
             className="mr-4 max-h-[105px] max-w-[330px] rounded-3xl border border-black  hover:cursor-pointer"
             onClick={handleSendEmail}
@@ -223,8 +223,8 @@ const Contact: NextPage = () => {
               Hit me baby (one time)
             </p>
           </div>
-          <div className="flex flex-col items-start gap-3">
-            <p className="mr-8 font-neueCondensed text-[45px] leading-[100%] text-orange">
+          <div className="flex flex-col items-start gap-3 px-16">
+            <p className="font-neueCondensed text-[45px] leading-[100%] text-orange">
               Retrouvez moi également sur <br />
               Linkedin juste
               <a

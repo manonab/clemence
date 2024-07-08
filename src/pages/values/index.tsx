@@ -151,7 +151,7 @@ const Values: NextPage = () => {
             grandir des projets auxquels je crois profondément. Cinq années se
             sont écoulées depuis mon premier poste et cette idée s’est
             transformée en un défi que je relève passionnément chaque jour.
-            Grâce à d’autres humain.e.s qui croyaient fort en leur convictions,
+            Grâce à d’autres humain.e.s qui croyaient fort en leurs convictions,
             j’ai eu la chance de porter des défis audacieux et des messages
             engagés. Serez-vous les prochain.e.s ?
           </p>
@@ -225,8 +225,8 @@ const Values: NextPage = () => {
                 04.
               </p>
               <p className="text-footer w-2/3 text-justify text-[28px] font-semibold leading-[120%] tracking-[02%]">
-                <span className="text-orange">Amusons nous</span> à créer,
-                partager, designer. Partageons l’amour<br></br> de nos métiers.
+                <span className="text-orange">Amusons nous</span>Partageons
+                l’amour<br></br> de nos métiers.
               </p>
             </div>
           </div>

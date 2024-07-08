@@ -68,7 +68,7 @@ const Services: NextPage = () => {
                 <div className="flex items-end">
                   <p className="w-[300px] text-base text-gray-900">
                     Informer, engager et fidéliser votre audience avec une
-                    stratégie moderne et adaptée à vos problématiques.
+                    stratégie moderne et adaptée à vos besoins.
                   </p>
                   {isCommunicationSelected ? (
                     <div
@@ -261,7 +261,7 @@ const Services: NextPage = () => {
           {isCommunicationSelected ? "-" : "+"}
         </p>
         {isCommunicationSelected && (
-          <div className="ml-5 mt-8">
+          <div className="ml-5 mt-8 animate-bounce transition-all duration-300  ease-in-out">
             <p className="mx-4 font-footer text-[12px]">
               Informer, engager et fidéliser votre audience avec une stratégie
               moderne et adaptée à vos problématiques.
@@ -295,7 +295,7 @@ const Services: NextPage = () => {
           {isDesignSelected ? "-" : "+"}
         </p>
         {isDesignSelected && (
-          <div className="ml-5 mt-8">
+          <div className="ml-5 mt-8 transition-all duration-300 ease-in-out ">
             <p className="mx-4 font-footer text-[12px]">
               Donner de la puissance à vos messages avec des designs marquants
               et intuitifs, notamment sur les réseaux.
@@ -324,7 +324,7 @@ const Services: NextPage = () => {
           {isConsultingSelected ? "-" : "+"}
         </p>
         {isConsultingSelected && (
-          <div className="ml-5 mt-8">
+          <div className="ml-5 mt-8 animate-ping">
             <p className="mx-4 font-footer text-[12px]">
               Vous encourager vers une communication plus éthique et solidaire
               qui répond aux problématiques d’aujourd’hui.
@@ -364,7 +364,7 @@ const Services: NextPage = () => {
               Construire ensemble une image de marque solide et cohérente. En
               adoptant une approche centrée sur vos besoins, je vise à créer
               pour vous une stratégie innovante et actuelle qui résonnera avec
-              votre audience cible et génèrera un engagement nouveau.
+              votre audience cible et générera un engagement nouveau.
             </p>
           </div>
           <div className="mx-6 mb-16 mt-10 flex flex-col gap-4">
@@ -381,7 +381,7 @@ const Services: NextPage = () => {
           </div>
           <div
             onClick={() => router.push("/projects")}
-            className="translate mx-auto w-[100px] rounded-full border border-black px-2 py-3 text-center text-[7px] font-bold uppercase text-grayBlack transition-all duration-300 ease-in-out hover:cursor-pointer hover:bg-grayBlack hover:text-white"
+            className="mx-auto w-[100px] rounded-full border border-black px-2 py-3 text-center text-[7px] font-bold uppercase text-grayBlack transition-all duration-300 ease-in-out hover:cursor-pointer hover:bg-grayBlack hover:text-white"
           >
             Mes projets
           </div>
