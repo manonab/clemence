@@ -54,7 +54,7 @@ const Capiche: NextPage = () => {
         <ArrowBack />
       </div>
       <div className="mb-20 h-screen flex-col">
-        <p className="mb-[160px] mt-[180px] text-center font-neueRegular text-capicheMobile uppercase text-redHome md:text-title">
+        <p className="mb-[120px] mt-[280px] text-center font-neueRegular text-capicheMobile uppercase text-redHome md:text-title">
           Capiche
         </p>
         <Link
@@ -90,9 +90,9 @@ const Capiche: NextPage = () => {
           Une alternative<br></br> écologique à vos soirées<br></br> endiablées.{" "}
         </p>
       </div>
-      <div className="mb-10 flex size-12 items-start gap-6 overflow-auto px-4 md:my-20 md:justify-evenly">
+      <div className="mb-10 flex  items-start gap-6 overflow-auto px-4 md:my-20 md:justify-evenly">
         {capicheContent.map((content, index) => (
-          <div key={index} className="mpl-6 flex flex-col items-start pb-6">
+          <div key={index} className="ml-6 flex flex-col items-start pb-6">
             <p className="mb-5 font-neueSemiBold text-[25px] lowercase text-redHome md:text-[50px]">
               {content.title}
             </p>

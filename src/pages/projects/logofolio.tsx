@@ -57,7 +57,7 @@ const LogoFolio: NextPage = () => {
       <div className="mx-5 flex w-8 md:hidden" onClick={handleGoBack}>
         <ArrowBack />
       </div>
-      <div className="my-56 h-screen">
+      <div className="my-28 h-screen">
         <Link to="logo_target" className="hover:cursor-pointer" smooth={true}>
           <p className="mt-40 text-center font-neueRegular text-titleMobile uppercase text-redHome md:text-title">
             Logofolio

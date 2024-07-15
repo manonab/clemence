@@ -10,6 +10,8 @@ import { Images } from "@/common/images";
 import { useHeaderColor } from "@/context";
 import { ArrowRight } from "@assets/arrow-right";
 import { BigArrow } from "@assets/big-arrow";
+import { PortfolioMobileScreen1 } from "@assets/portfolio/portfolio-mobile-screen1";
+import { PortfolioMobileScreen2 } from "@assets/portfolio/portfolio-mobile-screen2";
 
 const PortFolio: NextPage = () => {
   const { setHeaderColor } = useHeaderColor();
@@ -81,7 +83,7 @@ const PortFolio: NextPage = () => {
         <ArrowBack />
       </div>
       <div className="mb-12 mt-10 h-screen flex-col">
-        <p className="mb-[100px] mt-[180px] text-center font-neueRegular text-capicheMobile uppercase text-redHome md:text-title">
+        <p className="mb-[100px] mt-[280px] text-center font-neueRegular text-capicheMobile uppercase text-redHome md:text-title">
           Portfolio
         </p>
         <Link
@@ -212,17 +214,11 @@ const PortFolio: NextPage = () => {
       </div>
       <div className="my-20 hidden w-full flex-col bg-mainColor  md:flex">
         <div className="flex items-center justify-around">
-          <div className="-mt-[300px]">
-            <Image
-              src={Images.portfolioScreen1}
-              alt="mobile screen portfolio"
-            />
+          <div className="mt-[-300px]">
+            <PortfolioMobileScreen1 />
           </div>
           <div className="">
-            <Image
-              src={Images.portfolioScreen2}
-              alt="mobile screen portfolio"
-            />
+            <PortfolioMobileScreen2 />
           </div>
           <div className="pt-[300px]">
             <Image

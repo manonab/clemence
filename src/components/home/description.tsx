@@ -38,9 +38,9 @@ const Description: React.FC<DescriptionProps> = ({ id }) => {
       <div
         className={`hidden h-auto w-full flex-col md:flex ${isServicesSectionVisible ? "bg-mainColor" : "bg-yellowHome"}`}
       >
-        <div className="flex size-full flex-col items-baseline gap-[150px] py-32">
+        <div className="flex size-full flex-col gap-[150px] px-28 py-32">
           <p
-            className="ml-32 text-left font-neueCondensed text-[53px] leading-[57.6px] text-orange"
+            className="text-left font-neueCondensed text-[48px] leading-[57.6px] text-orange"
             id={id}
           >
             Le courage de nos idées, la passion de les<br></br> partager. Parce
@@ -49,7 +49,7 @@ const Description: React.FC<DescriptionProps> = ({ id }) => {
               qu’attendons nous pour commencer ?
             </span>
           </p>
-          <p className="mr-32 text-right font-neueCondensed text-[53px] leading-[57.6px] text-orange">
+          <p className="text-right font-neueCondensed text-[53px] leading-[57.6px] text-orange">
             Consultante en communication et créative<br></br> passionnée, je
             m’efforce d’aider votre projet à<br></br> grandir grâce au design et
             au marketing digital.
