@@ -13,43 +13,39 @@ export const Cookies: React.FC<CookiesProps> = ({ setIsOpen }) => {
   };
 
   return (
-    <div className="fixed bottom-0	z-[999] hidden min-h-[300px] w-1/4 flex-col rounded-t-3xl bg-saumon md:flex">
+    <div className="fixed	bottom-0 z-[999] min-h-[300px] w-1/4 flex-col rounded-t-3xl md:flex">
       <div className="my-16 ml-10 flex flex-col items-start">
-        <p className="font-neueRegular text-[50px] leading-[90px] text-orange">
+        <p className="text-[50px] leading-[90px]">
           Chauds les chookies, chauds !
         </p>
-        <p className="font-footer">
+        <p>
           Lorem ipsum dolor sit amet consectetur. Non gravida amet tellus sed
           sem mauris in at quam.
         </p>
       </div>
       <div className="flex items-center justify-start">
         <div
-          className="mx-10 rounded-3xl border border-black px-10 py-2 text-grayBlack transition hover:cursor-pointer  hover:bg-grayBlack hover:text-white"
+          className="mx-10 rounded-3xl border border-black px-10 py-2 text-customBlack transition  hover:cursor-pointer hover:text-white"
           onClick={handleClick}
         >
-          <p className="text-center font-footer text-[12px] font-bold uppercase">
+          <p className="text-center text-[12px] font-bold uppercase">
             Accepter
           </p>
         </div>
         <div
-          className="mx-10 rounded-3xl border border-black px-10 py-2 text-grayBlack transition hover:cursor-pointer  hover:bg-grayBlack hover:text-white"
+          className="mx-10 rounded-3xl border border-black px-10 py-2 text-customBlack transition  hover:cursor-pointer hover:text-white"
           onClick={handleClick}
         >
-          <p className="text-center font-footer text-[12px] font-bold uppercase">
-            Refuser
-          </p>
+          <p className="text-[12px] font-bold uppercase">Refuser</p>
         </div>
         <Link
           target={"_blank"}
           href={
             "https://meaningfuleats.com/the-best-gluten-free-chocolate-chip-cookies/"
           }
-          className="mx-10 rounded-3xl border border-black px-10 py-2 text-grayBlack transition hover:cursor-pointer  hover:bg-grayBlack hover:text-white"
+          className="mx-10 rounded-3xl border border-black px-10 py-2 text-customBlack transition  hover:cursor-pointer hover:text-white"
         >
-          <p className="text-center font-footer text-[12px] font-bold uppercase">
-            Option sans gluten
-          </p>
+          <p className="text-[12px] font-bold uppercase">Option sans gluten</p>
         </Link>
       </div>
       <Image

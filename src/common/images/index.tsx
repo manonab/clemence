@@ -52,6 +52,7 @@ import Pride from "@assets/pride.png";
 import Rabbit from "@assets/rabbit.png";
 import cookies from "@assets/utils/cookies.png";
 import rabbitError from "@assets/utils/rabbit-404.png";
+import self from "@assets/utils/self.png";
 
 export const Images = {
   eye: Eye,
@@ -108,4 +109,5 @@ export const Images = {
   PostMosaic4: PostMosaic4,
   PostMosaic5: PostMosaic5,
   PostMosaic6: PostMosaic6,
+  self: self,
 };

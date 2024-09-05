@@ -12,66 +12,52 @@ body {
 }
 @layer base {
   @font-face {
-    font-family: "Clash";
-    src: url("/static/fonts/ClashDisplay-Regular.otf") format("truetype");
+    font-family: "marsdenBlack";
+    src: url("/static/fonts/Marsden-Ct-Black.otf") format("truetype");
   }
   @font-face {
-    font-family: "Clash-Bold";
-    src: url("/static/fonts/ClashDisplay-Bold.otf") format("truetype");
+    font-family: "marsdenBold";
+    src: url("/static/fonts/Marsden-Ct-Bold.otf") format("truetype");
   }
   @font-face {
-    font-family: "Clash-Medium";
-    src: url("/static/fonts/ClashDisplay-Medium.otf") format("truetype");
+    font-family: "marsdenExtraLight";
+    src: url("/static/fonts/Marsden-Ct-ExtraLigh.otf") format("truetype");
   }
   @font-face {
-    font-family: "Clash-Extra";
-    src: url("/static/fonts/ClashDisplay-Extralight.otf") format("truetype");
+    font-family: "marsdenHairLine";
+    src: url("/static/fonts/Marsden-Ct-Hairline.otf") format("truetype");
   }
   @font-face {
-    font-family: "Clash-Semibold";
-    src: url("/static/fonts/ClashDisplay-Semibold.otf") format("truetype");
+    font-family: "marsdenHeavy";
+    src: url("/static/fonts/Marsden-Ct-Heavy.otf") format("truetype");
   }
   @font-face {
-    font-family: "Clash-Light";
-    src: url("/static/fonts/ClashDisplay-Light.otf") format("truetype");
+    font-family: "marsdenLight";
+    src: url("/static/fonts/Marsden-Ct-Ligh.otf") format("truetype");
   }
   @font-face {
-    font-family: "kate";
-    src: url("/static/fonts/Kate-Display.otf") format("truetype");
+    font-family: "marsdenThin";
+    src: url("/static/fonts/Marsden-Ct-Thin.otf") format("truetype");
   }
   @font-face {
-    font-family: "kate-medium";
-    src: url("/static/fonts/Kate-Medium.otf") format("truetype");
+    font-family: "marsdenSuper";
+    src: url("/static/fonts/Marsden-Ct-Super.otf") format("truetype");
   }
   @font-face {
-    font-family: "kate-black";
-    src: url("/static/fonts/Kate-Black.otf") format("truetype");
+    font-family: "marsdenUltra";
+    src: url("/static/fonts/Marsden-Ct-Ultra.otf") format("truetype");
   }
   @font-face {
-    font-family: "neue-medium";
-    src: url("/static/fonts/NeueHelveticaBQMedium.otf") format("truetype");
+    font-family: "marsdenMedium";
+    src: url("/static/fonts/Marsden-Ct-Medium.otf") format("truetype");
   }
   @font-face {
-    font-family: "neue-regular";
-    src: url("/static/fonts/NeueHelveticaBQRegular.otf") format("truetype");
+    font-family: "marsdenRegular";
+    src: url("/static/fonts/Marsden-Ct-Regular.otf") format("truetype");
   }
   @font-face {
-    font-family: "neue-semi";
-    src: url("/static/fonts/NeueHelveticaBQHeavy.otf") format("truetype");
-  }
-  @font-face {
-    font-family: "neue-bold";
-    src: url("/static/fonts/NeueHelveticaCondensedBQBold.otf")
-      format("truetype");
-  }
-  @font-face {
-    font-family: "neue-extra";
-    src: url("/static/fonts/NeueHelveticaBQBlack.otf") format("truetype");
-  }
-  @font-face {
-    font-family: "neue-condensed";
-    src: url("/static/fonts/HelveticaNeueMediumCondensed.otf")
-      format("truetype");
+    font-family: "marsdenSemiBold";
+    src: url("/static/fonts/Marsden-SemiBold.otf") format("truetype");
   }
 }
 

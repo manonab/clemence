@@ -3,6 +3,7 @@ import Image from "next/image";
 import React, { useEffect, useState } from "react";
 
 import { Images } from "@/common/images";
+import { RedArrow } from "@assets/utils/red-arrow-service";
 
 interface RouageAnimationProps {
   text1?: string;
@@ -159,18 +160,13 @@ const RouageAnimation: React.FC<RouageAnimationProps> = ({
           }}
         >
           <h1
-            className={`font-neueRegular text-[200px]  leading-loose ${color}`}
+            className={`font-marsdenBlack text-[200px]  leading-loose ${color}`}
           >
             {text1}
           </h1>
-          <Image
-            src={Images.service}
-            alt="arrow"
-            width={800}
-            className="size-[150px]"
-          />
+          <RedArrow />
           <h1
-            className={`font-neueRegular text-[200px]  leading-loose ${color}`}
+            className={`font-marsdenBlack text-[200px]  leading-loose ${color}`}
           >
             {text2}
           </h1>

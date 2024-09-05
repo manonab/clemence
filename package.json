@@ -2,6 +2,7 @@
   "name": "clemence",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -14,12 +15,11 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "pnpm run prepare"
+      "pre-commit": "lint-staged"
     }
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
-      "eslint --fix --parser @typescript-eslint/parser",
       "prettier --write"
     ]
   },
