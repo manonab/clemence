@@ -12,22 +12,6 @@ interface DescriptionProps {
 }
 const Description: React.FC<DescriptionProps> = ({ id }) => {
   const router = useRouter();
-  // const [scrollPosition, setScrollPosition] = useState<number>(0);
-  // const [scrolled, setScrolled] = useState<boolean>(false);
-  // useEffect(() => {
-  //   const handleScroll = () => {
-  //     setScrollPosition(window.scrollY);
-  //     if (window.scrollY > 1150) {
-  //       setScrolled(true);
-  //     }
-  //   };
-
-  //   window.addEventListener("scroll", handleScroll);
-
-  //   return () => {
-  //     window.removeEventListener("scroll", handleScroll);
-  //   };
-  // }, []);
 
   return (
     <div>
@@ -38,7 +22,7 @@ const Description: React.FC<DescriptionProps> = ({ id }) => {
             id={id}
           >
             Le courage de nos idées, la passion de les<br></br> partager. Parce
-            que chaque histoire mérite qu’on<br></br> la raconte,{" "}
+            que chaque histoire mérite qu’on<br></br> la raconte,
             <span className="font-bold">
               qu’attendons nous pour commencer ?
             </span>
@@ -67,10 +51,10 @@ const Description: React.FC<DescriptionProps> = ({ id }) => {
             <Image
               src={Images.self}
               alt="instagram post"
-              className="h-[600px] w-[380px]"
+              className="h-[600px] w-[310px]"
             />
-            <div className="mb-24 mr-40 w-[450px]">
-              <h1 className="my-10 font-marsdenMedium text-8xl text-customRed">
+            <div className="mb-24 mr-[250px] w-[450px]">
+              <h1 className="my-10 font-marsdenMedium text-[75px] text-customRed">
                 à propos
               </h1>
               <p className="font-footer font-normal">
@@ -129,18 +113,10 @@ const Description: React.FC<DescriptionProps> = ({ id }) => {
         <Parallax speed={-15} className="min-h-screen bg-darkRed">
           <div className="relative h-screen w-full pt-20">
             <div className="flex-col items-center justify-center">
-              <p className="mt-44 flex justify-center font-marsdenBlack text-[100px] leading-[100px] text-lightPink">
-                Like what you s
-                <span className="pt-[30px]">
-                  <Image
-                    src={Images?.rabbit}
-                    alt="rabbit"
-                    className="mx-2 w-[130px] rounded-2xl bg-center"
-                  />
-                </span>
-                ?
+              <p className="mt-44 flex justify-center font-marsdenBlack text-[100px] leading-[100px] text-white">
+                Like what you see ?
               </p>
-              <p className="text-center font-footer text-[50px] font-medium leading-[100px] text-white">
+              <p className="text-center font-footer text-[50px] font-medium leading-[100px] text-black">
                 Restons en contact.
               </p>
             </div>

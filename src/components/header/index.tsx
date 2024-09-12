@@ -12,7 +12,7 @@ export const Menu: React.FC = () => {
   const { headerColor } = useHeaderColor();
 
   const pathTextMapping = [
-    { path: "/about", name: "à propos" },
+    { path: "/home", name: "à propos" },
     { path: "/values", name: "mes valeurs" },
     { path: "/services", name: "services" },
     { path: "/projects", name: "projets" },

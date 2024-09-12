@@ -29,8 +29,8 @@ const About: NextPage = () => {
                 Spécialiste en communication/marketing et passionnée de design,
                 j’aide les entreprises à valoriser leur image de marque en leur
                 proposant une stratégie digitale adaptée.J’aime relever de
-                nouveaux défis et méthodiquement mener les projets jusqu&ldquo;à
-                leur pleine réussite.
+                nouveaux défis et méthodiquement mener les projets jusqu'à leur
+                pleine réussite.
               </p>
             </div>
           </div>
@@ -82,7 +82,6 @@ const About: NextPage = () => {
             />
           </div>
           <p className="mx-16 text-[50px] italic leading-[90%]">Manifesto</p>
-
           <div className="mx-auto w-3/4">
             <div className="flex items-center">
               <p className="mr-14 text-[70px]">01.</p>
