@@ -7,7 +7,7 @@ interface LayoutProps {
 }
 export const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
-    <div className="size-auto bg-mainColor">
+    <div className="size-auto bg-mainColor z-auto">
       <Menu />
       <main>{children}</main>
     </div>

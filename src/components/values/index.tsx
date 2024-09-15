@@ -60,7 +60,7 @@ export const ValueComponent: React.FC = () => {
         text2="MANIFESTO"
         end={-300}
         start={900}
-        color="text-customRed"
+        color="text-customRed mb-[-138px]"
       />
       <div className="flex size-full min-h-screen bg-mediumRed">
         <div className="mx-auto font-footer my-auto">

@@ -6,6 +6,7 @@ import { CapcicheText } from "@assets/projects/capiche-text";
 import { LogoText } from "@assets/projects/logofolio-text";
 import { MosaicText } from "@assets/projects/mosaic-text";
 import { PortFolioText } from "@assets/projects/portfolio-text";
+import path from "path";
 
 export default function Project() {
   const { setHeaderColor } = useHeaderColor();
@@ -19,20 +20,21 @@ export default function Project() {
 
   const pathTextMappingMobile = [
     { path: "/projects/mosaic", name: "mosaic", svgComponent: <MosaicText /> },
-    {
-      path: "/projects/portfolio",
-      name: "portfolio",
-      svgComponent: <PortFolioText />,
-    },
+    { path: "/projects/lutalica", name: "lutalica" },
+    { path: "/projects/kama", name: "kama" },
     {
       path: "/projects/capiche",
       name: "capiche",
       svgComponent: <CapcicheText />,
     },
     { path: "/projects/logofolio", name: "logos", svgComponent: <LogoText /> },
+    {
+      path: "/projects/portfolio",
+      name: "portfolio",
+      svgComponent: <PortFolioText />,
+    },
   ];
 
-  console.log(selected);
   const handleChange = (route: string) => {
     setSelected(route);
     router.push(`${route}`);
@@ -45,12 +47,12 @@ export default function Project() {
           <div key={index} className="flex h-[200px] items-center">
             <p
               key={route.path}
-              onMouseEnter={() => setHovered(route.path)}
-              onMouseLeave={() => setHovered("")}
+              // onMouseEnter={() => setHovered(route.path)}
+              // onMouseLeave={() => setHovered("")}
               onClick={() => {
                 handleChange(route.path);
               }}
-              className="z-10 font-neueRegular text-[65px] uppercase leading-[90%] text-orange hover:cursor-pointer hover:text-redHome md:text-[190px]"
+              className="z-10 font-marsdenHeavy text-[200px] uppercase text-customRed hover:cursor-pointer hover:text-lightPink"
             >
               {route.name}
             </p>

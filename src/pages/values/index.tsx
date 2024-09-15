@@ -1,4 +1,3 @@
-import RouageAnimation from "@/animations/rouage";
 import { ValueComponent } from "@/components/values";
 import { NextPage } from "next";
 import { ParallaxProvider, Parallax } from "react-scroll-parallax";

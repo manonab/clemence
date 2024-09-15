@@ -58,13 +58,13 @@ export const Menu: React.FC = () => {
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: isScrolled ? 0 : 1, y: isScrolled ? -20 : 0 }}
         transition={{ duration: 0.5, ease: "easeInOut" }}
-        className={`${headerColor} fixed top-0 mx-auto w-full flex-row items-center justify-between px-[40px] py-[30px] md:flex`}
+        className={`${headerColor} fixed top-0 mx-auto w-full flex-row items-center justify-between px-[40px] py-[30px] flex`}
       >
         <div
           onClick={() => router.push("/")}
-          className="h-[70px] hover:cursor-pointer"
+          className="h-26 hover:cursor-pointer"
         >
-          <Logo width={"50"} height={"40"} />
+          <Logo width="50px" height="40px" />
         </div>
         <div className="flex items-center justify-center gap-9">
           {pathTextMapping.map((route) => (
@@ -74,7 +74,7 @@ export const Menu: React.FC = () => {
               onClick={() => handleChange(route.path)}
             >
               <p
-                className={`${selected === route.path ? "font-bold text-customRed" : " text-customBlack"} font-footer text-[18px] leading-4 text-black hover:cursor-pointer hover:font-bold hover:text-customRed`}
+                className={`${selected === route.path ? "font-bold text-white" : " text-customBlack"} font-footer text-[18px] leading-4 text-black hover:cursor-pointer hover:font-bold hover:text-customRed`}
               >
                 {route.name}
               </p>

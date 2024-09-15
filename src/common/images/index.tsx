@@ -54,6 +54,8 @@ import cookies from "@assets/utils/cookies.png";
 import rabbitError from "@assets/utils/rabbit-404.png";
 import self from "@assets/utils/self.png";
 import badass from "@assets/values/bad-ass.png";
+import jumpPicture from "@assets/services/jump-services.png";
+import oldGrannies from "@assets/services/old-grannies.png";
 
 export const Images = {
   eye: Eye,
@@ -112,4 +114,6 @@ export const Images = {
   PostMosaic6: PostMosaic6,
   self: self,
   badass: badass,
+  jumpPicture: jumpPicture,
+  oldGrannies: oldGrannies,
 };
