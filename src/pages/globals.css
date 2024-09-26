@@ -59,6 +59,14 @@ body {
     font-family: "marsdenSemiBold";
     src: url("/static/fonts/Marsden-SemiBold.otf") format("truetype");
   }
+  @font-face {
+    font-family: "helveticaNeue";
+    src: url("/static/fonts/Helvetica-Neue-Condensed-Bold.ttf") format("truetype");
+  }
+  @font-face {
+    font-family: "helveticaCondensed";
+    src: url("/static/fonts/Helvetica-Neue-67-Medium-Condensed.otf") format("truetype");
+  }
 }
 
 .linear-background {

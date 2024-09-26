@@ -56,6 +56,8 @@ import self from "@assets/utils/self.png";
 import badass from "@assets/values/bad-ass.png";
 import jumpPicture from "@assets/services/jump-services.png";
 import oldGrannies from "@assets/services/old-grannies.png";
+import oldGranniesWithPhones from "@assets/contact/oldgrannieswithphone.png";
+import linkedinIcon from "@assets/contact/icon-linkedin.png";
 
 export const Images = {
   eye: Eye,
@@ -116,4 +118,6 @@ export const Images = {
   badass: badass,
   jumpPicture: jumpPicture,
   oldGrannies: oldGrannies,
+  oldGranniesWithPhones: oldGranniesWithPhones,
+  linkedinIcon: linkedinIcon,
 };

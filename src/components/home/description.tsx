@@ -18,7 +18,7 @@ const Description: React.FC<DescriptionProps> = ({ id }) => {
       <div className="h-auto w-full flex-col md:flex">
         <div className="flex size-full flex-col gap-[150px] bg-mediumRed px-28 py-32">
           <p
-            className="text-left text-[48px] leading-[57.6px] text-white"
+            className="font-helvetica67 text-left text-[48px] leading-[57.6px] text-white"
             id={id}
           >
             Le courage de nos idées, la passion de les<br></br> partager. Parce

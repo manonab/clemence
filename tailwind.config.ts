@@ -27,6 +27,8 @@ const config: Config = {
         marsdenRegular: ["marsdenRegular"],
         marsdenLight: ["marsdenLight"],
         marsdenUltra: ["marsdenUltra"],
+        helveticaNeue: ["helveticaNeue"],
+        helveticaCondensed: ["helveticaCondensed"],
         footer: ["Public Sans", ...defaultTheme.fontFamily.sans],
         inter: ["Inter", ...defaultTheme.fontFamily.sans],
       },
