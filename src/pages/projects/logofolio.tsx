@@ -3,67 +3,52 @@ import { motion } from "framer-motion";
 import { NextPage } from "next";
 import Image from "next/image";
 import { useRouter } from "next/router";
-import { useEffect, useState, useRef } from "react";
+import { useState, useRef } from "react";
 import { Link } from "react-scroll";
 
 import { Images } from "@/common/images";
-import { useHeaderColor } from "@/context";
 import { BigArrow } from "@assets/big-arrow";
 
 const LogoFolio: NextPage = () => {
-  const { setHeaderColor } = useHeaderColor();
-  const [showYellowBackground, setShowYellowBackground] =
-    useState<boolean>(false);
-  const containerRef = useRef<HTMLDivElement | null>(null);
+  const [switchColor, setSwitchColor] = useState<boolean>(false);
+  // const containerRef = useRef<HTMLDivElement | null>(null);
   const capicheRef = useRef<HTMLDivElement | null>(null);
-
   const router = useRouter();
 
   const timing = {
     duration: 0.7,
     ease: [0.43, 0.13, 0.23, 0.96],
   };
-  useEffect(() => {
-    setHeaderColor("linear-background");
-  }, [setHeaderColor]);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      if (capicheRef.current) {
-        const containerRect = capicheRef.current.getBoundingClientRect();
-        const scrollPosition = window.scrollY || window.pageYOffset;
-        const threshold = containerRect.top + containerRect.height / 0.5;
-        if (scrollPosition > threshold) {
-          setShowYellowBackground(true);
-        } else {
-          setShowYellowBackground(false);
-        }
-      }
-    };
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     if (capicheRef.current) {
+  //       const containerRect = capicheRef.current.getBoundingClientRect();
+  //       const scrollPosition = window.scrollY || window.pageYOffset;
+  //       const threshold = containerRect.top + containerRect.height / 0.5;
+  //       if (scrollPosition > threshold) {
+  //         setSwitchColor(true);
+  //       } else {
+  //         setSwitchColor(false);
+  //       }
+  //     }
+  //   };
+  //   window.addEventListener("scroll", handleScroll);
 
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, [capicheRef]);
-
-  const handleGoBack = () => {
-    router.back();
-  };
+  //   return () => {
+  //     window.removeEventListener("scroll", handleScroll);
+  //   };
+  // }, [capicheRef]);
 
   return (
-    <div className="flex size-full flex-col">
-      <div className="mx-5 flex w-8 md:hidden" onClick={handleGoBack}>
-        <ArrowBack />
-      </div>
-      <div className="my-28 h-screen">
-        <Link to="logo_target" className="hover:cursor-pointer" smooth={true}>
-          <p className="mt-40 text-center font-neueRegular text-titleMobile uppercase text-redHome md:text-title">
-            Logofolio
+    <div>
+      <div className="h-full bg-customRed mt-28">
+        <div className="flex flex-col items-start w-[500px] ml-20">
+          <p className="font-marsdenHeavy text-mainColor uppercase text-redHome pt-28 leading-[90%] text-[350px] text-left">
+            Logo-<br></br>folio
           </p>
           <motion.div
-            className="mx-auto my-20 flex flex-col items-center gap-3"
+            className="my-20 flex flex-col items-center gap-3 mx-auto"
             initial={{ opacity: 0, y: 100 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ ...timing, delay: 0.6 }}
@@ -73,28 +58,36 @@ const LogoFolio: NextPage = () => {
               DISCOVER
             </p>
           </motion.div>
-        </Link>
-      </div>
-      <div
-        ref={containerRef}
-        id="logo_target"
-        className={`h-screen w-full bg-mainColor py-[150px] `}
-      >
-        <Image
-          src={Images.newlogo}
-          className="mx-auto size-auto md:h-[350px] md:w-[400px]"
-          alt="clemence logo"
-        />
+        </div>
       </div>
       <div
         ref={capicheRef}
-        className={` ${showYellowBackground ? "bg-yellowHome" : "bg-mainColor"} h-screen w-full py-[150px] md:py-[250px]`}
+        className="flex items-center h-screen justify-center mx-20"
       >
         <Image
+          src={Images.newlogo}
+          className="mx-auto size-auto"
+          alt="portfolio logo"
+        />
+        <Image
           src={Images.capichelogo}
-          className="mx-auto size-auto md:h-1/2"
+          className="mx-auto w-[600px] h-[150px]"
           alt="capiche logo"
         />
+      </div>
+      <div className="flex items-center justify-between mx-16 mb-10 uppercase font-footer">
+        <div
+          onClick={() => router.push("/projets/kama")}
+          className="hover:cursor-pointer"
+        >
+          Retour
+        </div>
+        <div
+          className="uppercase font-extrabold hover:cursor-pointer"
+          onClick={() => router.push("/projets/mosaic")}
+        >
+          Prochain projet
+        </div>
       </div>
     </div>
   );
