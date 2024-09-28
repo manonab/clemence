@@ -6,7 +6,7 @@ import { Images } from "@/common/images";
 const Custom404 = () => {
   const redirect = useRouter();
   const handleRedirect = () => {
-    redirect.push("/home");
+    redirect.back();
   };
   return (
     <div className="mx-auto flex w-1/2 flex-col items-start">

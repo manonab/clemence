@@ -77,7 +77,7 @@ const LogoFolio: NextPage = () => {
       </div>
       <div className="flex items-center justify-between mx-16 mb-10 uppercase font-footer">
         <div
-          onClick={() => router.push("/projets/kama")}
+          onClick={() => router.push("/projects")}
           className="hover:cursor-pointer"
         >
           Retour

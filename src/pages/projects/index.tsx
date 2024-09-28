@@ -22,17 +22,7 @@ export default function Project() {
     { path: "/projects/mosaic", name: "mosaic", svgComponent: <MosaicText /> },
     { path: "/projects/lutalica", name: "lutalica" },
     { path: "/projects/kama", name: "kama" },
-    {
-      path: "/projects/capiche",
-      name: "capiche",
-      svgComponent: <CapcicheText />,
-    },
     { path: "/projects/logofolio", name: "logos", svgComponent: <LogoText /> },
-    {
-      path: "/projects/portfolio",
-      name: "portfolio",
-      svgComponent: <PortFolioText />,
-    },
   ];
 
   const handleChange = (route: string) => {

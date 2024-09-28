@@ -1,66 +1,34 @@
-import { motion } from "framer-motion";
 import { NextPage } from "next";
 import { useRouter } from "next/router";
-import { Link } from "react-scroll";
 
-import RouageAnimation from "@/animations/rouage";
 import Carousel from "@/components/mosaic/carousel";
-import { BigArrow } from "@assets/big-arrow";
+import BusinessInfo from "@/components/business-infos";
+import CustomSection from "@/components/custom-section";
 
 const Lutalica: NextPage = () => {
   const router = useRouter();
-  const timing = {
-    duration: 0.7,
-    ease: [0.43, 0.13, 0.23, 0.96],
-  };
+
+  const concept =
+    "Studio Lutalica est un studio de design graphique dédié aux projets et clients féministes et Queer. ";
+  const mission =
+    "Ma mission principale au sein du studio a été de créer une stratégie de communication digitale pour l’ensemble des réseaux sociaux. L’objectif étant de développer la visibilité et toucher une nouvelle clientèle via les réseaux.";
+  const whatIDid = [
+    "Community management",
+    "Stratégie de marque",
+    "Marketing digital",
+    "Relations publiques",
+    "Gestion de projet",
+  ];
+
   return (
     <div className="flex-col overflow-hidden flex">
-      <div className="mb-12 h-screen flex-col pt-36">
-        <p className="mb-[100px] mt-[180px] text-center font-neueRegular text-capicheMobile uppercase text-redHome md:text-title">
-          MOSAIC
-        </p>
-        <Link
-          to="mosaic_desktop_target"
-          className="hover:cursor-pointer"
-          smooth={true}
-        >
-          <motion.div
-            className="mb-[150px] flex flex-col items-center gap-3"
-            initial={{ opacity: 0, y: 100 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ ...timing, delay: 0.6 }}
-          >
-            <BigArrow />
-            <p className="font-footer text-[14px] font-bold uppercase leading-[20px] hover:cursor-pointer ">
-              DISCOVER
-            </p>
-          </motion.div>
-        </Link>
-      </div>
-      <div className="w-full">
-        <RouageAnimation
-          isMosaic={true}
-          start={-800}
-          end={100}
-          otherStart={100}
-          otherEnd={-800}
-        />
-      </div>
-      <div className="mt-32 bg-yellowHome py-10">
-        <div className="absolute -left-16 -mt-36 size-[189px]  rounded-full border-2 border-mosaic" />
-        <div className="ml-32 flex flex-col items-start">
-          <p className="mt-20 font-neueCondensed text-[62px] leading-[100%] text-orange">
-            “Mosaic encourage, éduque<br></br> et inspire les jeunes<br></br>{" "}
-            personnes LGBTQ+ et celleux<br></br> à leur côtés”.
-          </p>
-          <div className="mx-auto flex w-full items-center justify-start pb-28">
-            <div className="my-20 flex w-1/2 flex-col gap-6"></div>
-            <div className="ml-36">
-              <Carousel />
-            </div>
-          </div>
-        </div>
-      </div>
+      <BusinessInfo
+        name="Lutal-ica"
+        customStyle="mt-32"
+        sector="Design"
+        location="Edimbourg"
+      />
+      <CustomSection concept={concept} mission={mission} whatIDid={whatIDid} />
     </div>
   );
 };
