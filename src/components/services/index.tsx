@@ -52,7 +52,6 @@ export const ServiceComponent = () => {
             </ul>
           </div>
 
-          {/* Section 2: Design */}
           <div className="text-left max-w-sm md:max-w-md mb-10 md:mb-0">
             <div className="flex items-baseline">
               <p className="text-mainColor text-[60px] font-helveticaNeue">
@@ -73,7 +72,6 @@ export const ServiceComponent = () => {
             </ul>
           </div>
 
-          {/* Section 3: Consulting */}
           <div className="text-left max-w-sm md:max-w-md">
             <h2 className="text-[50px] font-bold mb-4">
               <span className="text-mainColor text-[60px]  font-marsdenHeavy">

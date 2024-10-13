@@ -71,6 +71,9 @@ import lutalicaReel1 from "@assets/lutalica/lutalica-reel-1.png";
 import lutalicaReel2 from "@assets/lutalica/lutalica-reel-2.png";
 import lutalicaReel3 from "@assets/lutalica/lutalica-reel-3.png";
 
+import kamaPost1 from "@assets/kama/kama-post-1.png";
+import kamaPost2 from "@assets/kama/kama-post-2.png";
+
 export const Images = {
   eye: Eye,
   image1: Image1,
@@ -143,4 +146,6 @@ export const Images = {
   newMosaicPost1: newMosaicPost1,
   newMosaicPost2: newMosaicPost2,
   newMosaicPost3: newMosaicPost3,
+  kamaPost1: kamaPost1,
+  kamaPost2: kamaPost2,
 };

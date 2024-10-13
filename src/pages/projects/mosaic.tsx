@@ -83,11 +83,11 @@ const Mosaic: NextPage = () => {
         </div>
         <div className="w-full my-32">
           <RouageAnimation
-            isMosaic={false}
             text1="IN WORD"
-            text2="TRUST"
-            start={150}
+            text2="WE TRUST"
             end={-300}
+            start={900}
+            color="text-customRed"
           />
         </div>
         <div className="my-32">
