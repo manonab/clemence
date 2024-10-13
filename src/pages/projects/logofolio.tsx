@@ -1,44 +1,20 @@
-import { ArrowBack } from "@mui/icons-material";
 import { motion } from "framer-motion";
 import { NextPage } from "next";
 import Image from "next/image";
 import { useRouter } from "next/router";
 import { useState, useRef } from "react";
-import { Link } from "react-scroll";
 
 import { Images } from "@/common/images";
 import { BigArrow } from "@assets/big-arrow";
+import { ButtonBottom } from "@/components/button-bottom";
 
 const LogoFolio: NextPage = () => {
-  const [switchColor, setSwitchColor] = useState<boolean>(false);
-  // const containerRef = useRef<HTMLDivElement | null>(null);
   const capicheRef = useRef<HTMLDivElement | null>(null);
-  const router = useRouter();
 
   const timing = {
     duration: 0.7,
     ease: [0.43, 0.13, 0.23, 0.96],
   };
-
-  // useEffect(() => {
-  //   const handleScroll = () => {
-  //     if (capicheRef.current) {
-  //       const containerRect = capicheRef.current.getBoundingClientRect();
-  //       const scrollPosition = window.scrollY || window.pageYOffset;
-  //       const threshold = containerRect.top + containerRect.height / 0.5;
-  //       if (scrollPosition > threshold) {
-  //         setSwitchColor(true);
-  //       } else {
-  //         setSwitchColor(false);
-  //       }
-  //     }
-  //   };
-  //   window.addEventListener("scroll", handleScroll);
-
-  //   return () => {
-  //     window.removeEventListener("scroll", handleScroll);
-  //   };
-  // }, [capicheRef]);
 
   return (
     <div>
@@ -75,20 +51,7 @@ const LogoFolio: NextPage = () => {
           alt="capiche logo"
         />
       </div>
-      <div className="flex items-center justify-between mx-16 mb-10 uppercase font-footer">
-        <div
-          onClick={() => router.push("/projects")}
-          className="hover:cursor-pointer"
-        >
-          Retour
-        </div>
-        <div
-          className="uppercase font-extrabold hover:cursor-pointer"
-          onClick={() => router.push("/projets/mosaic")}
-        >
-          Prochain projet
-        </div>
-      </div>
+      <ButtonBottom />
     </div>
   );
 };

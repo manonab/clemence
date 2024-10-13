@@ -13,6 +13,7 @@ const config: Config = {
         darkRed: "#D82020",
         mediumRed: "#FF2626",
         customRed: "#FF0101",
+        lightRed: "#FE201F",
       },
       fontFamily: {
         marsdenBlack: ["marsdenBlack"],

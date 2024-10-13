@@ -58,6 +58,18 @@ import jumpPicture from "@assets/services/jump-services.png";
 import oldGrannies from "@assets/services/old-grannies.png";
 import oldGranniesWithPhones from "@assets/contact/oldgrannieswithphone.png";
 import linkedinIcon from "@assets/contact/icon-linkedin.png";
+import lutalicaPost1 from "@assets/lutalica/lutalica-post-1.png";
+import lutalicaPost2 from "@assets/lutalica/lutalica-post-2.png";
+import lutalicaPost3 from "@assets/lutalica/lutalica-post-3.png";
+import lutalicaPost4 from "@assets/lutalica/lutalica-post-4.png";
+import lutalicaPost5 from "@assets/lutalica/lutalica-post-5.png";
+import newMosaicPost1 from "@assets/mosaic/news/mosaic-post-1.png";
+import newMosaicPost2 from "@assets/mosaic/news/mosaic-post-2.png";
+import newMosaicPost3 from "@assets/mosaic/news/mosaic-post-3.png";
+
+import lutalicaReel1 from "@assets/lutalica/lutalica-reel-1.png";
+import lutalicaReel2 from "@assets/lutalica/lutalica-reel-2.png";
+import lutalicaReel3 from "@assets/lutalica/lutalica-reel-3.png";
 
 export const Images = {
   eye: Eye,
@@ -120,4 +132,15 @@ export const Images = {
   oldGrannies: oldGrannies,
   oldGranniesWithPhones: oldGranniesWithPhones,
   linkedinIcon: linkedinIcon,
+  lutalicaPost1: lutalicaPost1,
+  lutalicaPost2: lutalicaPost2,
+  lutalicaPost3: lutalicaPost3,
+  lutalicaPost4: lutalicaPost4,
+  lutalicaPost5: lutalicaPost5,
+  lutalicaReel1: lutalicaReel1,
+  lutalicaReel2: lutalicaReel2,
+  lutalicaReel3: lutalicaReel3,
+  newMosaicPost1: newMosaicPost1,
+  newMosaicPost2: newMosaicPost2,
+  newMosaicPost3: newMosaicPost3,
 };
