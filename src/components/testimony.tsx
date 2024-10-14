@@ -4,7 +4,7 @@ export const Testimony = ({ content }: { content: string }) => {
       <div className="text-customBlack font-helveticaNeue text-[70px] leading-[90%]">
         témoignage
       </div>
-      <div className="text-customRed text-[80px] font-helveticaNeue leading-[90%] w-[1150px]">
+      <div className="text-customRed text-[70px] font-helveticaNeue leading-[90%] w-[1150px]">
         {content}
       </div>
       <div>Voir sur linkedin</div>

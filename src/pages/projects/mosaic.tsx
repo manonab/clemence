@@ -51,46 +51,54 @@ const Mosaic: NextPage = () => {
         </div>
         <div className="ml-24 my-40">
           <div className="text-left text-[170px] text-customRed max-w-[650px] leading-[90%] font-marsdenHeavy">
-            Encourager, éduquer et inspirer.{" "}
+            Encourager, éduquer et inspirer.
           </div>
-          <div className="mt-28 flex flex-col items-start justify-end gap-6 self-end max-w-[550px] ml-auto mr-32">
-            <div className="flex items-start flex-col">
-              <div className="font-footer text-lightRed font-semibold text-[70px]">
-                +16%
+          <div className="flex-row-reverse items-end flex">
+            <div className="mt-28 flex flex-col items-start justify-end gap-6 self-end max-w-[550px] ml-auto mr-32">
+              <div className="flex items-start flex-col">
+                <div className="font-footer text-lightRed font-semibold text-[70px]">
+                  +16%
+                </div>
+                <div className="text-customBlack font-helveticaCondensed leading-[90%] text-[50px]">
+                  d'audience globale sur<br></br>l'ensemble des réseaux
+                </div>
               </div>
-              <div className="text-customBlack font-helveticaCondensed leading-[90%] text-[50px]">
-                d'audience globale sur<br></br>l'ensemble des réseaux
+              <div className="flex items-start  flex-col">
+                <div className="font-footer text-lightRed font-semibold text-[70px]">
+                  20
+                </div>
+                <div className="text-customBlack font-helveticaCondensed leading-[90%] text-[50px]">
+                  workshops en ligne<br></br> organisés pour les<br></br> jeunes
+                  de l’association
+                </div>
+              </div>
+              <div className="flex items-start  flex-col">
+                <div className="font-footer text-lightRed font-semibold text-[70px]">
+                  1
+                </div>
+                <div className="text-customBlack font-helveticaCondensed leading-[90%] text-[50px]">
+                  nouveau concours littéraire<br></br> pour les personnes Queer.
+                </div>
               </div>
             </div>
-            <div className="flex items-start  flex-col">
-              <div className="font-footer text-lightRed font-semibold text-[70px]">
-                20
-              </div>
-              <div className="text-customBlack font-helveticaCondensed leading-[90%] text-[50px]">
-                workshops en ligne<br></br> organisés pour les<br></br> jeunes
-                de l’association
-              </div>
-            </div>
-            <div className="flex items-start  flex-col">
-              <div className="font-footer text-lightRed font-semibold text-[70px]">
-                1
-              </div>
-              <div className="text-customBlack font-helveticaCondensed leading-[90%] text-[50px]">
-                nouveau concours littéraire<br></br> pour les personnes Queer.
-              </div>
-            </div>
+            <Image
+              src={Images.MachineMosaic}
+              alt="machine à écrire"
+              className="relative right-24 top-12"
+              width={250}
+            />
           </div>
         </div>
         <div className="w-full my-32">
           <RouageAnimation
-            text1="IN WORD"
-            text2="WE TRUST"
-            end={-300}
-            start={900}
-            color="text-customRed"
+            text1="INWORD"
+            text2="WETRUST"
+            end={400}
+            start={1100}
+            color="text-customRed mb-[-138px]"
           />
         </div>
-        <div className="my-32">
+        <div>
           <div className="flex justify-evenly">
             <Image
               src={Images.newMosaicPost1}
@@ -114,19 +122,19 @@ const Mosaic: NextPage = () => {
               className="object-cover  hover:cursor-pointer"
             />
           </div>
-          <div className="my-[250px] max-w-[550px] ml-12">
-            Lors de ma mission à Mosaic, j’ai eu l’opportunité d’organiser un
-            concours littéraire pour la communauté LGBTQ+. De l’idée, à la
-            recherche de partenaire jusqu’à la promotion de l’élément sur les
-            réseaux sociaux, je suis fière d’avoir pu contribuer à créer un
-            événement créatif et inclusif. Un concours par et pour les Queer.
-          </div>
+        </div>
+        <div className="my-[250px] max-w-[550px] ml-12">
+          Lors de ma mission à Mosaic, j’ai eu l’opportunité d’organiser un
+          concours littéraire pour la communauté LGBTQ+. De l’idée, à la
+          recherche de partenaire jusqu’à la promotion de l’élément sur les
+          réseaux sociaux, je suis fière d’avoir pu contribuer à créer un
+          événement créatif et inclusif. Un concours par et pour les Queer.
         </div>
         <div>
           <Testimony content=" “Clémence was a true pleasure to work with. In joining us she created a new role for herself leveraging her skills and abilities to build on Mosaic's online presence and grew our audience [...]”." />
         </div>
       </div>
-      <ButtonBottom />
+      <ButtonBottom nextRoute="/projects/lutalica" />
     </div>
   );
 };

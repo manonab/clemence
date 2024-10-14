@@ -120,7 +120,7 @@ const Lutalica: NextPage = () => {
         </div>
       </div>
       <div className="bg-darkRed pt-32">
-        <ButtonBottom />
+        <ButtonBottom nextRoute="/projects/kama" />
       </div>
     </div>
   );

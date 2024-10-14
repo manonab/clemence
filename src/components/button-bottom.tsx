@@ -1,6 +1,6 @@
 import { useRouter } from "next/router";
 
-export const ButtonBottom = () => {
+export const ButtonBottom = ({ nextRoute }: { nextRoute: string }) => {
   const router = useRouter();
   return (
     <div className="flex items-center justify-between mx-16 mb-10 mt-32 uppercase font-footer">
@@ -12,7 +12,7 @@ export const ButtonBottom = () => {
       </div>
       <div
         className="uppercase font-extrabold hover:cursor-pointer"
-        onClick={() => router.push("/projets")}
+        onClick={() => router.push(nextRoute)}
       >
         Prochain projet
       </div>

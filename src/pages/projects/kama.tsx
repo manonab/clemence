@@ -65,8 +65,24 @@ const Kama: NextPage = () => {
           color="text-customRed"
         />
       </div>
+      <div className="mb-32 bg-darkRed flex items-center justify-evenly px-12 py-48">
+        <Image
+          src={Images.kamaPost3}
+          alt="kama post"
+          width={450}
+          height={450}
+          className="object-cover"
+        />
+        <Image
+          src={Images.kamapPost4}
+          alt="kama post"
+          width={450}
+          height={450}
+          className="object-cover"
+        />
+      </div>
       <Testimony content=" “Clemence worked on the social account for Kama for a couple of months. During this time, she added a huge amount of value with her viewpoints and her mindful approach to talking about delicate topics. Her human and creative qualities were very aligned with the company's mission.  [...]”." />
-      <ButtonBottom />
+      <ButtonBottom nextRoute="/projects/logofolio" />
     </div>
   );
 };

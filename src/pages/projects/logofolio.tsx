@@ -1,8 +1,7 @@
 import { motion } from "framer-motion";
 import { NextPage } from "next";
 import Image from "next/image";
-import { useRouter } from "next/router";
-import { useState, useRef } from "react";
+import { useRef } from "react";
 
 import { Images } from "@/common/images";
 import { BigArrow } from "@assets/big-arrow";
@@ -18,13 +17,13 @@ const LogoFolio: NextPage = () => {
 
   return (
     <div>
-      <div className="h-full bg-customRed mt-28">
-        <div className="flex flex-col items-start w-[500px] ml-20">
-          <p className="font-marsdenHeavy text-mainColor uppercase text-redHome pt-28 leading-[90%] text-[350px] text-left">
+      <div className="h-full bg-customRed mt-20 md:mt-28">
+        <div className="flex flex-col items-start w-full px-4 md:w-[500px] md:ml-20">
+          <p className="font-marsdenHeavy text-mainColor uppercase text-redHome pt-20 md:pt-28 leading-[90%] text-[100px] md:text-[350px] text-left">
             Logo-<br></br>folio
           </p>
           <motion.div
-            className="my-20 flex flex-col items-center gap-3 mx-auto"
+            className="my-12 md:my-20 flex flex-col items-center gap-3 mx-auto"
             initial={{ opacity: 0, y: 100 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ ...timing, delay: 0.6 }}
@@ -38,7 +37,7 @@ const LogoFolio: NextPage = () => {
       </div>
       <div
         ref={capicheRef}
-        className="flex items-center h-screen justify-center mx-20"
+        className="flex flex-col md:flex-row items-center h-screen justify-center mx-4 md:mx-20"
       >
         <Image
           src={Images.newlogo}
@@ -47,12 +46,13 @@ const LogoFolio: NextPage = () => {
         />
         <Image
           src={Images.capichelogo}
-          className="mx-auto w-[600px] h-[150px]"
+          className="mx-auto w-[300px] h-[80px] md:w-[600px] md:h-[150px]"
           alt="capiche logo"
         />
       </div>
-      <ButtonBottom />
+      <ButtonBottom nextRoute="/projects/logofolio" />
     </div>
   );
 };
+
 export default LogoFolio;
