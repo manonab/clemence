@@ -16,7 +16,7 @@ interface RouageAnimationProps {
   otherStart?: number;
 }
 
-const RouageAnimation: React.FC<RouageAnimationProps> = ({
+export const RouageAnimation: React.FC<RouageAnimationProps> = ({
   text1,
   text2,
   start,
@@ -66,107 +66,107 @@ const RouageAnimation: React.FC<RouageAnimationProps> = ({
   return (
     <>
       {isMosaic ? (
-        <div className="flex w-full flex-wrap gap-6">
+        <div className="flex w-full flex-wrap gap-4 md:gap-6">
           <motion.div
-            className="flex items-center justify-evenly gap-12"
+            className="flex items-center justify-evenly gap-8 md:gap-12"
             style={{
               x: motionValueToScroll(scrollProgress),
             }}
           >
             <Image
               src={Images.PostMosaic1}
-              alt="instagram post "
-              className="size-[350px]"
+              alt="instagram post"
+              className="w-[150px] md:w-[350px]" // Ajustement de taille pour mobile
             />
             <Image
               src={Images.PostMosaic2}
-              alt="instagram post "
-              className="mb-10 size-[310px]"
+              alt="instagram post"
+              className="mb-4 w-[130px] md:mb-10 md:w-[310px]"
             />
             <Image
               src={Images.PostMosaic3}
-              alt="instagram post "
-              className="size-[350px]"
+              alt="instagram post"
+              className="w-[150px] md:w-[350px]"
             />
             <Image
               src={Images.PostMosaic4}
-              alt="instagram post "
-              className="size-[350px]"
+              alt="instagram post"
+              className="w-[150px] md:w-[350px]"
             />
             <Image
               src={Images.PostMosaic1}
-              alt="instagram post "
-              className="size-[350px]"
+              alt="instagram post"
+              className="w-[150px] md:w-[350px]"
             />
             <Image
               src={Images.PostMosaic3}
-              alt="instagram post "
-              className="size-[350px]"
+              alt="instagram post"
+              className="w-[150px] md:w-[350px]"
             />
             <Image
               src={Images.PostMosaic6}
-              alt="instagram post "
-              className="size-[350px]"
+              alt="instagram post"
+              className="w-[150px] md:w-[350px]"
             />
           </motion.div>
           <motion.div
-            className="flex items-center justify-evenly gap-12"
+            className="flex items-center justify-evenly gap-8 md:gap-12"
             style={{
               x: motionOtherValueToScroll(scrollProgress),
             }}
           >
             <Image
               src={Images.PostMosaic6}
-              alt="instagram post "
-              className="size-[350px]"
+              alt="instagram post"
+              className="w-[150px] md:w-[350px]"
             />
             <Image
               src={Images.PostMosaic5}
-              alt="instagram post "
-              className="mb-10 size-[310px]"
+              alt="instagram post"
+              className="mb-4 w-[130px] md:mb-10 md:w-[310px]"
             />
             <Image
               src={Images.PostMosaic4}
-              alt="instagram post "
-              className="size-[350px]"
+              alt="instagram post"
+              className="w-[150px] md:w-[350px]"
             />
             <Image
               src={Images.PostMosaic2}
-              alt="instagram post "
-              className="mb-10 size-[310px]"
+              alt="instagram post"
+              className="mb-4 w-[130px] md:mb-10 md:w-[310px]"
             />
             <Image
               src={Images.PostMosaic1}
-              alt="instagram post "
-              className="size-[350px]"
+              alt="instagram post"
+              className="w-[150px] md:w-[350px]"
             />
             <Image
               src={Images.PostMosaic3}
-              alt="instagram post "
-              className="size-[350px]"
+              alt="instagram post"
+              className="w-[150px] md:w-[350px]"
             />
             <Image
               src={Images.PostMosaic6}
-              alt="instagram post "
-              className="size-[350px]"
+              alt="instagram post"
+              className="w-[150px] md:w-[350px]"
             />
           </motion.div>
         </div>
       ) : (
         <motion.div
-          className="flex w-screen items-center gap-12"
+          className="flex w-screen items-center gap-4 md:gap-12"
           style={{
             x: motionValueToScroll(scrollProgress),
           }}
         >
           <h1
-            className={`font-marsdenBlack text-[200px]  leading-loose ${color}`}
+            className={`font-marsdenBlack text-[80px] md:text-[200px] leading-loose ${color}`}
           >
             {text1}
           </h1>
           <RedArrow />
           <h1
-            className={`font-marsdenBlack text-[200px]  leading-loose ${color}`}
+            className={`font-marsdenBlack text-[80px] md:text-[200px] leading-loose ${color}`}
           >
             {text2}
           </h1>

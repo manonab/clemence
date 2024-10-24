@@ -32,24 +32,20 @@ const Lutalica: NextPage = () => {
       />
       <CustomSection concept={concept} mission={mission} whatIDid={whatIDid} />
 
-      <div className="flex flex-col items-center mt-36">
-        <div className="grid grid-cols-2 gap-12">
+      <div className="flex flex-col items-center md:mt-36">
+        <div className="md:grid md:grid-cols-2 md:gap-12">
           <Image
             src={Images.lutalicaPost1}
             alt="Image 1"
-            width={500}
-            height={500}
-            className="object-cover -mt-12"
+            className="object-cover md:-mt-12 md:w-[500px] w-[300px] my-12 md:my-auto"
           />
           <Image
             src={Images.lutalicaPost2}
             alt="Image 2"
-            width={500}
-            height={500}
-            className="object-cover"
+            className="object-cover md:-mt-12 md:w-[500px] w-[300px] my-12 md:my-auto"
           />
         </div>
-        <h1 className="text-customRed text-left  text-[170px] font-marsdenHeavy leading-[90%] mx-8 my-[150px] self-end">
+        <h1 className="text-customRed text-left text-[80px] md:text-[170px] font-marsdenHeavy leading-[90%] mx-8 md:my-[150px] self-end">
           L'engagement<br></br>comme<br></br> moteur.
         </h1>
         <p className="text-left mt-4 max-w-[880px] mb-32 self-start mx-12">

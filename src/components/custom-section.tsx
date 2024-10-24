@@ -17,7 +17,7 @@ const CustomSection: React.FC<SectionProps> = ({
         {/* Concept */}
         <div className="text-left">
           <h2 className="text-[50px] font-bold font-footer">
-            (01){" "}
+            (01)
             <span className="text-mainColor font-helveticaNeue">Concept</span>
           </h2>
           <p className="mt-6 max-w-sm">{concept}</p>

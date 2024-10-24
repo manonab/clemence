@@ -1,8 +1,14 @@
-export const PoshLogo = () => {
+export const PoshLogo = ({
+  width,
+  height,
+}: {
+  width: string;
+  height: string;
+}) => {
   return (
     <svg
-      width="269"
-      height="299"
+      width={width}
+      height={height}
       viewBox="0 0 269 299"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"

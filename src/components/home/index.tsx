@@ -17,13 +17,13 @@ const HomeComponent: React.FC = () => {
       <Construction />
       <Parallax
         speed={-15}
-        className="mb-20 w-full flex-col items-center justify-around gap-4 md:flex"
+        className="md:mb-20 w-full flex-col items-center justify-around gap-4 md:flex"
       >
         <motion.div
           transition={{ ...timing, delay: 2 }}
-          className="flex h-screen flex-col items-center justify-evenly"
+          className="flex flex-col items-center md:justify-evenly justify-center mb-52 mt-28"
         >
-          <p className="text-center font-marsdenHeavy text-welcome text-customRed">
+          <p className="text-center font-marsdenHeavy md:text-welcome text-customRed text-[60px] leading-tight">
             Consultante pour <br></br>
             esprits audacieux
           </p>
@@ -32,9 +32,9 @@ const HomeComponent: React.FC = () => {
             className="hover:cursor-pointer"
             smooth={true}
           >
-            <div className="mb-20 flex flex-col items-center gap-3">
+            <div className="md:mb-20 flex flex-col items-center gap-3">
               <BigArrow />
-              <p className="font-bold uppercase leading-[20px]">
+              <p className="font-bold uppercase md:leading-[20px]">
                 SCROLL & ROLL
               </p>
             </div>

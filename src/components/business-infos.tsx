@@ -22,14 +22,17 @@ const BusinessInfo: React.FC<BusinessInfoProps> = ({
   };
 
   return (
-    <div className="h-screen w-screen flex my-32">
-      <div className="flex-col flex flex-grow  items-start w-1/3 justify-center">
+    <div className="h-screen w-screen md:flex-row flex flex-col my-32">
+      <div className="flex-col flex flex-grow  md:items-start w-1/3 justify-center">
         <div
-          className={`text-[300px] font-marsdenHeavy leading-[90%] text-left ml-16 text-customRed uppercase ${customStyle}`}
+          className={`hidden md:block text-[300px] font-marsdenHeavy leading-[90%] text-left ml-16 text-customRed uppercase ${customStyle}`}
         >
           {name.split("-").map((line, idx) => (
             <div key={idx}>{line}</div>
           ))}
+        </div>
+        <div className="text-[100px] self-center md:hidden font-marsdenHeavy leading-[90%] text-customRed uppercase">
+          {name}
         </div>
         <motion.div
           className="my-12 flex flex-col items-center gap-3 mx-auto"
