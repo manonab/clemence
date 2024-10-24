@@ -7,28 +7,7 @@ import Image from "next/image";
 import { Images } from "@/common/images";
 import Link from "next/link";
 
-// type CloseModalFunction = () => void;
-
-// function Modal({ onClose }: { onClose: CloseModalFunction }) {
-//   return (
-//     <div className="fixed left-0 top-0 flex h-screen w-screen items-center justify-center bg-black bg-opacity-50">
-//       <div className="rounded-md bg-white p-8">
-//         <p className="text-center font-neueRegular text-xl">
-//           Votre message a bien été envoyé !
-//         </p>
-//         <button
-//           onClick={onClose}
-//           className="mx-auto mt-4 block rounded bg-royalBlue px-4 py-2 font-bold text-white"
-//         >
-//           Fermer
-//         </button>
-//       </div>
-//     </div>
-//   );
-// }
-
 const Contact: NextPage = () => {
-  // const [showModal, setShowModal] = useState<boolean>(false);
   const [name, setName] = useState<string>("");
   const [lastName, setLastName] = useState<string>("");
   const [email, setEmail] = useState<string>("");
@@ -44,7 +23,6 @@ const Contact: NextPage = () => {
       user_object: subject,
     }).then((response: EmailJSResponseStatus) => {
       console.log(response);
-      // setShowModal(true);
       setName("");
       setLastName("");
       setEmail("");
@@ -55,54 +33,70 @@ const Contact: NextPage = () => {
 
   return (
     <div className="w-screen mt-32">
-      <div className="flex">
-        <p className="font-marsdenHeavy uppercase text-customRed md:text-[300px] leading-[250px] z-10 ml-20">
+      <div className="flex flex-col items-center md:flex-row">
+        <p className="font-marsdenHeavy uppercase text-customRed md:text-[300px] text-[100px] leading-[100px] md:leading-[250px] z-10 ml-5 md:ml-20">
           Let's<br></br>keep<br></br>in touch
         </p>
         <Image
           src={Images.oldGranniesWithPhones}
           alt="old grannie with phone"
-          className="absolute right-[250px] z-0"
+          className="hidden md:block absolute right-[250px] z-0"
         />
       </div>
-      <div className="my-28 flex flex-col m-20">
-        <div className="flex w-full justify-start">
-          <div className="flex flex-col items-start mr-20 w-1/2">
-            <p className="mb-5 text-darkRed text-[40px] font-helveticaNeue">
+      <div className="my-28 flex flex-col px-5 md:m-20">
+        <div className="flex flex-col md:flex-row w-full">
+          <div className="flex flex-col items-start w-full md:w-1/2 mb-10 md:mr-20">
+            <p className="mb-2 md:mb-5 text-darkRed text-[25px] md:text-[40px] font-helveticaNeue">
               Nom
             </p>
-            <input className="border-black border rounded-[5px] bg-transparent shadow-gray-400 shadow-sm h-12 md:w-full" />
+            <input
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              className="border-black border rounded-[5px] bg-transparent shadow-gray-400 shadow-sm h-12 w-full"
+            />
           </div>
-          <div className="flex flex-col items-start ml-20 w-1/2">
-            <p className="mb-5 text-customRed text-[40px]  font-helveticaNeue">
+          <div className="flex flex-col items-start w-full md:w-1/2 mb-10">
+            <p className="mb-2 md:mb-5 text-customRed text-[25px] md:text-[40px] font-helveticaNeue">
               Prénom
             </p>
-            <input className="border-black border rounded-[5px] bg-transparent shadow-sm h-12 md:w-full" />
+            <input
+              value={lastName}
+              onChange={(e) => setLastName(e.target.value)}
+              className="border-black border rounded-[5px] bg-transparent shadow-sm h-12 w-full"
+            />
           </div>
         </div>
-        <div className="flex flex-col items-start mr-20 mt-10  w-1/2">
-          <p className="mb-5 text-darkRed text-[40px]  font-helveticaNeue">
+        <div className="flex flex-col items-start w-full mb-10">
+          <p className="mb-2 md:mb-5 text-darkRed text-[25px] md:text-[40px] font-helveticaNeue">
             Objet
           </p>
-          <input className="border-black border rounded-[5px] bg-transparent shadow-gray-400 shadow-sm h-12 md:w-[560px]" />
+          <input
+            value={subject}
+            onChange={(e) => setSubject(e.target.value)}
+            className="border-black border rounded-[5px] bg-transparent shadow-gray-400 shadow-sm h-12 w-full"
+          />
         </div>
-        <div className="flex flex-col items-start mr-20 mt-10  w-full">
-          <p className="mb-5 text-darkRed text-[40px] font-helveticaNeue">
+        <div className="flex flex-col items-start w-full mb-10">
+          <p className="mb-2 md:mb-5 text-darkRed text-[25px] md:text-[40px] font-helveticaNeue">
             Message
           </p>
-          <textarea className="p-2 border-black border rounded-[5px] bg-transparent shadow-gray-400 shadow-sm h-[300px] md:w-full" />
+          <textarea
+            value={message}
+            onChange={(e) => setMessage(e.target.value)}
+            className="p-2 border-black border rounded-[5px] bg-transparent shadow-gray-400 shadow-sm h-[200px] md:h-[300px] w-full"
+          />
         </div>
-        <div className="flex items-center justify-end mt-20">
+        <div className="flex flex-col md:flex-row items-center justify-between mt-10">
           <Link href={"https://www.linkedin.com/in/cl%C3%A9mence-dequaire/"}>
             <Image
               src={Images.linkedinIcon}
               alt="linkedin"
-              className="w-[40px] hover:cursor-pointer"
+              className="w-[30px] md:w-[40px] hover:cursor-pointer mb-5 md:mb-0"
             />
           </Link>
           <button
             onClick={handleSendEmail}
-            className="font-footer uppercase text-white bg-customRed py-3 rounded-[50px] px-5 text-xs w-[220px] h-[60px] ml-10"
+            className="font-footer uppercase text-white bg-customRed py-3 rounded-[50px] px-5 text-xs w-[150px] md:w-[220px] h-[50px] md:h-[60px]"
           >
             Hit me baby
           </button>
@@ -111,4 +105,5 @@ const Contact: NextPage = () => {
     </div>
   );
 };
+
 export default Contact;

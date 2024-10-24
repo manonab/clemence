@@ -8,6 +8,7 @@ import { Images } from "@/common/images";
 import { ArrowRight } from "@assets/arrow-right";
 import useResponsive from "@/hooks/useResponsive";
 import { ContactMeButton } from "../contact-me-button";
+import { CustomButton } from "../custom-button";
 
 interface DescriptionProps {
   id: string;
@@ -50,17 +51,7 @@ const Description: React.FC<DescriptionProps> = ({ id }) => {
               et au marketing digital.
             </p>
           </p>
-
-          <div
-            onClick={() => router.push("/services")}
-            className="md:mb-2 md:ml-24 flex md:w-[150px] flex-col md:items-center justify-around pb-2 hover:cursor-pointer items-start mt-10 ml-2.5"
-          >
-            <span className="flex items-center gap-3">
-              <p className="text-xs	uppercase">En savoir plus</p>
-              <ArrowRight />
-            </span>
-            <div className="absolute h-12 w-[150px] origin-left border-b-2 border-b-black transition-transform duration-300 hover:scale-x-0" />
-          </div>
+          <CustomButton text="En savoir plus" redirection="/services" />
         </div>
         <div className="flex flex-col">
           <p className="hidden md:my-10 md:ml-32 md:font-marsdenBlack md:text-[150px] md:leading-[95%] md:text-darkRed md:block">

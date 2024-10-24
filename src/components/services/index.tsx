@@ -5,29 +5,29 @@ import Image from "next/image";
 export const ServiceComponent = () => {
   return (
     <div className="size-full my-auto">
-      <div className="min-h-screen flex items-center justify-between mb-32">
+      <div className="min-h-screen md:flex items-center justify-between mb-32">
         <div className="my-auto">
           <Image
             src={Images.jumpPicture}
             alt="old picture"
-            className="absolute top-72 left-[500px] z-0"
+            className="absolute md:top-72 md:left-[500px]  left-[250px] top-32 z-0 w-[250px]"
           />
-          <p className="z-[999] relative text-customRed text-[300px] leading-[90%] mt-40 font-marsdenHeavy uppercase mx-28">
+          <p className="z-[999] relative text-customRed md:text-[300px] text-[150px] leading-[90%] mt-40 font-marsdenHeavy uppercase mx-28">
             Aller<br></br>plus<br></br>haut
           </p>
         </div>
 
-        <div className="mb-auto mr-28 mt-[280px] flex-col flex">
-          <p className="text-customBlack text-[30px]">
-            se rapprocher de l'avenir<br></br> radieux de votre projet
+        <div className="mb-auto md:mr-28 md:mt-[280px] mt-16 flex-col flex mx-auto">
+          <p className="text-customBlack text-4xl">
+            se rapprocher de l'avenir radieux de votre projet
           </p>
-          <div className="flex flex-col items-center gap-3 mt-[500px]">
+          <div className="flex flex-col items-center gap-3 md:mt-[500px]">
             <BigArrow />
             <p className="font-bold uppercase leading-[20px]">SCROLL & ROLL</p>
           </div>
         </div>
       </div>
-      <div className="w-screen bg-mediumRed text-customBlack py-10 min-h-screen flex items-center justify-center">
+      <div className="md:w-screen bg-mediumRed text-customBlack py-10 md:min-h-screen flex items-center justify-center">
         <div className="flex flex-col md:flex-row justify-around w-full px-5">
           <div className="text-left mb-10">
             <div className="flex items-baseline">
